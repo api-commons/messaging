@@ -1,0 +1,70 @@
+provider: mailchimp
+apis_io: https://apis.io/providers/mailchimp/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    - messages
+    properties:
+      id:
+      - id
+      - _id
+      from: from_email
+      created_at:
+      - create_time
+      - timestamp
+      to: recipients
+      status: status
+      subject: subject
+      conversation_id: conversation_id
+      sent_at:
+      - send_time
+      - send_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /automations/{workflow_id}/emails/{workflow_email_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /automations/{workflow_id}/emails
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /automations/{workflow_id}/emails/{workflow_email_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /conversations/{conversation_id}/messages
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /conversations/{conversation_id}/messages/{message_id}
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body: html
+      created_at: date_created
+      category:
+      - type
+      - category
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /templates/{template_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /templates
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /templates/{template_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#PATCH /templates/{template_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#POST /templates
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /conversations
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /conversations/{conversation_id}
+    - openapi/_original/mailchimp-marketing-api-openapi.yml#GET /conversations
+    - openapi/_original/mailchimp-marketing-api-openapi.yml#GET /conversations/{conversation_id}
+  sender:
+    path_segment:
+    - senders
+    properties:
+      email: address
+      created_at: created_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/mailchimp-transactional-api-openapi-original.json#POST /users/senders
+    - openapi/_original/mailchimp-transactional-api-openapi.yml#POST /users/senders

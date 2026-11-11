@@ -1,0 +1,47 @@
+provider: commsharbor
+apis_io: https://apis.io/providers/commsharbor/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      to: to
+      metadata: variables
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/commsharbor-openapi.json#POST /api/messages
+    - openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/messages
+    - openapi/_original/commsharbor-openapi_2.json#POST /api/messages
+    - openapi/_original/commsharbor-openapi_2.json#POST /api/organizations/{organization_id}/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      updated_at: updated_at
+      status: status
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/commsharbor-openapi.json#DELETE /api/organizations/{organization_id}/templates/{template_id}
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/templates
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/templates/{template_id}
+    - openapi/_original/commsharbor-openapi.json#PATCH /api/organizations/{organization_id}/templates/{template_id}
+    - openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/templates
+  suppression:
+    path_segment:
+    - suppressions
+    properties:
+      reason: reason
+      address: email
+      created_at: created_at
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/suppressions
+    - openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/suppressions
+    - openapi/_original/commsharbor-openapi_2.json#GET /api/organizations/{organization_id}/suppressions
+    - openapi/_original/commsharbor-openapi_2.json#POST /api/organizations/{organization_id}/suppressions

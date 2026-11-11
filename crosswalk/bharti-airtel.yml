@@ -1,0 +1,38 @@
+provider: bharti-airtel
+apis_io: https://apis.io/providers/bharti-airtel/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/airtel-iot.json#POST /send/custom/message
+    - openapi/_original/bharti-airtel-iot-openapi.yml#POST /send/custom/message
+  template:
+    path_segment:
+    - template
+    properties:
+      created_at: creationDate
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/airtel-iot.json#GET /template/
+    - openapi/_original/airtel-iot.json#POST /bulk/sim/download/template
+    - openapi/_original/airtel-iot.json#POST /download/batch/template
+    - openapi/_original/bharti-airtel-iot-openapi.yml#GET /template/
+    - openapi/_original/bharti-airtel-iot-openapi.yml#POST /bulk/sim/download/template
+  phone_number:
+    path_segment:
+    - numbers
+    properties:
+      number: msisdn
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/airtel-iot.json#GET /voice/numbers
+    - openapi/_original/airtel-iot.json#GET /wt/numbers
+    - openapi/_original/airtel-iot.json#POST /voice/numbers
+    - openapi/_original/airtel-iot.json#POST /wt/numbers/batch
+    - openapi/_original/bharti-airtel-iot-openapi.yml#GET /voice/numbers

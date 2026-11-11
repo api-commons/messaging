@@ -1,0 +1,38 @@
+provider: emarsys
+apis_io: https://apis.io/providers/emarsys/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - messages
+    properties:
+      id: id
+      from: source
+      created_at: created
+      status: status
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/emarsys-email-campaigns-openapi.yml#GET /v2/email/
+    - openapi/_original/emarsys-email-campaigns-openapi.yml#GET /v2/email/{emailId}/
+    - openapi/_original/emarsys-email-campaigns-openapi.yml#POST /v2/email
+    - openapi/_original/emarsys-sms-partner-service-openapi.yml#POST /clients/{clientId}/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/emarsys-email-templates-openapi.yml#GET /v2/email/templates
+    - openapi/_original/emarsys-email-templates-openapi.yml#GET /v2/email/templates/{templateId}
+  suppression:
+    path_segment:
+    - blocklist
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/emarsys-email-campaigns-openapi.yml#POST /v2/blocklist

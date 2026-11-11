@@ -1,0 +1,34 @@
+provider: telesign
+apis_io: https://apis.io/providers/telesign/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sms
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/telesign-email-intelligence-api-openapi.json#POST /intelligence/email
+    - openapi/_original/telesign-email-intelligence-extended-response-openapi.json#POST /intelligence/email
+    - openapi/_original/telesign-email-intelligence-extended-response-openapi.yml#POST /intelligence/email
+    - openapi/_original/telesign-engage-api-number-masking-openapi.json#POST /v1/anonymous/session/sms
+    - openapi/_original/telesign-engage-api-number-masking-openapi.yml#POST /v1/anonymous/session/sms
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body: text
+      category:
+      - type
+      - category
+      language: language
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telesign-engage-api-openapi.json#GET /v1/omnichannel/templates
+    - openapi/_original/telesign-engage-api-openapi.json#POST /v1/omnichannel/templates

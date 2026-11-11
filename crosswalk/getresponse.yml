@@ -1,0 +1,46 @@
+provider: getresponse
+apis_io: https://apis.io/providers/getresponse/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    properties:
+      body: content
+      channel: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/getresponse-open-api-original.json#GET /sms
+    - openapi/_original/getresponse-open-api-original.json#GET /sms/{smsId}
+    - openapi/_original/getresponse-open-api-original.json#GET /statistics/sms/{smsId}
+    - openapi/_original/getresponse-open-api-original.json#POST /sms
+    - openapi/_original/getresponse-sms-messages-openapi.yml#GET /sms
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: templateId
+      body: content
+      created_at: createdOn
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/getresponse-open-api-original.json#DELETE /transactional-emails/templates/{transactionalEmailTemplateId}
+    - openapi/_original/getresponse-open-api-original.json#GET /transactional-emails/templates
+    - openapi/_original/getresponse-open-api-original.json#GET /transactional-emails/templates/{transactionalEmailTemplateId}
+    - openapi/_original/getresponse-open-api-original.json#POST /transactional-emails/templates
+    - openapi/_original/getresponse-open-api-original.json#POST /transactional-emails/templates/{transactionalEmailTemplateId}
+  suppression:
+    path_segment:
+    - suppressions
+    properties:
+      created_at: createdOn
+      id: suppressionId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/getresponse-open-api-original.json#DELETE /suppressions/{suppressionId}
+    - openapi/_original/getresponse-open-api-original.json#GET /suppressions
+    - openapi/_original/getresponse-open-api-original.json#GET /suppressions/{suppressionId}
+    - openapi/_original/getresponse-open-api-original.json#POST /suppressions
+    - openapi/_original/getresponse-open-api-original.json#POST /suppressions/{suppressionId}

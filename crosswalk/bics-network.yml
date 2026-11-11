@@ -1,0 +1,23 @@
+provider: bics-network
+apis_io: https://apis.io/providers/bics-network/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bics-sms-openapi.json#GET /inbound/registrations/{inboundNumber}/messages
+  phone_number:
+    path_segment:
+    - numbers
+    properties:
+      number: number
+      country: country
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/bics-mynumbers-openapi.json#GET /numbers
+    - openapi/_original/bics-mynumbers-openapi.json#GET /numbers/{number}

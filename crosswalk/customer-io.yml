@@ -1,0 +1,61 @@
+provider: customer-io
+apis_io: https://apis.io/providers/customer-io/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - emails
+    - sms
+    - email
+    properties:
+      body:
+      - body
+      - content
+      id: id
+      from:
+      - from
+      - sender_id
+      created_at: created
+      to:
+      - to
+      - recipient
+      channel: type
+      subject: subject
+      attachments: attachments
+      sent_at: send_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/customer-io-app-api-openapi.json#DELETE /v1/design_studio/emails/{id}
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/broadcasts/{broadcast_id}/messages
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/campaigns/{campaign_id}/messages
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/customers/{customer_id}/messages
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/design_studio/emails
+  sender:
+    path_segment:
+    - sender_identities
+    properties:
+      id: id
+      email:
+      - email
+      - address
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/sender_identities
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/sender_identities/{sender_id}
+    - openapi/_original/customer-io-journeys-api-openapi.json#GET /v1/sender_identities
+    - openapi/_original/customer-io-journeys-api-openapi.json#GET /v1/sender_identities/{sender_id}
+  suppression:
+    path_segment:
+    - optouts
+    - suppression
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/customers/{customer_id}/optouts
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/esp/domains/{domain_name}/suppression/{suppression_type}
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/esp/suppression/{suppression_type}
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/optouts
+    - openapi/_original/customer-io-app-api-openapi.json#PUT /v1/customers/{customer_id}/optouts

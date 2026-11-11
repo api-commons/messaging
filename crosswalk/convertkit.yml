@@ -1,0 +1,26 @@
+provider: convertkit
+apis_io: https://apis.io/providers/convertkit/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties:
+      body: content
+      id: id
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.json#DELETE /v4/sequences/{sequence_id}/emails/{id}
+    - openapi/_original/openapi.json#GET /v4/sequences/{sequence_id}/emails
+    - openapi/_original/openapi.json#GET /v4/sequences/{sequence_id}/emails/{id}
+    - openapi/_original/openapi.json#POST /v4/sequences/{sequence_id}/emails
+    - openapi/_original/openapi.json#PUT /v4/sequences/{sequence_id}/emails/{id}
+  template:
+    path_segment:
+    - email_templates
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#GET /v4/email_templates

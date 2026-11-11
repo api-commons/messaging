@@ -1,0 +1,64 @@
+provider: webex
+apis_io: https://apis.io/providers/webex/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - text
+      - html
+      id: id
+      created_at: created
+      attachments:
+      - files
+      - attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/webex-contact-center-openapi.json#POST /v2/tasks/{taskId}/messages
+    - openapi/_original/webex-meeting-openapi.json#DELETE /meeting/messages/{meetingMessageId}
+    - openapi/_original/webex-messaging-openapi.json#DELETE /messages/{messageId}
+    - openapi/_original/webex-messaging-openapi.json#GET /messages
+    - openapi/_original/webex-messaging-openapi.json#GET /messages/{messageId}
+  template:
+    path_segment:
+    - templates
+    properties:
+      id:
+      - id
+      - templateId
+      name: name
+      category:
+      - category
+      - type
+      - templateType
+      language: locale
+      subject: title
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/webex-admin-openapi.json#GET /partner/reports/templates
+    - openapi/_original/webex-admin-openapi.json#GET /report/templates
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /partner/reports/templates
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/config/aiReceptionists/templates
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /telephony/config/aiReceptionists/templates/{templateId}
+  phone_number:
+    path_segment:
+    - numbers
+    properties:
+      number: phoneNumber
+      id: id
+      capabilities: numberType
+      name: name
+      status:
+      - state
+      - status
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/config/locations/{locationId}/numbers
+    - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/config/people/me/settings/callBlock/numbers/{phoneNumberId}
+    - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/config/people/me/settings/singleNumberReach/numbers/{phoneNumberId}
+    - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/config/people/{personId}/singleNumberReach/numbers/{id}
+    - openapi/_original/webex-cloud-calling-openapi.json#GET /people/{personId}/features/numbers

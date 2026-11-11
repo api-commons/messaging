@@ -1,0 +1,15 @@
+provider: apache-rocketmq
+apis_io: https://apis.io/providers/apache-rocketmq/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: msgId
+      metadata: properties
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/apache-rocketmq-rest-api.yaml#POST /messages

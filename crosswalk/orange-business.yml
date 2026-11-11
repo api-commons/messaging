@@ -1,0 +1,18 @@
+provider: orange-business
+apis_io: https://apis.io/providers/orange-business/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      from: source
+      created_at:
+      - timestamp
+      - created
+      channel: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/orange-business-live-objects-openapi.json#GET /api/v0/auditlog/messages

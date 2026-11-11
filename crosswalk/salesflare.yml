@@ -1,0 +1,21 @@
+provider: salesflare
+apis_io: https://apis.io/providers/salesflare/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - email
+    properties:
+      body: body
+      id: id
+      channel: type
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/salesflare-api-openapi.yml#DELETE /messages/{message_id}
+    - openapi/_original/salesflare-api-openapi.yml#GET /accounts/{account_id}/messages
+    - openapi/_original/salesflare-api-openapi.yml#GET /datasources/email
+    - openapi/_original/salesflare-api-openapi.yml#POST /messages
+    - openapi/_original/salesflare-api-openapi.yml#PUT /datasources/email/{id}

@@ -1,0 +1,14 @@
+provider: cloudtalk
+apis_io: https://apis.io/providers/cloudtalk/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    properties:
+      from: sender
+      to: recipient
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/cloudtalk-openapi.json#POST /sms/send.json

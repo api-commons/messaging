@@ -1,0 +1,40 @@
+provider: khoros-ai
+apis_io: https://apis.io/providers/khoros-ai/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    - messages
+    properties:
+      body: content
+      id: id
+      from: originator
+      created_at: createdAt
+      channel: type
+      status: status
+      subject: title
+      conversation_id: threadId
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lithium-care-listening-api-v2-openapi.json#DELETE /{integrationUuid}/messages
+    - openapi/_original/lithium-care-listening-api-v2-openapi.json#POST /{integrationUuid}/messages
+    - openapi/_original/lithium-conversations-api-openapi.yml#DELETE /conversations/initiative/{initiativeId}/message/{messageId}
+    - openapi/_original/lithium-conversations-api-openapi.yml#GET /conversations/calendar/messages
+    - openapi/_original/lithium-conversations-api-openapi.yml#GET /conversations/initiative/{initiativeId}/message/{messageId}
+  conversation:
+    path_segment:
+    - conversations
+    - conversation
+    - threads
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lithium-care-analytics-reports-openapi.json#POST /reports/report/conversation
+    - openapi/_original/lithium-care-author-api-v2-openapi.json#GET /networks/{networktype}/handles/{networkhandle}/conversations
+    - openapi/_original/lithium-care-author-api-v2-openapi.json#GET /networks/{networktype}/ids/{networkid}/conversations
+    - openapi/_original/lithium-care-author-api-v2-openapi.json#GET /networks/{networktype}/instances/{networkinstance}/handles/{networkhandle}/conversations
+    - openapi/_original/lithium-care-author-api-v2-openapi.json#GET /networks/{networktype}/instances/{networkinstance}/ids/{networkid}/conversations

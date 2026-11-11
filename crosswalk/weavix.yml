@@ -1,0 +1,12 @@
+provider: weavix
+apis_io: https://apis.io/providers/weavix/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weavix-rest-openapi.yml#POST /api/{channelId}/message

@@ -1,0 +1,12 @@
+provider: beehiiv
+apis_io: https://apis.io/providers/beehiiv/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/beehiiv-openapi.yml#GET /publications/{publicationId}/automations/{automationId}/emails

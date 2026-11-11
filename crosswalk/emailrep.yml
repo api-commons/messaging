@@ -1,0 +1,17 @@
+provider: emailrep
+apis_io: https://apis.io/providers/emailrep/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      from: sender
+      created_at: created_at
+      to: recipients
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/emailrep-openapi.json#GET /v0/messages/{id}

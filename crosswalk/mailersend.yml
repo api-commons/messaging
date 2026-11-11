@@ -1,0 +1,38 @@
+provider: mailersend
+apis_io: https://apis.io/providers/mailersend/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - email
+    properties:
+      body:
+      - text
+      - html
+      from: from
+      to: to
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/mailersend-openapi.yml#GET /messages
+    - openapi/_original/mailersend-openapi.yml#GET /messages/{message_id}
+    - openapi/_original/mailersend-openapi.yml#POST /email
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mailersend-openapi.yml#DELETE /templates/{template_id}
+    - openapi/_original/mailersend-openapi.yml#GET /templates
+    - openapi/_original/mailersend-openapi.yml#GET /templates/{template_id}
+  sender:
+    path_segment:
+    - identities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mailersend-openapi.yml#GET /identities
+    - openapi/_original/mailersend-openapi.yml#POST /identities

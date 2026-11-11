@@ -1,0 +1,60 @@
+aid: common-messaging
+name: Messaging (Email, SMS, Chat)
+type: Common
+description: 'The common Messaging (Email, SMS, Chat) vocabulary, distilled from the harvested OpenAPI of 365 providers
+  in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common
+  names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Messaging
+- Email
+- SMS
+- WhatsApp
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/messaging/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-messaging:messaging
+  name: Common Messaging (Email, SMS, Chat) Interface
+  description: The Messaging (Email, SMS, Chat) interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/messaging
+  tags:
+  - Messaging
+  - Email
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: message
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/schema/message.json
+  - type: JSONSchema
+    name: template
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/schema/template.json
+  - type: JSONSchema
+    name: conversation
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/schema/conversation.json
+  - type: JSONSchema
+    name: phone_number
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/schema/phone_number.json
+  - type: JSONSchema
+    name: sender
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/schema/sender.json
+  - type: JSONSchema
+    name: suppression
+    url: https://raw.githubusercontent.com/api-commons/messaging/main/schema/suppression.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/messaging/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,17 @@
+provider: bandwidth
+apis_io: https://apis.io/providers/bandwidth/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      from: from
+      to: to
+      attachments: media
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bandwidth-messaging-api-openapi.yml#GET /users/{accountId}/messages
+    - openapi/_original/bandwidth-messaging-api-openapi.yml#POST /users/{accountId}/messages

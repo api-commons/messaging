@@ -1,0 +1,52 @@
+provider: live-direct-marketing-online
+apis_io: https://apis.io/providers/live-direct-marketing-online/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    - mail
+    - messages
+    - email
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/briefs/{id}/mail
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/notifications
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#PATCH /api/settings/notifications
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#POST /api/enrichment/email
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#POST /api/support/messages
+  template:
+    path_segment:
+    - templates
+    - template
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/creatives/{id}/autopilot/bank/templates
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/creatives/{id}/autopilot/bank/templates/{templateId}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/creatives/{id}/autopilot/bank/templates/{templateId}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/development-pipeline/conveyor/template
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/import/templates
+  conversation:
+    path_segment:
+    - threads
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/admin/support/threads
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/admin/support/threads/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#GET /api/admin/support/threads
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#GET /api/admin/support/threads/{id}
+  suppression:
+    path_segment:
+    - suppression
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/suppression/{email}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/suppression
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#POST /api/suppression
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#POST /api/suppression/bulk
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#DELETE /api/suppression/{email}

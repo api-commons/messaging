@@ -1,0 +1,80 @@
+provider: brevo
+apis_io: https://apis.io/providers/brevo/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - email
+    - emails
+    - sms
+    properties:
+      body:
+      - text
+      - html
+      - htmlContent
+      - textContent
+      - body
+      - content
+      id:
+      - id
+      - messageId
+      from:
+      - from
+      - source
+      - sender
+      created_at: createdAt
+      to:
+      - to
+      - recipient
+      channel:
+      - type
+      - messageType
+      subject: subject
+      attachments:
+      - attachments
+      - attachment
+      metadata: tags
+      sent_at: scheduledAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/brevo-conversations-openapi.yml#DELETE /conversations/messages/{messageId}
+    - openapi/_original/brevo-conversations-openapi.yml#GET /conversations/messages/{messageId}
+    - openapi/_original/brevo-conversations-openapi.yml#POST /conversations/messages
+    - openapi/_original/brevo-conversations-openapi.yml#PUT /conversations/messages/{messageId}
+    - openapi/_original/brevo-conversations-openapi_2.yml#DELETE /conversations/messages/{id}
+  template:
+    path_segment:
+    - templates
+    - template
+    properties:
+      id: id
+      name: name
+      body: htmlContent
+      created_at: createdAt
+      updated_at: modifiedAt
+      category: category
+      language: language
+      subject: subject
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/brevo-email-api-openapi.yml#DELETE /smtp/templates/{templateId}
+    - openapi/_original/brevo-email-api-openapi.yml#GET /smtp/templates
+    - openapi/_original/brevo-email-api-openapi.yml#GET /smtp/templates/{templateId}
+    - openapi/_original/brevo-email-api-openapi.yml#POST /smtp/templates
+    - openapi/_original/brevo-email-api-openapi.yml#PUT /smtp/templates/{templateId}
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: id
+      email: email
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/brevo-accounts-and-settings-openapi.yml#DELETE /senders/{senderId}
+    - openapi/_original/brevo-accounts-and-settings-openapi.yml#GET /senders
+    - openapi/_original/brevo-accounts-and-settings-openapi.yml#POST /senders
+    - openapi/_original/brevo-accounts-and-settings-openapi.yml#PUT /senders/{senderId}
+    - openapi/_original/brevo-transactional-email-openapi.yml#GET /senders

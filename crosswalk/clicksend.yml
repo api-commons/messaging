@@ -1,0 +1,30 @@
+provider: clicksend
+apis_io: https://apis.io/providers/clicksend/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    - mms
+    - email
+    properties:
+      body: body
+      from:
+      - source
+      - from
+      to: to
+      subject: subject
+      attachments: attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/clicksend-openapi.yml#POST /email/send
+    - openapi/_original/clicksend-openapi.yml#POST /mms/send
+    - openapi/_original/clicksend-openapi.yml#POST /sms/send
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/clicksend-openapi.yml#GET /sms/templates

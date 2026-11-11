@@ -1,0 +1,74 @@
+provider: microsoft-graph
+apis_io: https://apis.io/providers/microsoft-graph/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties:
+      body: body
+      id: id
+      from:
+      - from
+      - sender
+      channel: messageType
+      subject:
+      - subject
+      - title
+      attachments: attachments
+      conversation_id:
+      - chatId
+      - conversationId
+      - conversation
+      metadata: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chats-openapi-original.yml#DELETE /chats/{chat-id}/messages/{chatMessage-id}
+    - openapi/_original/chats-openapi-original.yml#DELETE /me/chats/{chat-id}/messages/{chatMessage-id}
+    - openapi/_original/chats-openapi-original.yml#DELETE /users/{user-id}/chats/{chat-id}/messages/{chatMessage-id}
+    - openapi/_original/chats-openapi-original.yml#GET /chats/{chat-id}/messages
+    - openapi/_original/chats-openapi-original.yml#GET /chats/{chat-id}/messages/{chatMessage-id}
+  template:
+    path_segment:
+    - templates
+    - template
+    properties:
+      id: id
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/applications-openapi-original.yml#DELETE /applications/{application-id}/synchronization/templates/{synchronizationTemplate-id}
+    - openapi/_original/applications-openapi-original.yml#GET /applications/{application-id}/synchronization/templates
+    - openapi/_original/applications-openapi-original.yml#GET /applications/{application-id}/synchronization/templates/{synchronizationTemplate-id}
+    - openapi/_original/applications-openapi-original.yml#PATCH /applications/{application-id}/synchronization/templates/{synchronizationTemplate-id}
+    - openapi/_original/applications-openapi-original.yml#POST /applications/{application-id}/synchronization/templates
+  conversation:
+    path_segment:
+    - chats
+    - conversation
+    - threads
+    - conversations
+    properties:
+      id: id
+      participants: members
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chats-openapi-original.yml#DELETE /chats/{chat-id}
+    - openapi/_original/chats-openapi-original.yml#DELETE /me/chats/{chat-id}
+    - openapi/_original/chats-openapi-original.yml#DELETE /users/{user-id}/chats/{chat-id}
+    - openapi/_original/chats-openapi-original.yml#GET /chats
+    - openapi/_original/chats-openapi-original.yml#GET /chats/{chat-id}
+  sender:
+    path_segment:
+    - identities
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/microsoft-graph-api-openapi.yml#DELETE /security/identities
+    - openapi/_original/microsoft-graph-api-openapi.yml#GET /security/identities
+    - openapi/_original/microsoft-graph-api-openapi.yml#PATCH /security/identities
+    - openapi/_original/security-openapi-original.yml#DELETE /security/identities
+    - openapi/_original/security-openapi-original.yml#GET /security/identities

@@ -1,0 +1,24 @@
+provider: hunter
+apis_io: https://apis.io/providers/hunter/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/hunter-openapi.json#GET /messages
+    - openapi/_original/hunter-openapi.json#POST /messages
+  template:
+    path_segment:
+    - message-templates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/hunter-openapi.json#DELETE /message-templates/{id}
+    - openapi/_original/hunter-openapi.json#GET /message-templates
+    - openapi/_original/hunter-openapi.json#GET /message-templates/{id}
+    - openapi/_original/hunter-openapi.json#PATCH /message-templates/{id}
+    - openapi/_original/hunter-openapi.json#POST /message-templates

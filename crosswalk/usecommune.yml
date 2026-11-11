@@ -1,0 +1,55 @@
+provider: usecommune
+apis_io: https://apis.io/providers/usecommune/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - sends
+    properties:
+      body: content
+      id: id
+      created_at: created_at
+      attachments: media
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/usecommune-openapi.json#GET /messages/{message}
+    - openapi/_original/usecommune-openapi.json#GET /newsletters/{newsletter}/sends
+    - openapi/_original/usecommune-openapi.json#GET /sends/{send}
+    - openapi/_original/usecommune-openapi.json#GET /threads/{thread}/messages
+    - openapi/_original/usecommune-openapi.json#POST /threads/{thread}/messages
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+      created_at: created_at
+      last_message_at:
+      - updated_at
+      - last_activity_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/usecommune-openapi.json#GET /newsletters/{newsletter}/threads
+    - openapi/_original/usecommune-openapi.json#GET /threads/{thread}
+    - openapi/_original/usecommune-openapi.json#POST /newsletters/{newsletter}/threads
+    - openapi/_original/usecommune-openapi.yml#GET /newsletters/{newsletter}/threads
+    - openapi/_original/usecommune-openapi.yml#GET /threads/{thread}
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: id
+      email: from_email
+      created_at: created_at
+      updated_at: updated_at
+      verified:
+      - verification_status
+      - verified_at
+      from_name: from_name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/usecommune-openapi.json#GET /newsletters/{newsletter}/senders
+    - openapi/_original/usecommune-openapi.json#GET /senders/{sender}
+    - openapi/_original/usecommune-openapi.yml#GET /newsletters/{newsletter}/senders
+    - openapi/_original/usecommune-openapi.yml#GET /senders/{sender}

@@ -1,0 +1,31 @@
+provider: salesloft
+apis_io: https://apis.io/providers/salesloft/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /activities/emails
+    - openapi/_original/salesloft-openapi.yml#GET /activities/emails/{id}
+  template:
+    path_segment:
+    - email_templates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /email_templates
+    - openapi/_original/salesloft-openapi.yml#GET /email_templates/{id}
+    - openapi/_original/salesloft-openapi.yml#POST /email_templates
+    - openapi/_original/salesloft-openapi.yml#PUT /email_templates/{id}
+  conversation:
+    path_segment:
+    - conversations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /conversations
+    - openapi/_original/salesloft-openapi.yml#GET /conversations/{id}

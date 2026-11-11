@@ -1,0 +1,16 @@
+provider: pushover
+apis_io: https://apis.io/providers/pushover/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: html
+      created_at: timestamp
+      status: status
+      subject: title
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/pushover-openapi.yml#POST /messages.json

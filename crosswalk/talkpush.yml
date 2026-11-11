@@ -1,0 +1,30 @@
+provider: talkpush
+apis_io: https://apis.io/providers/talkpush/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/talkpush-openapi.json#POST /messaging/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body: content
+      created_at: created_at
+      updated_at: updated_at
+      category:
+      - type
+      - category
+      language: locale
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/talkpush-openapi.json#GET /messaging/templates
+    - openapi/_original/talkpush-openapi.json#PATCH /messaging/templates/{id}
+    - openapi/_original/talkpush-openapi.json#POST /messaging/templates

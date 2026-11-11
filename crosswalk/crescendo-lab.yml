@@ -1,0 +1,24 @@
+provider: crescendo-lab
+apis_io: https://apis.io/providers/crescendo-lab/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    properties:
+      body: body
+      id:
+      - message_id
+      - id
+      from: from
+      to: to
+      channel: type
+      status: status
+      sent_at:
+      - sent_at
+      - delivered_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#GET /sms/{id}
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#POST /sms/send

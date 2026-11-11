@@ -1,0 +1,13 @@
+provider: tata-communications
+apis_io: https://apis.io/providers/tata-communications/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id: messageId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/tata-communications-mobile-messaging-exchange-cdr-report-api.json#GET /CDR/message/{messageId}

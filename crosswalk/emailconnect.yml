@@ -1,0 +1,22 @@
+provider: emailconnect
+apis_io: https://apis.io/providers/emailconnect/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties:
+      id:
+      - id
+      - messageId
+      created_at: createdAt
+      status:
+      - deliveryStatus
+      - status
+      subject: subject
+      sent_at: deliveredAt
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/emailconnect-openapi.json#DELETE /api/v1/emails/{messageId}
+    - openapi/_original/emailconnect-openapi.json#GET /api/v1/emails/{messageId}

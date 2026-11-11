@@ -1,0 +1,77 @@
+provider: dotdigital
+apis_io: https://apis.io/providers/dotdigital/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - email
+    properties:
+      body:
+      - body
+      - htmlContent
+      id:
+      - id
+      - messageId
+      from: from
+      created_at: _createdOn
+      to: to
+      status: status
+      subject:
+      - title
+      - subject
+      attachments: attachments
+      conversation_id: conversationId
+      direction:
+      - inbound
+      - direction
+      metadata:
+      - metadata
+      - tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/analytics-api.json#GET /cpaas/analytics/messages
+    - openapi/_original/chat-message-api.json#GET /cpaas/chats/{chatId}/messages
+    - openapi/_original/chat-message-api.json#POST /cpaas/chats/{chatId}/messages
+    - openapi/_original/conversation-message-api.json#GET /cpaas/conversations/{conversationId}/messages
+    - openapi/_original/conversation-message-api.json#POST /cpaas/conversations/{conversationId}/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body:
+      - htmlContent
+      - components
+      created_at: _createdOn
+      category: category
+      language: language
+      status: status
+      subject: subject
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/Dotdigital-dotdigital-campaign-templates-2.0.0-resolved.yaml#GET /v2/templates
+    - openapi/_original/Dotdigital-dotdigital-campaign-templates-2.0.0-resolved.yaml#GET /v2/templates/{id}
+    - openapi/_original/Dotdigital-dotdigital-campaign-templates-2.0.0-resolved.yaml#POST /v2/templates
+    - openapi/_original/Dotdigital-dotdigital-campaign-templates-2.0.0-resolved.yaml#PUT /v2/templates/{id}
+    - openapi/_original/Dotdigital-whatsapp-channel-api-1.0.0-resolved-1.yaml#GET /cpaas/channels/whatsapp/businessaccounts/{wabaId}/templates
+  conversation:
+    path_segment:
+    - chats
+    - conversations
+    properties:
+      id: id
+      created_at: _createdOn
+      status: status
+      name: name
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/analytics-api.json#GET /cpaas/analytics/chats
+    - openapi/_original/analytics-api.json#GET /cpaas/analytics/whatsapp/conversations
+    - openapi/_original/chat-api.json#DELETE /cpaas/chats/{chatId}
+    - openapi/_original/chat-api.json#GET /cpaas/chats
+    - openapi/_original/chat-api.json#GET /cpaas/chats/{chatId}

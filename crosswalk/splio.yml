@@ -1,0 +1,13 @@
+provider: splio
+apis_io: https://apis.io/providers/splio/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/blacklists/emails
+    - openapi/_original/splio-doc-swagger2.json#GET /data/blacklists/emails

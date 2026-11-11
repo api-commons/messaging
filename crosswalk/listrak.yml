@@ -1,0 +1,36 @@
+provider: listrak
+apis_io: https://apis.io/providers/listrak/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id: messageId
+      from: fromEmail
+      to: phoneNumber
+      channel: messageType
+      status:
+      - messageStatus
+      - status
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Conversation/{conversationId}/Message
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Conversation/{conversationId}/Message/{conversationMessageId}
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Message
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Message/{messageId}
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/SplitTest/{splitTestId}/Message
+  conversation:
+    path_segment:
+    - conversation
+    properties:
+      id: conversationId
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Conversation
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Conversation/{conversationId}
+    - openapi/_original/listrak-email-openapi.yml#GET /v1/List/{listId}/Conversation
+    - openapi/_original/listrak-email-openapi.yml#GET /v1/List/{listId}/Conversation/{conversationId}

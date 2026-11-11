@@ -1,0 +1,28 @@
+provider: stream-io
+apis_io: https://apis.io/providers/stream-io/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/stream-io-chat-openapi.yml#DELETE /messages/{id}
+    - openapi/_original/stream-io-chat-openapi.yml#GET /channels/{type}/{id}/messages
+    - openapi/_original/stream-io-chat-openapi.yml#GET /messages/{id}
+    - openapi/_original/stream-io-chat-openapi.yml#GET /moderation/flags/message
+    - openapi/_original/stream-io-chat-openapi.yml#POST /channels/{type}/{id}/message
+  conversation:
+    path_segment:
+    - threads
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/stream-io-chat-openapi.yml#GET /threads/{message_id}
+    - openapi/_original/stream-io-chat-openapi.yml#PATCH /threads/{message_id}
+    - openapi/_original/stream-io-chat-openapi.yml#POST /threads
+    - openapi/_original/stream-io-serverside-openapi.yml#GET /api/v2/chat/threads/{message_id}
+    - openapi/_original/stream-io-serverside-openapi.yml#PATCH /api/v2/chat/threads/{message_id}

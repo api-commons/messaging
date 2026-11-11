@@ -1,0 +1,12 @@
+provider: matrix
+apis_io: https://apis.io/providers/matrix/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/matrix-openapi.yml#GET /v3/rooms/{roomId}/messages

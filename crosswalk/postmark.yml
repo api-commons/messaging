@@ -1,0 +1,77 @@
+provider: postmark
+apis_io: https://apis.io/providers/postmark/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sends
+    properties:
+      body:
+      - HtmlBody
+      - TextBody
+      id: MessageID
+      from: From
+      to: To
+      subject: Subject
+      attachments: Attachments
+      sent_at: Sent
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/postmark-api-openapi.yml#GET /stats/outbound/sends
+    - openapi/_original/postmark-api-openapi.yml#POST /email
+    - openapi/_original/postmark-api-openapi.yml#POST /email/batch
+    - openapi/_original/postmark-server-openapi-original.yml#GET /stats/outbound/sends
+    - openapi/_original/postmark-server-openapi-original.yml#POST /email
+  template:
+    path_segment:
+    - templates
+    properties:
+      id:
+      - TemplateId
+      - TemplateID
+      name: Name
+      body:
+      - HtmlBody
+      - TextBody
+      subject: Subject
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/postmark-api-openapi.yml#DELETE /templates/{templateIdOrAlias}
+    - openapi/_original/postmark-api-openapi.yml#GET /templates
+    - openapi/_original/postmark-server-openapi-original.yml#DELETE /templates/{templateIdOrAlias}
+    - openapi/_original/postmark-server-openapi-original.yml#GET /templates
+    - openapi/_original/postmark-server-openapi-original.yml#GET /templates/{templateIdOrAlias}
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: ID
+      email:
+      - EmailAddress
+      - FromEmail
+      name: Name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/postmark-account-openapi-original.yml#DELETE /senders/{signatureid}
+    - openapi/_original/postmark-account-openapi-original.yml#GET /senders
+    - openapi/_original/postmark-account-openapi-original.yml#GET /senders/{signatureid}
+    - openapi/_original/postmark-account-openapi-original.yml#POST /senders
+    - openapi/_original/postmark-account-openapi-original.yml#PUT /senders/{signatureid}
+  suppression:
+    path_segment:
+    - bounces
+    properties:
+      reason: Type
+      address: Email
+      id:
+      - ID
+      - MessageID
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/postmark-api-openapi.yml#GET /bounces
+    - openapi/_original/postmark-api-openapi.yml#GET /bounces/{bounceid}
+    - openapi/_original/postmark-api-openapi.yml#GET /stats/outbound/bounces
+    - openapi/_original/postmark-server-openapi-original.yml#GET /bounces
+    - openapi/_original/postmark-server-openapi-original.yml#GET /bounces/{bounceid}

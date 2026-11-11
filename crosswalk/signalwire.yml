@@ -1,0 +1,87 @@
+provider: signalwire
+apis_io: https://apis.io/providers/signalwire/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - sms
+    properties:
+      body: body
+      id:
+      - sid
+      - id
+      from: from
+      created_at:
+      - date_created
+      - created_at
+      to: to
+      channel:
+      - kind
+      - channel
+      status: status
+      attachments: media
+      direction: direction
+      sent_at: date_sent
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/signalwire-compatibility-openapi.yaml#DELETE /Accounts/{AccountSid}/Messages/{Sid}
+    - openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Messages
+    - openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/Messages/{Sid}
+    - openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Messages
+    - openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/Messages/{Sid}
+  template:
+    path_segment:
+    - templates
+    properties:
+      id:
+      - id
+      - template_id
+      name: name
+      body: components
+      created_at: created_at
+      updated_at: updated_at
+      category: category
+      language: language
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/signalwire-rest-openapi.yaml#DELETE /api/messaging/whatsapp/templates/{id}
+    - openapi/_original/signalwire-rest-openapi.yaml#GET /api/messaging/whatsapp/templates
+    - openapi/_original/signalwire-rest-openapi.yaml#GET /api/messaging/whatsapp/templates/{id}
+    - openapi/_original/signalwire-rest-openapi.yaml#PATCH /api/messaging/whatsapp/templates/{id}
+    - openapi/_original/signalwire-rest-openapi.yaml#POST /api/messaging/whatsapp/templates
+  phone_number:
+    path_segment:
+    - incomingphonenumbers
+    - phone_numbers
+    - numbers
+    - short_codes
+    properties:
+      number:
+      - phone_number
+      - number
+      id:
+      - sid
+      - id
+      capabilities:
+      - capabilities
+      - number_type
+      country: country_code
+      name:
+      - friendly_name
+      - name
+      status: state
+      created_at:
+      - date_created
+      - created_at
+      updated_at:
+      - date_updated
+      - updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/signalwire-compatibility-openapi.yaml#DELETE /Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}
+    - openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/IncomingPhoneNumbers
+    - openapi/_original/signalwire-compatibility-openapi.yaml#GET /Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}
+    - openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/IncomingPhoneNumbers
+    - openapi/_original/signalwire-compatibility-openapi.yaml#POST /Accounts/{AccountSid}/IncomingPhoneNumbers/{Sid}

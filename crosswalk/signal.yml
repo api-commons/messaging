@@ -1,0 +1,13 @@
+provider: signal
+apis_io: https://apis.io/providers/signal/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      created_at: timestamp
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/signal-server-openapi.yml#PUT /v1/messages/{destinationUuid}

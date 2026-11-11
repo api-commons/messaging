@@ -1,0 +1,19 @@
+provider: iterable
+apis_io: https://apis.io/providers/iterable/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/iterable-api-openapi.json#GET /api/embedded-messaging/messages
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/iterable-api-openapi.json#GET /api/templates

@@ -1,0 +1,16 @@
+provider: google-chat
+apis_io: https://apis.io/providers/google-chat/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      from: sender
+      created_at: createTime
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.yml#GET /v1/{parent}/messages
+    - openapi/_original/openapi.yml#POST /v1/{parent}/messages

@@ -1,0 +1,18 @@
+provider: termii
+apis_io: https://apis.io/providers/termii/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    properties:
+      id: message_id
+      from: from
+      to: to
+      channel:
+      - type
+      - channel
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/termii-openapi.yml#POST /sms/send

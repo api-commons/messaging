@@ -1,0 +1,33 @@
+provider: samu
+apis_io: https://apis.io/providers/samu/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: id
+      from: sender
+      attachments: attachments
+      direction: direction
+      sent_at: sentAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/samu-openapi-original.json#GET /api/chat/threads/{threadId}/messages
+    - openapi/_original/samu-openapi.yml#GET /api/chat/threads/{threadId}/messages
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+      last_message_at: lastMessageAt
+      name: title
+      participants: contacts
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/samu-openapi-original.json#GET /api/chat/threads
+    - openapi/_original/samu-openapi-original.json#GET /api/chat/threads/{threadId}
+    - openapi/_original/samu-openapi.yml#GET /api/chat/threads
+    - openapi/_original/samu-openapi.yml#GET /api/chat/threads/{threadId}

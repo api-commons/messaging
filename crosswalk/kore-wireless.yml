@@ -1,0 +1,16 @@
+provider: kore-wireless
+apis_io: https://apis.io/providers/kore-wireless/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      from: from
+      to: msisdn
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/kore-wireless-sms.yml#GET /v1/messages
+    - openapi/_original/kore-wireless-sms.yml#POST /v1/messages/send

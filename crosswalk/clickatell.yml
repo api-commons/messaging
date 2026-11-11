@@ -1,0 +1,20 @@
+provider: clickatell
+apis_io: https://apis.io/providers/clickatell/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    - messages
+    properties:
+      body: content
+      from: from
+      to: to
+      channel: channel
+      attachments: media
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/clickatell-one-api-openapi.json#GET /v1/message/{omniMessageId}
+    - openapi/_original/clickatell-one-api-openapi.json#POST /v1/message
+    - openapi/_original/clickatell-sms-api-openapi.json#POST /messages

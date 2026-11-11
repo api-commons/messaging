@@ -1,0 +1,28 @@
+provider: smtp2go
+apis_io: https://apis.io/providers/smtp2go/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sms
+    properties:
+      body:
+      - html_body
+      - text_body
+      - content
+      from: sender
+      to:
+      - recipient
+      - to
+      - destination
+      subject: subject
+      attachments: attachments
+      sent_at: sent
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/smtp2go-openapi-original.yml#POST /archive/email
+    - openapi/_original/smtp2go-openapi-original.yml#POST /email/batch
+    - openapi/_original/smtp2go-openapi-original.yml#POST /email/send
+    - openapi/_original/smtp2go-openapi-original.yml#POST /sms/send

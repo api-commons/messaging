@@ -1,0 +1,36 @@
+provider: suprsend
+apis_io: https://apis.io/providers/suprsend/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id: message_id
+      created_at: created_at
+      to: recipient
+      channel: channel
+      status: status
+      sent_at: delivered_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/suprsend-rest-api-openapi.yml#GET /v1/message/
+    - openapi/_original/suprsend-rest-api-openapi.yml#PATCH /v1/bulk/message/
+  template:
+    path_segment:
+    - template
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      status: status
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/suprsend-rest-api-openapi.yml#GET /v1/template/
+    - openapi/_original/suprsend-rest-api-openapi.yml#GET /v1/template/{template_slug}/
+    - openapi/_original/suprsend-rest-api-openapi.yml#GET /v2/{workspace}/template/
+    - openapi/_original/suprsend-rest-api-openapi.yml#GET /v2/{workspace}/template/{template_slug}/
+    - openapi/_original/suprsend-rest-api-openapi.yml#POST /v2/{workspace}/template/{template_slug}/

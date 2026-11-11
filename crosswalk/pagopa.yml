@@ -1,0 +1,29 @@
+provider: pagopa
+apis_io: https://apis.io/providers/pagopa/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/io-functions-services.yaml#POST /messages
+    - openapi/_original/io-functions-services.yaml#POST /messages/{fiscal_code}
+    - openapi/_original/pagopa-io-services-openapi.yml#POST /messages
+    - openapi/_original/pagopa-io-services-openapi.yml#POST /messages/{fiscal_code}
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: templateId
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/pagopa-print-payment-notices-openapi.yml#GET /notices/templates
+    - openapi/_original/pagopa-print-payment-notices-openapi.yml#GET /notices/templates/{template_id}
+    - openapi/_original/print-payment-notice-service.json#GET /notices/templates
+    - openapi/_original/print-payment-notice-service.json#GET /notices/templates/{template_id}

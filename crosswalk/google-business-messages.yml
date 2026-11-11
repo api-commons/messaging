@@ -1,0 +1,15 @@
+provider: google-business-messages
+apis_io: https://apis.io/providers/google-business-messages/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      id: messageId
+      created_at: createTime
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.yml#POST /conversations/{conversationId}/messages

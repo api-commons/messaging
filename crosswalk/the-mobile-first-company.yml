@@ -1,0 +1,48 @@
+provider: the-mobile-first-company
+apis_io: https://apis.io/providers/the-mobile-first-company/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    properties:
+      body: content
+      from:
+      - from_number
+      - sender_id
+      - from
+      to:
+      - to_number
+      - to
+      channel: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v1/api/sms
+  conversation:
+    path_segment:
+    - conversation
+    - conversations
+    properties:
+      channel: type
+      participants: contacts
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/contact/{contact_id}/conversation
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/conversations
+  phone_number:
+    path_segment:
+    - numbers
+    properties:
+      number: number
+      capabilities:
+      - type
+      - capabilities
+      country: country
+      name: name
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#DELETE /v2/api/dialing-queues/current/numbers
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/numbers
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/numbers
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/dialing-queues/current/numbers

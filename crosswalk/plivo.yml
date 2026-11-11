@@ -1,0 +1,21 @@
+provider: plivo
+apis_io: https://apis.io/providers/plivo/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      body: text
+      from: from_number
+      to: to_number
+      channel:
+      - type
+      - message_type
+      attachments: media_urls
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/plivo-openapi.yml#GET /Account/{auth_id}/Message/
+    - openapi/_original/plivo-openapi.yml#GET /Account/{auth_id}/Message/{message_uuid}/
+    - openapi/_original/plivo-openapi.yml#POST /Account/{auth_id}/Message/

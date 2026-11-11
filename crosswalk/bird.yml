@@ -1,0 +1,137 @@
+provider: bird
+apis_io: https://apis.io/providers/bird/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - email
+    properties:
+      body:
+      - body
+      - text
+      id: id
+      from:
+      - sender
+      - originator
+      - from
+      created_at:
+      - createdAt
+      - created_at
+      to:
+      - receiver
+      - recipients
+      - to
+      channel: type
+      status: status
+      direction: direction
+      metadata:
+      - tags
+      - metadata
+      sent_at:
+      - sent_at
+      - delivered_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bird-openapi.yml#GET /messages
+    - openapi/_original/bird-openapi.yml#GET /messages/{id}
+    - openapi/_original/bird-openapi.yml#GET /workspaces/{workspaceId}/channels/{channelId}/messages
+    - openapi/_original/bird-openapi.yml#GET /workspaces/{workspaceId}/conversations/{conversationId}/messages/{messageId}
+    - openapi/_original/bird-openapi.yml#POST /messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id:
+      - id
+      - template_id
+      name: name
+      body: components
+      created_at:
+      - created_at
+      - createdAt
+      updated_at:
+      - updated_at
+      - updatedAt
+      category: category
+      language: language
+      status: status
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/messagebird-bird-api-openapi.yml#DELETE /v1/email/templates/{template_ref}
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/stats/templates
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/templates
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/templates/{template_ref}
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/sms/templates
+  conversation:
+    path_segment:
+    - conversations
+    - threads
+    properties:
+      id: id
+      created_at:
+      - createdAt
+      - created_at
+      last_message_at:
+      - last_message_at
+      - updated_at
+      status: status
+      channel: channel
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bird-openapi.yml#POST /workspaces/{workspaceId}/conversations
+    - openapi/_original/messagebird-bird-api-openapi.yml#DELETE /v1/email/threads/{thread_id}
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/threads
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/threads/{thread_id}
+    - openapi/_original/messagebird-bird-api-openapi.yml#PATCH /v1/email/threads/{thread_id}
+  phone_number:
+    path_segment:
+    - numbers
+    - phone-numbers
+    properties:
+      number:
+      - number
+      - phone_number
+      id: id
+      capabilities:
+      - type
+      - capabilities
+      - number_type
+      - features
+      country:
+      - country
+      - country_code
+      - region
+      - countryCode
+      name: name
+      status: status
+      created_at:
+      - created_at
+      - createdAt
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bird-openapi.yml#GET /workspaces/{workspaceId}/numbers
+    - openapi/_original/messagebird-bird-api-openapi.yml#DELETE /v1/numbers/{number_id}
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/numbers
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/numbers/{number_id}
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/sms/stats/inbound/numbers
+  suppression:
+    path_segment:
+    - suppressions
+    - complaints
+    properties:
+      reason: reason
+      address: email
+      created_at: created_at
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/messagebird-bird-api-openapi.yml#DELETE /v1/email/suppressions/{suppression_id}
+    - openapi/_original/messagebird-bird-api-openapi.yml#DELETE /v1/sms/suppressions/{suppression_id}
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/inbox-insights/complaints
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/suppressions
+    - openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/suppressions/{suppression_id}

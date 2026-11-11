@@ -1,0 +1,13 @@
+provider: streamnative
+apis_io: https://apis.io/providers/streamnative/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/kafka-rest-api-v1.json#GET /admin/v1/topics/{topicName}/messages
+    - openapi/_original/streamnative-kafka-rest-openapi.yml#GET /admin/v1/topics/{topicName}/messages

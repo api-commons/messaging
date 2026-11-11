@@ -1,0 +1,31 @@
+provider: neynar
+apis_io: https://apis.io/providers/neynar/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    - message
+    - messages
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/neynar-farcaster-api.yaml#GET /v2/farcaster/frame/notifications/
+    - openapi/_original/neynar-farcaster-api.yaml#GET /v2/farcaster/notifications/
+    - openapi/_original/neynar-farcaster-api.yaml#GET /v2/studio/deployment/conversations/messages
+    - openapi/_original/neynar-farcaster-api.yaml#POST /v2/farcaster/frame/notifications/
+    - openapi/_original/neynar-farcaster-api.yaml#POST /v2/farcaster/message/
+  conversation:
+    path_segment:
+    - conversation
+    - conversations
+    properties:
+      id: id
+      created_at: created_at
+      last_message_at: updated_at
+      name: title
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/neynar-farcaster-api.yaml#GET /v2/farcaster/cast/conversation/
+    - openapi/_original/neynar-farcaster-api.yaml#GET /v2/studio/deployment/conversations

@@ -1,0 +1,40 @@
+provider: courier
+apis_io: https://apis.io/providers/courier/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    - messages
+    properties:
+      body: content
+      id: id
+      created_at:
+      - created_at
+      - created
+      to: recipient
+      status:
+      - status
+      - state
+      subject: title
+      metadata: tags
+      sent_at: sent
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/courier-openapi.yml#DELETE /notifications/{id}
+    - openapi/_original/courier-openapi.yml#GET /messages
+    - openapi/_original/courier-openapi.yml#GET /messages/{message_id}
+    - openapi/_original/courier-openapi.yml#GET /notifications
+    - openapi/_original/courier-openapi.yml#GET /notifications/{id}
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      body: content
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/courier-openapi.yml#GET /tenants/{tenant_id}/templates
+    - openapi/_original/courier-openapi.yml#GET /tenants/{tenant_id}/templates/{template_id}
+    - openapi/_original/courier-openapi.yml#PUT /tenants/{tenant_id}/templates/{template_id}

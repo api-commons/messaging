@@ -1,0 +1,19 @@
+provider: zoho-mail
+apis_io: https://apis.io/providers/zoho-mail/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: messageId
+      status: status
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/openapi.json#DELETE /api/accounts/{accountId}/folders/{folderId}/messages/{messageId}
+    - openapi/_original/openapi.json#GET /api/accounts/{accountId}/messages
+    - openapi/_original/openapi.json#POST /api/accounts/{accountId}/messages
+    - openapi/_original/openapi.json#POST /api/accounts/{accountId}/messages/{messageId}

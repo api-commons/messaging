@@ -1,0 +1,138 @@
+provider: telnyx
+apis_io: https://apis.io/providers/telnyx/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - sms
+    - message
+    properties:
+      body:
+      - text
+      - content
+      - body
+      id:
+      - id
+      - message_id
+      from: from
+      created_at: created_at
+      to:
+      - to
+      - phone_number
+      channel: type
+      status: status
+      subject: subject
+      attachments:
+      - attachments
+      - media
+      - media_urls
+      conversation_id:
+      - conversation_id
+      - thread_id
+      direction: direction
+      metadata:
+      - metadata
+      - tags
+      sent_at:
+      - sent_at
+      - send_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /messages/{id}
+    - openapi/_original/telnyx-openapi.json#GET /ai/conversations/{conversation_id}/messages
+    - openapi/_original/telnyx-openapi.json#GET /email_inboxes/{inbox_id}/messages
+    - openapi/_original/telnyx-openapi.json#GET /messages/{id}
+    - openapi/_original/telnyx-openapi.json#PATCH /email_inboxes/{inbox_id}/messages/{message_id}
+  template:
+    path_segment:
+    - message_templates
+    - email_templates
+    - templates
+    properties:
+      id:
+      - id
+      - template_id
+      name: name
+      body:
+      - html_body
+      - text_body
+      - components
+      - text
+      created_at: created_at
+      updated_at: updated_at
+      category: category
+      language: language
+      status: status
+      subject: subject
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /email_templates/{id}
+    - openapi/_original/telnyx-openapi.json#DELETE /whatsapp/message_templates/{id}
+    - openapi/_original/telnyx-openapi.json#GET /email_templates
+    - openapi/_original/telnyx-openapi.json#GET /email_templates/{id}
+    - openapi/_original/telnyx-openapi.json#GET /v2/whatsapp/message_templates
+  conversation:
+    path_segment:
+    - conversations
+    - threads
+    properties:
+      id:
+      - id
+      - message_id
+      created_at: created_at
+      last_message_at:
+      - last_message_at
+      - updated_at
+      status: status
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /ai/conversations/{conversation_id}
+    - openapi/_original/telnyx-openapi.json#GET /ai/conversations
+    - openapi/_original/telnyx-openapi.json#GET /ai/conversations/{conversation_id}
+    - openapi/_original/telnyx-openapi.json#GET /email_inboxes/{inbox_id}/threads
+    - openapi/_original/telnyx-openapi.json#GET /email_inboxes/{inbox_id}/threads/{thread_id}
+  phone_number:
+    path_segment:
+    - phone_numbers
+    - numbers
+    - short_codes
+    - phonenumbers
+    properties:
+      number:
+      - phoneNumber
+      - phone_number
+      id:
+      - id
+      - phone_number_id
+      capabilities:
+      - type
+      - features
+      country: country_code
+      name: display_name
+      status: status
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /dir/{dir_id}/phone_numbers
+    - openapi/_original/telnyx-openapi.json#DELETE /enterprises/{enterprise_id}/reputation/numbers/{phone_number}
+    - openapi/_original/telnyx-openapi.json#DELETE /phone_numbers/{id}
+    - openapi/_original/telnyx-openapi.json#DELETE /reputation/numbers/{phone_number}
+    - openapi/_original/telnyx-openapi.json#DELETE /v2/whatsapp/phone_numbers/{phone_number}
+  suppression:
+    path_segment:
+    - suppressions
+    properties:
+      reason:
+      - reason
+      - status
+      created_at: created_at
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/telnyx-openapi.json#DELETE /email_unsubscribe_groups/{id}/suppressions/{email}
+    - openapi/_original/telnyx-openapi.json#GET /email_unsubscribe_groups/{id}/suppressions
+    - openapi/_original/telnyx-openapi.json#POST /email_unsubscribe_groups/{id}/suppressions

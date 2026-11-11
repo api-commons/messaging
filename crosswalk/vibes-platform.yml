@@ -1,0 +1,15 @@
+provider: vibes-platform
+apis_io: https://apis.io/providers/vibes-platform/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      created_at: created_at
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/campaigns/wallet/{wallet_id}/messages
+    - openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/campaigns/wallet/{wallet_id}/messages/{wallet_message_id}
+    - openapi/_original/vibes-platform-api-openapi.json#POST /companies/{company_key}/campaigns/wallet/{wallet_id}/messages

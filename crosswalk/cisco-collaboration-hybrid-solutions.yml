@@ -1,0 +1,23 @@
+provider: cisco-collaboration-hybrid-solutions
+apis_io: https://apis.io/providers/cisco-collaboration-hybrid-solutions/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - text
+      - html
+      id: id
+      created_at: created
+      attachments:
+      - files
+      - attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/cisco-collaboration-hybrid-solutions-openapi.yml#DELETE /messages/{messageId}
+    - openapi/_original/cisco-collaboration-hybrid-solutions-openapi.yml#GET /messages
+    - openapi/_original/cisco-collaboration-hybrid-solutions-openapi.yml#GET /messages/{messageId}
+    - openapi/_original/cisco-collaboration-hybrid-solutions-openapi.yml#POST /messages

@@ -1,0 +1,13 @@
+provider: birdeye
+apis_io: https://apis.io/providers/birdeye/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/birdeye-birdeye-api-openapi.yml#GET /v1/reports/business/analytics/email
+    - openapi/_original/birdeye-openapi-original.yml#GET /v1/reports/business/analytics/email

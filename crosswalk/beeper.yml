@@ -1,0 +1,43 @@
+provider: beeper
+apis_io: https://apis.io/providers/beeper/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      id:
+      - id
+      - messageID
+      from: senderID
+      created_at: timestamp
+      channel: type
+      attachments:
+      - attachments
+      - attachment
+      conversation_id: chatID
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#DELETE /v1/chats/{chatID}/messages/{messageID}
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#GET /v1/chats/{chatID}/messages
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#GET /v1/chats/{chatID}/messages/{messageID}
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#POST /v1/chats/{chatID}/messages
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#PUT /v1/chats/{chatID}/messages/{messageID}
+  conversation:
+    path_segment:
+    - chats
+    properties:
+      id: id
+      created_at: timestamp
+      status: status
+      name: title
+      channel: type
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#GET /v1/chats
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#GET /v1/chats/{chatID}
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#PATCH /v1/chats/{chatID}
+    - openapi/_original/beeper-desktop-api-openapi-original.yml#POST /v1/chats

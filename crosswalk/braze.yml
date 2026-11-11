@@ -1,0 +1,22 @@
+provider: braze
+apis_io: https://apis.io/providers/braze/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/braze-openapi.yml#POST /messages/send
+  suppression:
+    path_segment:
+    - unsubscribes
+    - blocklist
+    properties:
+      address: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/braze-openapi.yml#GET /email/unsubscribes
+    - openapi/_original/braze-openapi.yml#POST /email/blocklist

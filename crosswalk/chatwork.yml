@@ -1,0 +1,19 @@
+provider: chatwork
+apis_io: https://apis.io/providers/chatwork/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: message_id
+      sent_at: send_time
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/chatwork-openapi.yml#DELETE /rooms/{room_id}/messages/{message_id}
+    - openapi/_original/chatwork-openapi.yml#GET /rooms/{room_id}/messages
+    - openapi/_original/chatwork-openapi.yml#GET /rooms/{room_id}/messages/{message_id}
+    - openapi/_original/chatwork-openapi.yml#POST /rooms/{room_id}/messages
+    - openapi/_original/chatwork-openapi.yml#PUT /rooms/{room_id}/messages/{message_id}

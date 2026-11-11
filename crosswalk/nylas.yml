@@ -1,0 +1,54 @@
+provider: nylas
+apis_io: https://apis.io/providers/nylas/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: id
+      from: from
+      to: to
+      subject: subject
+      attachments: attachments
+      conversation_id: thread_id
+      metadata: metadata
+      sent_at: send_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nylas-api-openapi.yml#DELETE /v3/grants/{grant_id}/messages/{message_id}
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/messages
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/messages/{message_id}
+    - openapi/_original/nylas-api-openapi.yml#POST /v3/domains/{domain_name}/messages/send
+    - openapi/_original/nylas-api-openapi.yml#POST /v3/grants/{grant_id}/messages/send
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body: body
+      created_at: created_at
+      updated_at: updated_at
+      subject: subject
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nylas-api-openapi.yml#DELETE /v3/grants/{grant_id}/templates/{template_id}
+    - openapi/_original/nylas-api-openapi.yml#DELETE /v3/templates/{template_id}
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/templates
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/templates/{template_id}
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/templates
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nylas-api-openapi.yml#DELETE /v3/grants/{grant_id}/threads/{thread_id}
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/threads
+    - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/threads/{thread_id}
+    - openapi/_original/nylas-api-openapi.yml#PUT /v3/grants/{grant_id}/threads/{thread_id}

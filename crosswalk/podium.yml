@@ -1,0 +1,55 @@
+provider: podium
+apis_io: https://apis.io/providers/podium/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      from: sender
+      created_at: createdAt
+      channel: channel
+      subject: subject
+      conversation_id: conversation
+      direction: direction
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/podium-campaigns-openapi-original.json#POST /v4/campaigns/{uid}/messages
+    - openapi/_original/podium-campaigns-openapi.yml#POST /v4/campaigns/{uid}/messages
+    - openapi/_original/podium-messenger-openapi-original.json#GET /v4/conversations/{conversation_uid}/messages
+    - openapi/_original/podium-messenger-openapi-original.json#GET /v4/conversations/{conversation_uid}/messages/{uid}
+    - openapi/_original/podium-messenger-openapi-original.json#POST /v4/import/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      body: text
+      created_at: createdAt
+      updated_at: updatedAt
+      category: type
+      subject:
+      - subject
+      - title
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/podium-messenger-openapi-original.json#DELETE /v4/templates/{uid}
+    - openapi/_original/podium-messenger-openapi-original.json#GET /v4/templates
+    - openapi/_original/podium-messenger-openapi-original.json#POST /v4/templates
+    - openapi/_original/podium-messenger-openapi-original.json#PUT /v4/templates/{uid}
+    - openapi/_original/podium-messenger-openapi.yml#DELETE /v4/templates/{uid}
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      created_at: createdAt
+      last_message_at: updatedAt
+      channel: channel
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/podium-conversations-openapi-original.json#GET /v4/conversations
+    - openapi/_original/podium-conversations-openapi-original.json#GET /v4/conversations/{uid}
+    - openapi/_original/podium-conversations-openapi-original.json#PUT /v4/conversations/{uid}
+    - openapi/_original/podium-conversations-openapi.yml#GET /v4/conversations
+    - openapi/_original/podium-conversations-openapi.yml#GET /v4/conversations/{uid}

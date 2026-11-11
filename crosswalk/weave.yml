@@ -1,0 +1,31 @@
+provider: weave
+apis_io: https://apis.io/providers/weave/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties:
+      body: body
+      id: id
+      created_at: created_at
+      status: status
+      attachments: media_urls
+      direction: direction
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/weave-openapi.yml#GET /v1/messages
+    - openapi/_original/weave-openapi.yml#POST /api/v2/quick-fill/message/send
+    - openapi/_original/weave-openapi.yml#POST /v1/messages
+  phone_number:
+    path_segment:
+    - phone-numbers
+    properties:
+      number: number
+      id: id
+      name: label
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/weave-openapi.yml#GET /v1/department/phone-numbers

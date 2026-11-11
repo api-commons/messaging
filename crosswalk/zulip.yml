@@ -1,0 +1,17 @@
+provider: zulip
+apis_io: https://apis.io/providers/zulip/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/zulip-openapi.yml#DELETE /messages/{message_id}
+    - openapi/_original/zulip-openapi.yml#GET /messages
+    - openapi/_original/zulip-openapi.yml#GET /messages/{message_id}
+    - openapi/_original/zulip-openapi.yml#PATCH /messages/{message_id}
+    - openapi/_original/zulip-openapi.yml#POST /messages

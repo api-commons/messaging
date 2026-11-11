@@ -1,0 +1,105 @@
+provider: sendpulse
+apis_io: https://apis.io/providers/sendpulse/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    - messages
+    - email
+    - sms
+    properties:
+      body:
+      - body
+      - html
+      - text
+      id: id
+      from:
+      - sender
+      - from
+      created_at: created_at
+      to:
+      - recipient
+      - to
+      channel:
+      - type
+      - channel
+      status: status
+      subject: subject
+      attachments: attachments
+      direction: direction
+      metadata:
+      - variables
+      - tags
+      sent_at: delivered_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#DELETE /addressbooks/{id}/emails
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#DELETE /emails/{email}
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /addressbooks/{id}/emails
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /addressbooks/{id}/emails/{email}
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /campaigns/{id}/email/{email}
+  template:
+    path_segment:
+    - templates
+    - template
+    properties:
+      id: id
+      name: name
+      body:
+      - body
+      - components
+      created_at:
+      - createdAt
+      - created_at
+      updated_at: updatedAt
+      category: category
+      language:
+      - lang
+      - language
+      status: status
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /template/{template_id}
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /templates
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#POST /template
+    - openapi/_original/sendpulse-crm-openapi.yml#GET /tasks-repeat/templates
+    - openapi/_original/sendpulse-whatsapp-openapi.yml#GET /templates
+  conversation:
+    path_segment:
+    - chats
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sendpulse-facebook-openapi.yml#GET /chats
+    - openapi/_original/sendpulse-instagram-openapi.yml#GET /chats
+    - openapi/_original/sendpulse-live-chat-openapi.yml#GET /chats
+    - openapi/_original/sendpulse-telegram-openapi.yml#GET /chats
+    - openapi/_original/sendpulse-tiktok-openapi.yml#GET /chats
+  phone_number:
+    path_segment:
+    - numbers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sendpulse-sms-openapi.yml#DELETE /sms/numbers
+    - openapi/_original/sendpulse-sms-openapi.yml#POST /sms/numbers
+    - openapi/_original/sendpulse-sms-openapi.yml#PUT /sms/numbers
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: id
+      email: email
+      name: name
+      country: country
+      verified: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#DELETE /senders
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /senders
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#POST /senders
+    - openapi/_original/sendpulse-sms-openapi.yml#GET /sms/senders
+    - openapi/_original/sendpulse-smtp-openapi.yml#GET /smtp/senders

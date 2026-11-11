@@ -1,0 +1,30 @@
+provider: gladly
+apis_io: https://apis.io/providers/gladly/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    - email
+    properties:
+      body: body
+      from: from
+      to: to
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/gladly-rest-api-openapi.yml#POST /api/v1/communications/email
+    - openapi/_original/gladly-rest-api-openapi.yml#POST /api/v1/communications/sms
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+      created_at: createdAt
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gladly-rest-api-openapi.yml#GET /api/v1/conversations/{conversationId}
+    - openapi/_original/gladly-rest-api-openapi.yml#GET /api/v1/customers/{customerId}/conversations
+    - openapi/_original/gladly-rest-api-openapi.yml#PATCH /api/v1/conversations/{conversationId}

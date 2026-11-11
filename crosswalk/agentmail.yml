@@ -1,0 +1,44 @@
+provider: agentmail
+apis_io: https://apis.io/providers/agentmail/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - text
+      - html
+      id: message_id
+      from: from
+      created_at:
+      - timestamp
+      - created_at
+      to: to
+      subject: subject
+      attachments: attachments
+      conversation_id: thread_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/inboxes/{inbox_id}/messages/{message_id}
+    - openapi/_original/agentmail-openapi-original.yml#GET /v0/inboxes/{inbox_id}/messages
+    - openapi/_original/agentmail-openapi-original.yml#GET /v0/inboxes/{inbox_id}/messages/{message_id}
+    - openapi/_original/agentmail-openapi-original.yml#PATCH /v0/inboxes/{inbox_id}/messages/{message_id}
+    - openapi/_original/agentmail-openapi-original.yml#POST /v0/inboxes/{inbox_id}/messages/send
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      created_at:
+      - timestamp
+      - created_at
+      last_message_at: updated_at
+      participants: recipients
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/inboxes/{inbox_id}/threads/{thread_id}
+    - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/pods/{pod_id}/threads/{thread_id}
+    - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/threads/{thread_id}
+    - openapi/_original/agentmail-openapi-original.yml#GET /v0/inboxes/{inbox_id}/threads
+    - openapi/_original/agentmail-openapi-original.yml#GET /v0/inboxes/{inbox_id}/threads/{thread_id}

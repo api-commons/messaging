@@ -1,0 +1,28 @@
+provider: google-gmail
+apis_io: https://apis.io/providers/google-gmail/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      conversation_id: threadId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/openapi.yml#DELETE /gmail/v1/users/{userId}/messages/{id}
+    - openapi/_original/openapi.yml#GET /gmail/v1/users/{userId}/messages
+    - openapi/_original/openapi.yml#GET /gmail/v1/users/{userId}/messages/{id}
+    - openapi/_original/openapi.yml#POST /gmail/v1/users/{userId}/messages
+    - openapi/_original/openapi.yml#POST /gmail/v1/users/{userId}/messages/send
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openapi.yml#DELETE /gmail/v1/users/{userId}/threads/{id}
+    - openapi/_original/openapi.yml#GET /gmail/v1/users/{userId}/threads
+    - openapi/_original/openapi.yml#GET /gmail/v1/users/{userId}/threads/{id}

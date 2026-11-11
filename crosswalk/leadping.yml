@@ -1,0 +1,73 @@
+provider: leadping
+apis_io: https://apis.io/providers/leadping/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    - notifications
+    properties:
+      body: text
+      id: id
+      created_at: createdAt
+      channel: type
+      status: status
+      attachments:
+      - media
+      - mediaUrls
+      conversation_id: conversationId
+      direction: direction
+      sent_at:
+      - sentAt
+      - deliveredAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/leadping-openapi.json#GET /events/sms/{smsEventId}
+    - openapi/_original/leadping-openapi.json#GET /notifications/{id}
+    - openapi/_original/leadping-openapi.json#POST /sms/send
+  conversation:
+    path_segment:
+    - conversation
+    - conversations
+    properties:
+      id:
+      - conversationId
+      - id
+      created_at: createdAt
+      status: status
+      channel: channel
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/leadping-openapi.json#POST /events/conversations/{conversationId}
+    - openapi/_original/leadping-openapi.json#POST /phone-numbers/outgoing/conversation/{conversationId}
+  phone_number:
+    path_segment:
+    - phone-numbers
+    properties:
+      number: number
+      id: id
+      name: name
+      created_at: createdAt
+      updated_at: modifiedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/leadping-openapi.json#DELETE /phone-numbers/{phoneNumberId}
+    - openapi/_original/leadping-openapi.json#GET /phone-numbers/{phoneNumberId}
+    - openapi/_original/leadping-openapi.json#POST /phone-numbers
+    - openapi/_original/leadping-openapi.json#PUT /phone-numbers/{phoneNumberId}
+  suppression:
+    path_segment:
+    - suppressions
+    properties:
+      reason:
+      - status
+      - reason
+      address:
+      - phoneNumber
+      - email
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/leadping-openapi.json#GET /suppressions/{id}
+    - openapi/_original/leadping-openapi.json#POST /suppressions

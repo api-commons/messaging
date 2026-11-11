@@ -1,0 +1,47 @@
+provider: kpn
+apis_io: https://apis.io/providers/kpn/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - sms
+    properties:
+      body:
+      - text
+      - body
+      id:
+      - id
+      - messageId
+      from: from
+      to: to
+      channel:
+      - message_type
+      - channel
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/parley-secure-messenger-openapi.yml#GET /messages
+    - openapi/_original/parley-secure-messenger-openapi.yml#GET /messages/{id}
+    - openapi/_original/parley-secure-messenger-openapi.yml#GET /messages/{paging}:{id}
+    - openapi/_original/parley-secure-messenger-openapi.yml#POST /messages
+    - openapi/_original/vonage-messages-openapi.yml#POST /messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/kpn-mobile-services-management-openapi.yml#GET /contracting/basket/templates
+    - openapi/_original/kpn-mobile-services-management-openapi.yml#GET /contracting/templates
+    - openapi/_original/kpn-mobile-services-management-openapi.yml#GET /contracting/templates/{id}
+  phone_number:
+    path_segment:
+    - numbers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vonage-phone-numbers-openapi.yml#GET /account/numbers

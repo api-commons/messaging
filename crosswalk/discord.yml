@@ -1,0 +1,48 @@
+provider: discord
+apis_io: https://apis.io/providers/discord/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: id
+      created_at: timestamp
+      channel: type
+      attachments: attachments
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/discord-openapi.json#DELETE /channels/{channel_id}/messages/{message_id}
+    - openapi/_original/discord-openapi.json#DELETE /webhooks/{webhook_id}/{webhook_token}/messages/{message_id}
+    - openapi/_original/discord-openapi.json#GET /channels/{channel_id}/messages
+    - openapi/_original/discord-openapi.json#GET /channels/{channel_id}/messages/{message_id}
+    - openapi/_original/discord-openapi.json#GET /lobbies/{lobby_id}/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/discord-openapi.json#DELETE /guilds/{guild_id}/templates/{code}
+    - openapi/_original/discord-openapi.json#GET /guilds/templates/{code}
+    - openapi/_original/discord-openapi.json#GET /guilds/{guild_id}/templates
+    - openapi/_original/discord-openapi.json#PATCH /guilds/{guild_id}/templates/{code}
+    - openapi/_original/discord-openapi.json#POST /guilds/{guild_id}/templates
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+      name: name
+      channel: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/discord-openapi.json#POST /channels/{channel_id}/messages/{message_id}/threads
+    - openapi/_original/discord-openapi.json#POST /channels/{channel_id}/threads

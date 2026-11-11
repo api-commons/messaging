@@ -1,0 +1,22 @@
+provider: knock-app
+apis_io: https://apis.io/providers/knock-app/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      from: source
+      to: recipient
+      channel: channel
+      status: status
+      metadata: metadata
+      sent_at: scheduled_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/knock-app-openapi.json#GET /v1/messages
+    - openapi/_original/knock-app-openapi.json#GET /v1/messages/{message_id}
+    - openapi/_original/knock-app-openapi.json#GET /v1/objects/{collection}/{id}/messages
+    - openapi/_original/knock-app-openapi.json#GET /v1/users/{user_id}/messages

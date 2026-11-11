@@ -1,0 +1,31 @@
+provider: amazon-pinpoint
+apis_io: https://apis.io/providers/amazon-pinpoint/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sms
+    - messages
+    properties:
+      body: Body
+      id: Id
+      from: SenderId
+      created_at: CreationDate
+      subject: Subject
+      metadata: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/amazon-pinpoint-openapi-original.yaml#DELETE /v1/apps/{application-id}/channels/email
+    - openapi/_original/amazon-pinpoint-openapi-original.yaml#DELETE /v1/apps/{application-id}/channels/sms
+    - openapi/_original/amazon-pinpoint-openapi-original.yaml#DELETE /v1/templates/{template-name}/email
+    - openapi/_original/amazon-pinpoint-openapi-original.yaml#DELETE /v1/templates/{template-name}/sms
+    - openapi/_original/amazon-pinpoint-openapi-original.yaml#GET /v1/apps/{application-id}/channels/email
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/amazon-pinpoint-openapi-original.yaml#GET /v1/templates

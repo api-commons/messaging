@@ -1,0 +1,28 @@
+provider: sparkpost
+apis_io: https://apis.io/providers/sparkpost/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sparkpost-events-openapi.yml#GET /events/message
+  template:
+    path_segment:
+    - templates
+    - template
+    properties:
+      id: id
+      name: name
+      body: content
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sparkpost-metrics-openapi.yml#GET /metrics/deliverability/template
+    - openapi/_original/sparkpost-templates-openapi.yml#DELETE /templates/{id}
+    - openapi/_original/sparkpost-templates-openapi.yml#GET /templates
+    - openapi/_original/sparkpost-templates-openapi.yml#GET /templates/{id}
+    - openapi/_original/sparkpost-templates-openapi.yml#POST /templates

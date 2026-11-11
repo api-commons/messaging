@@ -1,0 +1,30 @@
+provider: getstream
+apis_io: https://apis.io/providers/getstream/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties:
+      body: text
+      attachments: attachments
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/getstream-openapi.yml#DELETE /messages/{id}
+    - openapi/_original/getstream-openapi.yml#GET /messages/{id}
+    - openapi/_original/getstream-openapi.yml#POST /channels/{type}/{id}/message
+    - openapi/_original/getstream-openapi.yml#POST /messages/{id}
+    - openapi/_original/getstream-openapi.yml#PUT /messages/{id}
+  conversation:
+    path_segment:
+    - threads
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/getstream-openapi.yml#GET /threads/{message_id}
+    - openapi/_original/getstream-openapi.yml#PATCH /threads/{message_id}
+    - openapi/_original/getstream-openapi.yml#POST /threads
+    - openapi/_original/stream-io-product-chat-api-openapi.yml#GET /api/v2/chat/threads/{message_id}
+    - openapi/_original/stream-io-product-chat-api-openapi.yml#GET /threads/{message_id}

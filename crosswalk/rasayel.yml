@@ -1,0 +1,31 @@
+provider: rasayel
+apis_io: https://apis.io/providers/rasayel/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rasayel-rest-openapi.yml#POST /messages
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rasayel-rest-openapi.yml#DELETE /templates/{id}
+    - openapi/_original/rasayel-rest-openapi.yml#GET /templates
+    - openapi/_original/rasayel-rest-openapi.yml#GET /templates/{id}
+    - openapi/_original/rasayel-rest-openapi.yml#PATCH /templates/{id}
+    - openapi/_original/rasayel-rest-openapi.yml#POST /templates
+  conversation:
+    path_segment:
+    - conversations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rasayel-rest-openapi.yml#GET /conversations
+    - openapi/_original/rasayel-rest-openapi.yml#PUT /conversations/{id}

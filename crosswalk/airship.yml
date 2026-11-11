@@ -1,0 +1,24 @@
+provider: airship
+apis_io: https://apis.io/providers/airship/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sends
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/airship-openapi.yml#DELETE /api/user/messages/{push_id}
+    - openapi/_original/airship-openapi.yml#GET /api/reports/sends
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/airship-openapi.yml#DELETE /api/templates/{template_id}
+    - openapi/_original/airship-openapi.yml#GET /api/templates
+    - openapi/_original/airship-openapi.yml#GET /api/templates/{template_id}
+    - openapi/_original/airship-openapi.yml#POST /api/templates

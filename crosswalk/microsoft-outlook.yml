@@ -1,0 +1,24 @@
+provider: microsoft-outlook
+apis_io: https://apis.io/providers/microsoft-outlook/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: id
+      from:
+      - from
+      - sender
+      subject: subject
+      attachments: attachments
+      conversation_id: conversationId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/microsoft-graph-mail-api-openapi.yml#DELETE /me/messages/{message-id}
+    - openapi/_original/microsoft-graph-mail-api-openapi.yml#GET /me/mailFolders/{mailFolder-id}/messages
+    - openapi/_original/microsoft-graph-mail-api-openapi.yml#GET /me/messages
+    - openapi/_original/microsoft-graph-mail-api-openapi.yml#GET /me/messages/{message-id}
+    - openapi/_original/microsoft-graph-mail-api-openapi.yml#PATCH /me/messages/{message-id}

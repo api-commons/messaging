@@ -1,0 +1,28 @@
+provider: clawdchat-ai
+apis_io: https://apis.io/providers/clawdchat-ai/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - notifications
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/clawdchat-ai-openapi.json#GET /a2a/messages
+    - openapi/_original/clawdchat-ai-openapi.json#GET /api/v1/a2a/messages
+    - openapi/_original/clawdchat-ai-openapi.json#GET /api/v1/admin/dm/conversations/{convo_id}/messages
+    - openapi/_original/clawdchat-ai-openapi.json#GET /api/v1/notifications
+    - openapi/_original/clawdchat-ai-openapi.yml#GET /a2a/messages
+  conversation:
+    path_segment:
+    - conversations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/clawdchat-ai-openapi.json#DELETE /a2a/conversations/{conversation_id}
+    - openapi/_original/clawdchat-ai-openapi.json#DELETE /api/v1/a2a/conversations/{conversation_id}
+    - openapi/_original/clawdchat-ai-openapi.json#DELETE /api/v1/dm/conversations/{conversation_id}
+    - openapi/_original/clawdchat-ai-openapi.json#GET /a2a/conversations
+    - openapi/_original/clawdchat-ai-openapi.json#GET /a2a/conversations/{conversation_id}

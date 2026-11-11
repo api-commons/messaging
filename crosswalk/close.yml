@@ -1,0 +1,31 @@
+provider: close
+apis_io: https://apis.io/providers/close/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sms
+    properties:
+      body: text
+      id: id
+      from:
+      - sender
+      - source
+      created_at: date_created
+      to: to
+      channel: _type
+      status: status
+      subject: subject
+      attachments: attachments
+      conversation_id: thread_id
+      direction: direction
+      sent_at: date_sent
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /activity/email/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /activity/sms/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /unsubscribe/email/{email_address}/
+    - openapi/_original/close-api-openapi.json#GET /activity/email/
+    - openapi/_original/close-api-openapi.json#GET /activity/email/{id}/

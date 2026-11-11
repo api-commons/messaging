@@ -1,0 +1,60 @@
+provider: front
+apis_io: https://apis.io/providers/front/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - body
+      - text
+      id: id
+      created_at: created_at
+      to:
+      - to
+      - recipients
+      channel: type
+      subject: subject
+      attachments: attachments
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/front-core-api-openapi.json#GET /conversations/{conversation_id}/messages
+    - openapi/_original/front-core-api-openapi.json#GET /messages/{message_id}
+    - openapi/_original/front-core-api-openapi.json#POST /channels/{channel_id}/messages
+    - openapi/_original/front-core-api-openapi.json#POST /conversations/{conversation_id}/messages
+  template:
+    path_segment:
+    - message_templates
+    properties:
+      id: id
+      name: name
+      body: body
+      created_at: created_at
+      updated_at: updated_at
+      subject: subject
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/front-core-api-openapi.json#DELETE /message_templates/{message_template_id}
+    - openapi/_original/front-core-api-openapi.json#GET /message_template_folders/{message_template_folder_id}/message_templates
+    - openapi/_original/front-core-api-openapi.json#GET /message_templates
+    - openapi/_original/front-core-api-openapi.json#GET /message_templates/{message_template_id}
+    - openapi/_original/front-core-api-openapi.json#GET /teammates/{teammate_id}/message_templates
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+      created_at: created_at
+      last_message_at: updated_at
+      status: status
+      channel: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/front-core-api-openapi.json#DELETE /conversations/{conversation_id}
+    - openapi/_original/front-core-api-openapi.json#GET /contacts/{contact_id}/conversations
+    - openapi/_original/front-core-api-openapi.json#GET /conversations
+    - openapi/_original/front-core-api-openapi.json#GET /conversations/{conversation_id}
+    - openapi/_original/front-core-api-openapi.json#GET /inboxes/{inbox_id}/conversations

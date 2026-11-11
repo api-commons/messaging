@@ -1,0 +1,15 @@
+provider: wunderkind
+apis_io: https://apis.io/providers/wunderkind/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    properties:
+      body: body
+      from: from
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/wunderkind-email-openapi.yml#POST /email/send

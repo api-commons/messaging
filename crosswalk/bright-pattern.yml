@@ -1,0 +1,23 @@
+provider: bright-pattern
+apis_io: https://apis.io/providers/bright-pattern/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - notifications
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/bright-pattern-mobile-web-messaging-v2-openapi.yml#POST /clientweb/api/v2/chats/{chatId}/notifications
+    - openapi/_original/bright-pattern-sms-mms-openapi.yml#GET /clientweb/smsapi/v1/Messages/{message_sid}
+    - openapi/_original/bright-pattern-sms-mms-openapi.yml#POST /clientweb/smsapi/v1/Messages
+  conversation:
+    path_segment:
+    - chats
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/bright-pattern-mobile-web-messaging-v1-openapi.yml#POST /clientweb/api/v1/chats
+    - openapi/_original/bright-pattern-mobile-web-messaging-v2-openapi.yml#POST /clientweb/api/v2/chats

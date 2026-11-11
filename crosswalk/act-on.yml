@@ -1,0 +1,34 @@
+provider: act-on
+apis_io: https://apis.io/providers/act-on/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    - email
+    - messages
+    - emails
+    properties:
+      id: id
+      created_at: createdDate
+      channel: type
+      subject:
+      - subject
+      - title
+      metadata: customFields
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/act-on-api-1.json#DELETE /api/1/message/{id}
+    - openapi/_original/act-on-api-1.json#DELETE /ucl/v2/{accountId}/contact/email/{emailAddress}
+    - openapi/_original/act-on-api-1.json#DELETE /ucl/v2/{accountId}/contact/emails
+    - openapi/_original/act-on-api-1.json#GET /api/1/media/{id}/report/messages
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/contact/email/{emailAddress}
+  sender:
+    path_segment:
+    - senders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/act-on-api-1.json#GET /api/1/account/senders
+    - openapi/_original/act-on-rest-api-openapi.yml#GET /api/1/account/senders

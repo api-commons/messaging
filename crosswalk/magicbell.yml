@@ -1,0 +1,19 @@
+provider: magicbell
+apis_io: https://apis.io/providers/magicbell/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    properties:
+      body: content
+      id: id
+      created_at: created_at
+      status: status
+      subject: title
+      sent_at: sent_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/magicbell-openapi.json#GET /notifications
+    - openapi/_original/magicbell-openapi.json#GET /notifications/{notification_id}

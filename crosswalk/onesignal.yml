@@ -1,0 +1,34 @@
+provider: onesignal
+apis_io: https://apis.io/providers/onesignal/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    properties:
+      id: id
+      conversation_id: thread_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/onesignal-api-openapi.json#DELETE /notifications/{message_id}?app_id={app_id}
+    - openapi/_original/onesignal-api-openapi.json#GET /notifications/{message_id}?app_id={app_id}
+    - openapi/_original/onesignal-api-openapi.json#POST /apps/{app_id}/live_activities/{activity_id}/notifications
+    - openapi/_original/onesignal-openapi.yml#DELETE /notifications/{notification_id}
+    - openapi/_original/onesignal-openapi.yml#GET /notifications
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body: content
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onesignal-api-openapi.json#DELETE /templates/{template_id}?app_id={app_id}
+    - openapi/_original/onesignal-api-openapi.json#GET /templates/{template_id}?app_id={app_id}
+    - openapi/_original/onesignal-api-openapi.json#PATCH /templates/{template_id}?app_id={app_id}
+    - openapi/_original/onesignal-api-openapi.json#POST /templates
+    - openapi/_original/onesignal-openapi.yml#DELETE /templates/{template_id}

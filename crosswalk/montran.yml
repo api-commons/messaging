@@ -1,0 +1,24 @@
+provider: montran
+apis_io: https://apis.io/providers/montran/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: messageId
+      created_at: createdAt
+      channel:
+      - channel
+      - messageType
+      status: status
+      direction: direction
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/montran-payments-connectivity-openapi.yml#GET /messages
+    - openapi/_original/montran-payments-connectivity-openapi.yml#GET /messages/{messageId}
+    - openapi/_original/montran-payments-connectivity-openapi.yml#GET /swift/messages
+    - openapi/_original/montran-payments-connectivity-openapi.yml#POST /messages

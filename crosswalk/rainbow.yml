@@ -1,0 +1,29 @@
+provider: rainbow
+apis_io: https://apis.io/providers/rainbow/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: id
+      from: from
+      created_at: timestamp
+      to: to
+      channel: type
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/rainbow-messaging-openapi.yml#GET /enduser/v1.0/conversations/{conversationId}/messages
+    - openapi/_original/rainbow-messaging-openapi.yml#POST /enduser/v1.0/messages
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+      channel: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/rainbow-messaging-openapi.yml#GET /enduser/v1.0/conversations

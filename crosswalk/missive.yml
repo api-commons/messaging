@@ -1,0 +1,30 @@
+provider: missive
+apis_io: https://apis.io/providers/missive/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: id
+      created_at: created_at
+      channel: type
+      subject: subject
+      attachments: attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/missive-rest-api-openapi.yml#GET /conversations/{id}/messages
+    - openapi/_original/missive-rest-api-openapi.yml#POST /messages
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+      last_message_at: last_activity_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/missive-rest-api-openapi.yml#GET /conversations
+    - openapi/_original/missive-rest-api-openapi.yml#GET /conversations/{id}
+    - openapi/_original/missive-rest-api-openapi.yml#PATCH /conversations/{id}

@@ -1,0 +1,46 @@
+provider: phone-com
+apis_io: https://apis.io/providers/phone-com/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    - messages
+    properties:
+      body: text
+      from: from
+      to: to
+      attachments: media
+      direction: direction
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/extensions/{extension_id}/messages/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/extensions/{extension_id}/sms
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/extensions/{extension_id}/sms/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/messages/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/sms
+  conversation:
+    path_segment:
+    - conversations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/extensions/{extension_id}/conversations/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/conversations
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/conversations
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/conversations/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#PATCH /v4/accounts/{voip_id}/extensions/{extension_id}/conversations/{id}
+  phone_number:
+    path_segment:
+    - phone-numbers
+    properties:
+      number: phone_number
+      name: name
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/phone-numbers/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/10dlc/phone-numbers
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/phone-numbers
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/extensions/{extension_id}/phone-numbers/{id}
+    - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/phone-numbers

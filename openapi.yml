@@ -1,0 +1,590 @@
+openapi: 3.1.0
+info:
+  title: Messaging (Email, SMS, Chat) (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Messaging (Email, SMS, Chat) interface, distilled from the harvested OpenAPI of 365 providers
+    in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /messages:
+    post:
+      operationId: createMessage
+      summary: Create a message
+      tags:
+      - Messages
+      x-commons-tier: core
+      x-commons-share: 0.84
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id001
+                $ref: '#/components/schemas/Message'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    get:
+      operationId: listMessages
+      summary: List messages
+      tags:
+      - Messages
+      x-commons-tier: core
+      x-commons-share: 0.706
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id001
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /messages/{message_id}:
+    parameters:
+    - $ref: '#/components/parameters/message_id'
+    get:
+      operationId: getMessage
+      summary: Get a message
+      tags:
+      - Messages
+      x-commons-tier: core
+      x-commons-share: 0.505
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteMessage
+      summary: Delete a message
+      tags:
+      - Messages
+      x-commons-tier: extended
+      x-commons-share: 0.304
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateMessage
+      summary: Update a message
+      tags:
+      - Messages
+      x-commons-tier: extended
+      x-commons-share: 0.273
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /templates:
+    get:
+      operationId: listTemplates
+      summary: List templates
+      tags:
+      - Templates
+      x-commons-tier: core
+      x-commons-share: 0.97
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Template'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createTemplate
+      summary: Create a template
+      tags:
+      - Templates
+      x-commons-tier: core
+      x-commons-share: 0.636
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /templates/{template_id}:
+    parameters:
+    - $ref: '#/components/parameters/template_id'
+    get:
+      operationId: getTemplate
+      summary: Get a template
+      tags:
+      - Templates
+      x-commons-tier: core
+      x-commons-share: 0.712
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteTemplate
+      summary: Delete a template
+      tags:
+      - Templates
+      x-commons-tier: core
+      x-commons-share: 0.515
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateTemplate
+      summary: Update a template
+      tags:
+      - Templates
+      x-commons-tier: extended
+      x-commons-share: 0.455
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /conversations:
+    get:
+      operationId: listConversations
+      summary: List conversations
+      tags:
+      - Conversations
+      x-commons-tier: core
+      x-commons-share: 0.843
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Conversation'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createConversation
+      summary: Create a conversation
+      tags:
+      - Conversations
+      x-commons-tier: extended
+      x-commons-share: 0.471
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /conversations/{conversation_id}:
+    parameters:
+    - $ref: '#/components/parameters/conversation_id'
+    get:
+      operationId: getConversation
+      summary: Get a conversation
+      tags:
+      - Conversations
+      x-commons-tier: core
+      x-commons-share: 0.757
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateConversation
+      summary: Update a conversation
+      tags:
+      - Conversations
+      x-commons-tier: extended
+      x-commons-share: 0.414
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteConversation
+      summary: Delete a conversation
+      tags:
+      - Conversations
+      x-commons-tier: extended
+      x-commons-share: 0.286
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /phone-numbers:
+    get:
+      operationId: listPhoneNumbers
+      summary: List phone numbers
+      tags:
+      - Phone Numbers
+      x-commons-tier: core
+      x-commons-share: 0.906
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/PhoneNumber'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPhoneNumber
+      summary: Create a phone number
+      tags:
+      - Phone Numbers
+      x-commons-tier: core
+      x-commons-share: 0.719
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /phone-numbers/{phone_number_id}:
+    parameters:
+    - $ref: '#/components/parameters/phone_number_id'
+    get:
+      operationId: getPhoneNumber
+      summary: Get a phone number
+      tags:
+      - Phone Numbers
+      x-commons-tier: core
+      x-commons-share: 0.656
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    delete:
+      operationId: deletePhoneNumber
+      summary: Delete a phone number
+      tags:
+      - Phone Numbers
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updatePhoneNumber
+      summary: Update a phone number
+      tags:
+      - Phone Numbers
+      x-commons-tier: extended
+      x-commons-share: 0.344
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /senders:
+    get:
+      operationId: listSenders
+      summary: List senders
+      tags:
+      - Senders
+      x-commons-tier: core
+      x-commons-share: 0.947
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Sender'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSender
+      summary: Create a sender
+      tags:
+      - Senders
+      x-commons-tier: core
+      x-commons-share: 0.737
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /senders/{sender_id}:
+    parameters:
+    - $ref: '#/components/parameters/sender_id'
+    get:
+      operationId: getSender
+      summary: Get a sender
+      tags:
+      - Senders
+      x-commons-tier: core
+      x-commons-share: 0.579
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    delete:
+      operationId: deleteSender
+      summary: Delete a sender
+      tags:
+      - Senders
+      x-commons-tier: extended
+      x-commons-share: 0.421
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateSender
+      summary: Update a sender
+      tags:
+      - Senders
+      x-commons-tier: extended
+      x-commons-share: 0.421
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /suppressions:
+    get:
+      operationId: listSuppressions
+      summary: List suppressions
+      tags:
+      - Suppressions
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id006
+                  $ref: '#/components/schemas/Suppression'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSuppression
+      summary: Create a suppression
+      tags:
+      - Suppressions
+      x-commons-tier: core
+      x-commons-share: 0.619
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /suppressions/{suppression_id}:
+    parameters:
+    - $ref: '#/components/parameters/suppression_id'
+    delete:
+      operationId: deleteSuppression
+      summary: Delete a suppression
+      tags:
+      - Suppressions
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    get:
+      operationId: getSuppression
+      summary: Get a suppression
+      tags:
+      - Suppressions
+      x-commons-tier: extended
+      x-commons-share: 0.286
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+components:
+  schemas:
+    Message:
+      $ref: ./schema/message.json
+    Template:
+      $ref: ./schema/template.json
+    Conversation:
+      $ref: ./schema/conversation.json
+    PhoneNumber:
+      $ref: ./schema/phone_number.json
+    Sender:
+      $ref: ./schema/sender.json
+    Suppression:
+      $ref: ./schema/suppression.json
+  parameters:
+    message_id:
+      name: message_id
+      in: path
+      required: true
+      schema:
+        type: string
+    template_id:
+      name: template_id
+      in: path
+      required: true
+      schema:
+        type: string
+    conversation_id:
+      name: conversation_id
+      in: path
+      required: true
+      schema:
+        type: string
+    phone_number_id:
+      name: phone_number_id
+      in: path
+      required: true
+      schema:
+        type: string
+    sender_id:
+      name: sender_id
+      in: path
+      required: true
+      schema:
+        type: string
+    suppression_id:
+      name: suppression_id
+      in: path
+      required: true
+      schema:
+        type: string

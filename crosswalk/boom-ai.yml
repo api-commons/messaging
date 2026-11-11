@@ -1,0 +1,42 @@
+provider: boom-ai
+apis_io: https://apis.io/providers/boom-ai/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      id: id
+      channel: type
+      attachments: mediaUrl
+      direction: direction
+      sent_at: sentAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/boom-ai-openapi.json#GET /api/v1/initiatives/{id}/participants/{participantId}/messages
+  template:
+    path_segment:
+    - templates
+    - message-templates
+    properties:
+      id:
+      - templateId
+      - id
+      name:
+      - friendlyName
+      - name
+      body: content
+      created_at: createdAt
+      updated_at: updatedAt
+      category: category
+      language: language
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/boom-ai-openapi.json#GET /api/v1/initiatives/{id}/templates
+    - openapi/_original/boom-ai-openapi.json#GET /api/v1/journeys/message-templates
+    - openapi/_original/boom-ai-openapi.json#GET /api/v1/templates
+    - openapi/_original/boom-ai-openapi.json#GET /api/v1/templates/{id}
+    - openapi/_original/boom-ai-openapi.json#POST /api/v1/initiatives/{id}/templates

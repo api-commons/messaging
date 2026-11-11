@@ -1,0 +1,55 @@
+provider: justcall
+apis_io: https://apis.io/providers/justcall/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - texts
+    properties:
+      body: body
+      id: id
+      channel: medium
+      status:
+      - status
+      - delivery_status
+      attachments: media_url
+      direction: direction
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages
+    - openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages/{id}
+    - openapi/_original/justcall-openapi.json#GET /v2.1/texts
+    - openapi/_original/justcall-openapi.json#GET /v2.1/texts/{id}
+    - openapi/_original/justcall-openapi.json#GET /v2.1/whatsapp/messages
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages/templates
+    - openapi/_original/justcall-openapi.json#GET /v2.1/whatsapp/messages/templates
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/justcall-openapi.json#GET /v2.1/texts/threads
+    - openapi/_original/justcall-openapi.json#GET /v2.1/texts/threads/{thread_id}
+  phone_number:
+    path_segment:
+    - phone-numbers
+    properties:
+      id: id
+      capabilities:
+      - number_type
+      - capabilities
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/justcall-openapi.json#GET /v2.1/phone-numbers
+    - openapi/_original/justcall-openapi.json#GET /v2.1/phone-numbers/{id}

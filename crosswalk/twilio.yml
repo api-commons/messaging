@@ -1,0 +1,132 @@
+provider: twilio
+apis_io: https://apis.io/providers/twilio/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - notifications
+    - mail
+    - email
+    properties:
+      body:
+      - body
+      - content
+      id: sid
+      from:
+      - from
+      - source
+      created_at: date_created
+      to:
+      - to
+      - personalizations
+      channel: type
+      status: status
+      subject:
+      - title
+      - subject
+      attachments:
+      - media
+      - attachments
+      direction: direction
+      metadata:
+      - attributes
+      - tags
+      sent_at:
+      - date_sent
+      - send_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Conversations/{ConversationSid}/Messages/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Conversations/{ConversationSid}/Messages
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Conversations/{ConversationSid}/Messages/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Services/{ChatServiceSid}/Configuration/Notifications
+  template:
+    path_segment:
+    - templates
+    properties:
+      id:
+      - id
+      - sid
+      name:
+      - name
+      - friendly_name
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/twilio-sendgrid-openapi.yml#DELETE /templates/{template_id}
+    - openapi/_original/twilio-sendgrid-openapi.yml#GET /templates
+    - openapi/_original/twilio-sendgrid-openapi.yml#GET /templates/{template_id}
+    - openapi/_original/twilio-sendgrid-openapi.yml#PATCH /templates/{template_id}
+    - openapi/_original/twilio-sendgrid-openapi.yml#POST /templates
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id:
+      - sid
+      - id
+      created_at:
+      - date_created
+      - createdAt
+      last_message_at: updatedAt
+      status:
+      - state
+      - status
+      name:
+      - friendly_name
+      - name
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Conversations/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Services/{ChatServiceSid}/Conversations/{Sid}
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}
+    - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Users/{UserSid}/Conversations/{ConversationSid}
+    - openapi/_original/conversations-openapi-original.yml#GET /v1/Conversations
+  phone_number:
+    path_segment:
+    - phonenumbers
+    - numbers
+    properties:
+      number:
+      - phone_number
+      - phoneNumber
+      id: sid
+      capabilities: capabilities
+      country:
+      - country_code
+      - country
+      - iso_country
+      name:
+      - friendly_name
+      - friendlyName
+      created_at:
+      - date_created
+      - dateCreated
+      updated_at:
+      - date_updated
+      - dateUpdated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/accounts-openapi-original.yml#DELETE /v1/SafeList/Numbers
+    - openapi/_original/accounts-openapi-original.yml#GET /v1/SafeList/Numbers
+    - openapi/_original/accounts-openapi-original.yml#POST /v1/SafeList/Numbers
+    - openapi/_original/messaging-openapi-original.yml#DELETE /v1/Services/{ServiceSid}/PhoneNumbers/{Sid}
+    - openapi/_original/messaging-openapi-original.yml#GET /v1/Services/{ServiceSid}/PhoneNumbers
+  sender:
+    path_segment:
+    - verified_senders
+    properties:
+      email:
+      - from_email
+      - address
+      country: country
+      from_name: from_name
+      status: state
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/twilio-sendgrid-openapi.yml#GET /verified_senders
+    - openapi/_original/twilio-sendgrid-openapi.yml#POST /verified_senders

@@ -1,0 +1,37 @@
+provider: sendhub
+apis_io: https://apis.io/providers/sendhub/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      id:
+      - id
+      - message_id
+      created_at: created_at
+      channel: type
+      conversation_id: thread_id
+      direction: direction
+      sent_at:
+      - scheduled_at
+      - sent
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sendhub-openapi-original.yml#DELETE /v1/messages/{message_id}
+    - openapi/_original/sendhub-openapi-original.yml#GET /v1/messages/{message_id}
+    - openapi/_original/sendhub-openapi-original.yml#POST /v1/messages
+    - openapi/_original/sendhub-openapi-original.yml#PUT /v1/messages/{message_id}
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+      channel: type
+      participants: contacts
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendhub-openapi-original.yml#DELETE /v1/threads/{thread_id}
+    - openapi/_original/sendhub-openapi-original.yml#GET /v1/threads/{thread_id}

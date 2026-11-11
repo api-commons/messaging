@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/messaging/main/schema/message.json",
+  "title": "Message",
+  "description": "The common message in Messaging (Email, SMS, Chat), distilled from 178 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.669,
+      "x-commons-providers": 119,
+      "x-commons-spellings": [
+        "body",
+        "text",
+        "content",
+        "html",
+        "htmlContent",
+        "htmlBody",
+        "html_body",
+        "text_body"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.669,
+      "x-commons-providers": 119,
+      "x-commons-spellings": [
+        "id",
+        "messageId",
+        "message_id",
+        "_id",
+        "sid",
+        "Id",
+        "msgId",
+        "messageID"
+      ]
+    },
+    "from": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.539,
+      "x-commons-providers": 96,
+      "x-commons-spellings": [
+        "from",
+        "sender",
+        "source",
+        "senderId",
+        "sender_id",
+        "from_number",
+        "originator",
+        "from_email"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 79,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "timestamp",
+        "created",
+        "createdDate",
+        "date_created",
+        "createTime",
+        "CreationDate"
+      ],
+      "format": "date-time"
+    },
+    "to": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 79,
+      "x-commons-spellings": [
+        "to",
+        "recipient",
+        "recipients",
+        "destination",
+        "to_number",
+        "receiver",
+        "personalizations",
+        "msisdn"
+      ]
+    },
+    "channel": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.388,
+      "x-commons-providers": 69,
+      "x-commons-spellings": [
+        "type",
+        "channel",
+        "messageType",
+        "message_type",
+        "_type",
+        "medium",
+        "channelType",
+        "kind"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.36,
+      "x-commons-providers": 64,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "deliveryStatus",
+        "delivery_status",
+        "messageStatus"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.343,
+      "x-commons-providers": 61,
+      "x-commons-spellings": [
+        "subject",
+        "title",
+        "Subject"
+      ]
+    },
+    "attachments": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.337,
+      "x-commons-providers": 60,
+      "x-commons-spellings": [
+        "attachments",
+        "media",
+        "media_urls",
+        "attachment",
+        "mediaUrl",
+        "files",
+        "mediaUrls",
+        "media_url"
+      ]
+    },
+    "conversation_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.213,
+      "x-commons-providers": 38,
+      "x-commons-spellings": [
+        "conversationId",
+        "conversation_id",
+        "thread_id",
+        "threadId",
+        "conversation",
+        "chatId",
+        "chat_id",
+        "chatID"
+      ]
+    },
+    "direction": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.213,
+      "x-commons-providers": 38,
+      "x-commons-spellings": [
+        "direction",
+        "inbound"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.208,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "tags",
+        "metadata",
+        "attributes",
+        "variables",
+        "customFields",
+        "properties",
+        "custom_args",
+        "custom"
+      ]
+    },
+    "sent_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.202,
+      "x-commons-providers": 36,
+      "x-commons-spellings": [
+        "send_at",
+        "sent_at",
+        "delivered_at",
+        "sentAt",
+        "scheduled_at",
+        "date_sent",
+        "sent",
+        "deliveredAt"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "messaging",
+    "concept": "message",
+    "providers": 178,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,22 @@
+provider: greenhelix-net
+apis_io: https://apis.io/providers/greenhelix-net/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      from: sender
+      to: recipient
+      channel: message_type
+      subject: subject
+      conversation_id: thread_id
+      metadata: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/greenhelix-net-a2a-commerce-gateway-openapi.yml#GET /v1/messaging/messages
+    - openapi/_original/greenhelix-net-a2a-commerce-gateway-openapi.yml#POST /v1/messaging/messages
+    - openapi/_original/greenhelix-net-openapi.json#GET /v1/messaging/messages
+    - openapi/_original/greenhelix-net-openapi.json#POST /v1/messaging/messages

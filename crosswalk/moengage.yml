@@ -1,0 +1,26 @@
+provider: moengage
+apis_io: https://apis.io/providers/moengage/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sms
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/moengage-email-templates-2-openapi.yml#POST /custom-templates/email
+    - openapi/_original/moengage-email-templates-2-openapi.yml#PUT /custom-templates/email
+    - openapi/_original/moengage-sms-templates-openapi.yml#POST /custom-templates/sms
+    - openapi/_original/moengage-sms-templates-openapi.yml#PUT /custom-templates/sms
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: label
+      category: template_type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/moengage-offerings-openapi.yml#GET /v5/offers/templates

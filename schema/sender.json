@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/messaging/main/schema/sender.json",
+  "title": "Sender",
+  "description": "The common sender in Messaging (Email, SMS, Chat), distilled from 17 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.824,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "id",
+        "ID",
+        "uuid",
+        "senderId"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.706,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "address",
+        "from_email",
+        "email",
+        "emailAddress",
+        "EmailAddress",
+        "FromEmail",
+        "from"
+      ],
+      "format": "email"
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.588,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "Name"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.412,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "created_at",
+        "created",
+        "created_date",
+        "createdAt"
+      ],
+      "format": "date-time"
+    },
+    "country": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.353,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "country"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.294,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt"
+      ],
+      "format": "date-time"
+    },
+    "verified": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.294,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "status",
+        "verified",
+        "verification_status",
+        "verified_at"
+      ]
+    },
+    "from_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.235,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "from_name"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.235,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "state"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "messaging",
+    "concept": "sender",
+    "providers": 17,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

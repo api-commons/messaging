@@ -1,0 +1,55 @@
+provider: teliax
+apis_io: https://apis.io/providers/teliax/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    - messages
+    - sms
+    properties:
+      body: body
+      id: id
+      from: from
+      created_at: created_at
+      to: to
+      status: status
+      direction: direction
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/teliax-tniq-openapi.json#GET /v1/port-projects/projects/{projectId}/emails
+    - openapi/_original/teliax-tniq-openapi.json#GET /v1/port-projects/projects/{projectId}/emails/{emailId}
+    - openapi/_original/teliax-tniq-openapi.json#POST /v1/port-projects/projects/{projectId}/emails
+    - openapi/_original/teliax-tniq-openapi.yml#GET /v1/port-projects/projects/{projectId}/emails
+    - openapi/_original/teliax-tniq-openapi.yml#GET /v1/port-projects/projects/{projectId}/emails/{emailId}
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/teliax-tniq-openapi.json#DELETE /v1/tollfree/templates/{tmplName}
+    - openapi/_original/teliax-tniq-openapi.json#GET /v1/tollfree/templates
+    - openapi/_original/teliax-tniq-openapi.json#GET /v1/tollfree/templates/{tmplName}
+    - openapi/_original/teliax-tniq-openapi.json#POST /v1/tollfree/templates
+    - openapi/_original/teliax-tniq-openapi.json#PUT /v1/tollfree/templates
+  phone_number:
+    path_segment:
+    - numbers
+    properties:
+      id: id
+      capabilities: number_type
+      name: friendly_name
+      status:
+      - state
+      - status
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/teliax-tniq-openapi.json#DELETE /v1/messaging/campaigns/{campaignId}/numbers
+    - openapi/_original/teliax-tniq-openapi.json#GET /v1/inventory/numbers/{telephoneNumber}
+    - openapi/_original/teliax-tniq-openapi.json#GET /v1/messaging/campaigns/{campaignId}/numbers
+    - openapi/_original/teliax-tniq-openapi.json#POST /v1/messaging/campaigns/{campaignId}/numbers
+    - openapi/_original/teliax-tniq-openapi.yml#DELETE /v1/messaging/campaigns/{campaignId}/numbers

@@ -1,0 +1,27 @@
+provider: crisp
+apis_io: https://apis.io/providers/crisp/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties:
+      body: content
+      from: from
+      channel: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/crisp-openapi.yml#GET /website/{website_id}/conversation/{session_id}/messages
+    - openapi/_original/crisp-openapi.yml#POST /website/{website_id}/conversation/{session_id}/message
+  conversation:
+    path_segment:
+    - conversation
+    - conversations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/crisp-openapi.yml#GET /website/{website_id}/conversation/{session_id}
+    - openapi/_original/crisp-openapi.yml#GET /website/{website_id}/conversations/{page_number}
+    - openapi/_original/crisp-openapi.yml#POST /website/{website_id}/conversation

@@ -1,0 +1,16 @@
+provider: zenzap
+apis_io: https://apis.io/providers/zenzap/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/zenzap-openapi-original.yml#DELETE /v2/messages/{messageId}
+    - openapi/_original/zenzap-openapi-original.yml#GET /v2/topics/{topicId}/messages
+    - openapi/_original/zenzap-openapi-original.yml#PATCH /v2/messages/{messageId}
+    - openapi/_original/zenzap-openapi-original.yml#POST /v2/messages

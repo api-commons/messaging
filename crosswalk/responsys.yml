@@ -1,0 +1,17 @@
+provider: responsys
+apis_io: https://apis.io/providers/responsys/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - sms
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/settings/account/domains/email
+    - openapi/_original/responsys-openapi.json#POST /rest/api/v1.3/campaigns/{campaignName}/email
+    - openapi/_original/responsys-openapi.json#POST /rest/api/v1.3/campaigns/{campaignName}/sms
+    - openapi/_original/responsys-openapi.json#PUT /rest/api/v1.3/settings/account/domains/email
+    - openapi/_original/responsys-openapi.yml#GET /rest/api/v1.3/settings/account/domains/email

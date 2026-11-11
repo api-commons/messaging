@@ -1,0 +1,18 @@
+provider: google-chat-integrations-for-workspace
+apis_io: https://apis.io/providers/google-chat-integrations-for-workspace/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties:
+      body: text
+      from: sender
+      created_at: createTime
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/google-chat-integrations-for-workspace-openapi.yml#DELETE /v1/{name}/message
+    - openapi/_original/google-chat-integrations-for-workspace-openapi.yml#GET /v1/{parent}/messages
+    - openapi/_original/google-chat-integrations-for-workspace-openapi.yml#POST /v1/{parent}/messages

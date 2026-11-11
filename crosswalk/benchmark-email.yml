@@ -1,0 +1,42 @@
+provider: benchmark-email
+apis_io: https://apis.io/providers/benchmark-email/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    - email
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/reports/email/{id}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#DELETE /Automation/{AutomationID}/Emails/{AutomationDetailID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#DELETE /Emails/{ID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Automation/{AutomationID}/Emails/{AutomationDetailID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Emails/{ID}
+  template:
+    path_segment:
+    - template
+    properties:
+      id: id
+      name: name
+      body: html
+      language: lang
+      subject: subject
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/email/template
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/email/template/{id}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Emails/Template
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Emails/Template/{TemplateID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /SignupForm/Template
+  suppression:
+    path_segment:
+    - unsubscribes
+    - bounces
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Emails/{ID}/Report/Bounces
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Emails/{ID}/Report/Unsubscribes

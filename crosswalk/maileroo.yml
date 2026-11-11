@@ -1,0 +1,30 @@
+provider: maileroo
+apis_io: https://apis.io/providers/maileroo/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties:
+      body: html
+      from: from
+      to: to
+      subject: subject
+      attachments: attachments
+      metadata: tags
+      sent_at: scheduled_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/maileroo-email-api-openapi.yml#POST /emails
+    - openapi/_original/maileroo-email-api-openapi.yml#POST /emails/bulk
+  template:
+    path_segment:
+    - template
+    properties:
+      id: template_id
+      body: html
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/maileroo-email-api-openapi.yml#POST /emails/template

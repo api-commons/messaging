@@ -1,0 +1,1181 @@
+context: messaging
+generated: '2026-11-10'
+adopters:
+- provider: 46elks
+  apis_io: https://apis.io/providers/46elks/
+  crosswalk: crosswalk/46elks.yml
+  concepts:
+  - message
+  - phone_number
+- provider: 8x8
+  apis_io: https://apis.io/providers/8x8/
+  crosswalk: crosswalk/8x8.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - template
+- provider: ably
+  apis_io: https://apis.io/providers/ably/
+  crosswalk: crosswalk/ably.yml
+  concepts:
+  - message
+- provider: act-on
+  apis_io: https://apis.io/providers/act-on/
+  crosswalk: crosswalk/act-on.yml
+  concepts:
+  - message
+  - sender
+- provider: agentmail
+  apis_io: https://apis.io/providers/agentmail/
+  crosswalk: crosswalk/agentmail.yml
+  concepts:
+  - conversation
+  - message
+- provider: agentmesh-link
+  apis_io: https://apis.io/providers/agentmesh-link/
+  crosswalk: crosswalk/agentmesh-link.yml
+  concepts:
+  - message
+- provider: agentphone
+  apis_io: https://apis.io/providers/agentphone/
+  crosswalk: crosswalk/agentphone.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+- provider: agmsg-world
+  apis_io: https://apis.io/providers/agmsg-world/
+  crosswalk: crosswalk/agmsg-world.yml
+  concepts:
+  - message
+- provider: ahasend
+  apis_io: https://apis.io/providers/ahasend/
+  crosswalk: crosswalk/ahasend.yml
+  concepts:
+  - conversation
+  - message
+  - suppression
+- provider: airship
+  apis_io: https://apis.io/providers/airship/
+  crosswalk: crosswalk/airship.yml
+  concepts:
+  - message
+  - template
+- provider: alianza
+  apis_io: https://apis.io/providers/alianza/
+  crosswalk: crosswalk/alianza.yml
+  concepts:
+  - message
+- provider: amazon-pinpoint
+  apis_io: https://apis.io/providers/amazon-pinpoint/
+  crosswalk: crosswalk/amazon-pinpoint.yml
+  concepts:
+  - message
+  - template
+- provider: ando
+  apis_io: https://apis.io/providers/ando/
+  crosswalk: crosswalk/ando.yml
+  concepts:
+  - conversation
+  - message
+- provider: apache-rocketmq
+  apis_io: https://apis.io/providers/apache-rocketmq/
+  crosswalk: crosswalk/apache-rocketmq.yml
+  concepts:
+  - message
+- provider: avito
+  apis_io: https://apis.io/providers/avito/
+  crosswalk: crosswalk/avito.yml
+  concepts:
+  - conversation
+  - message
+- provider: bandwidth
+  apis_io: https://apis.io/providers/bandwidth/
+  crosswalk: crosswalk/bandwidth.yml
+  concepts:
+  - message
+- provider: beehiiv
+  apis_io: https://apis.io/providers/beehiiv/
+  crosswalk: crosswalk/beehiiv.yml
+  concepts:
+  - message
+- provider: beeper
+  apis_io: https://apis.io/providers/beeper/
+  crosswalk: crosswalk/beeper.yml
+  concepts:
+  - conversation
+  - message
+- provider: benchmark-email
+  apis_io: https://apis.io/providers/benchmark-email/
+  crosswalk: crosswalk/benchmark-email.yml
+  concepts:
+  - message
+  - suppression
+  - template
+- provider: bharti-airtel
+  apis_io: https://apis.io/providers/bharti-airtel/
+  crosswalk: crosswalk/bharti-airtel.yml
+  concepts:
+  - message
+  - phone_number
+  - template
+- provider: bics-network
+  apis_io: https://apis.io/providers/bics-network/
+  crosswalk: crosswalk/bics-network.yml
+  concepts:
+  - message
+  - phone_number
+- provider: bird
+  apis_io: https://apis.io/providers/bird/
+  crosswalk: crosswalk/bird.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - suppression
+  - template
+- provider: birdeye
+  apis_io: https://apis.io/providers/birdeye/
+  crosswalk: crosswalk/birdeye.yml
+  concepts:
+  - message
+- provider: boom-ai
+  apis_io: https://apis.io/providers/boom-ai/
+  crosswalk: crosswalk/boom-ai.yml
+  concepts:
+  - message
+  - template
+- provider: braze
+  apis_io: https://apis.io/providers/braze/
+  crosswalk: crosswalk/braze.yml
+  concepts:
+  - message
+  - suppression
+- provider: brevo
+  apis_io: https://apis.io/providers/brevo/
+  crosswalk: crosswalk/brevo.yml
+  concepts:
+  - message
+  - sender
+  - template
+- provider: bright-pattern
+  apis_io: https://apis.io/providers/bright-pattern/
+  crosswalk: crosswalk/bright-pattern.yml
+  concepts:
+  - conversation
+  - message
+- provider: bulksms
+  apis_io: https://apis.io/providers/bulksms/
+  crosswalk: crosswalk/bulksms.yml
+  concepts:
+  - message
+- provider: buttondown
+  apis_io: https://apis.io/providers/buttondown/
+  crosswalk: crosswalk/buttondown.yml
+  concepts:
+  - message
+- provider: chat
+  apis_io: https://apis.io/providers/chat/
+  crosswalk: crosswalk/chat.yml
+  concepts:
+  - conversation
+  - message
+- provider: chatwoot
+  apis_io: https://apis.io/providers/chatwoot/
+  crosswalk: crosswalk/chatwoot.yml
+  concepts:
+  - conversation
+  - message
+- provider: chatwork
+  apis_io: https://apis.io/providers/chatwork/
+  crosswalk: crosswalk/chatwork.yml
+  concepts:
+  - message
+- provider: cisco-collaboration-hybrid-solutions
+  apis_io: https://apis.io/providers/cisco-collaboration-hybrid-solutions/
+  crosswalk: crosswalk/cisco-collaboration-hybrid-solutions.yml
+  concepts:
+  - message
+- provider: clawdchat-ai
+  apis_io: https://apis.io/providers/clawdchat-ai/
+  crosswalk: crosswalk/clawdchat-ai.yml
+  concepts:
+  - conversation
+  - message
+- provider: clickatell
+  apis_io: https://apis.io/providers/clickatell/
+  crosswalk: crosswalk/clickatell.yml
+  concepts:
+  - message
+- provider: clicksend
+  apis_io: https://apis.io/providers/clicksend/
+  crosswalk: crosswalk/clicksend.yml
+  concepts:
+  - message
+  - template
+- provider: clicksend-sms
+  apis_io: https://apis.io/providers/clicksend-sms/
+  crosswalk: crosswalk/clicksend-sms.yml
+  concepts:
+  - message
+- provider: close
+  apis_io: https://apis.io/providers/close/
+  crosswalk: crosswalk/close.yml
+  concepts:
+  - message
+- provider: cloudtalk
+  apis_io: https://apis.io/providers/cloudtalk/
+  crosswalk: crosswalk/cloudtalk.yml
+  concepts:
+  - message
+- provider: cm-com
+  apis_io: https://apis.io/providers/cm-com/
+  crosswalk: crosswalk/cm-com.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - template
+- provider: cometchat
+  apis_io: https://apis.io/providers/cometchat/
+  crosswalk: crosswalk/cometchat.yml
+  concepts:
+  - conversation
+  - message
+- provider: commsharbor
+  apis_io: https://apis.io/providers/commsharbor/
+  crosswalk: crosswalk/commsharbor.yml
+  concepts:
+  - message
+  - suppression
+  - template
+- provider: constant-contact
+  apis_io: https://apis.io/providers/constant-contact/
+  crosswalk: crosswalk/constant-contact.yml
+  concepts:
+  - message
+  - suppression
+- provider: convertkit
+  apis_io: https://apis.io/providers/convertkit/
+  crosswalk: crosswalk/convertkit.yml
+  concepts:
+  - message
+  - template
+- provider: courier
+  apis_io: https://apis.io/providers/courier/
+  crosswalk: crosswalk/courier.yml
+  concepts:
+  - message
+  - template
+- provider: crescendo-lab
+  apis_io: https://apis.io/providers/crescendo-lab/
+  crosswalk: crosswalk/crescendo-lab.yml
+  concepts:
+  - message
+- provider: crisp
+  apis_io: https://apis.io/providers/crisp/
+  crosswalk: crosswalk/crisp.yml
+  concepts:
+  - conversation
+  - message
+- provider: customer-io
+  apis_io: https://apis.io/providers/customer-io/
+  crosswalk: crosswalk/customer-io.yml
+  concepts:
+  - message
+  - sender
+  - suppression
+- provider: diaspora
+  apis_io: https://apis.io/providers/diaspora/
+  crosswalk: crosswalk/diaspora.yml
+  concepts:
+  - conversation
+  - message
+- provider: discord
+  apis_io: https://apis.io/providers/discord/
+  crosswalk: crosswalk/discord.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: dixa
+  apis_io: https://apis.io/providers/dixa/
+  crosswalk: crosswalk/dixa.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: dotdigital
+  apis_io: https://apis.io/providers/dotdigital/
+  crosswalk: crosswalk/dotdigital.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: drift-com
+  apis_io: https://apis.io/providers/drift-com/
+  crosswalk: crosswalk/drift-com.yml
+  concepts:
+  - conversation
+  - message
+- provider: emailconnect
+  apis_io: https://apis.io/providers/emailconnect/
+  crosswalk: crosswalk/emailconnect.yml
+  concepts:
+  - message
+- provider: emailrep
+  apis_io: https://apis.io/providers/emailrep/
+  crosswalk: crosswalk/emailrep.yml
+  concepts:
+  - message
+- provider: emarsys
+  apis_io: https://apis.io/providers/emarsys/
+  crosswalk: crosswalk/emarsys.yml
+  concepts:
+  - message
+  - suppression
+  - template
+- provider: encharge
+  apis_io: https://apis.io/providers/encharge/
+  crosswalk: crosswalk/encharge.yml
+  concepts:
+  - message
+- provider: engagespark
+  apis_io: https://apis.io/providers/engagespark/
+  crosswalk: crosswalk/engagespark.yml
+  concepts:
+  - message
+- provider: entergram
+  apis_io: https://apis.io/providers/entergram/
+  crosswalk: crosswalk/entergram.yml
+  concepts:
+  - conversation
+  - message
+- provider: front
+  apis_io: https://apis.io/providers/front/
+  crosswalk: crosswalk/front.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: genesys
+  apis_io: https://apis.io/providers/genesys/
+  crosswalk: crosswalk/genesys.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - template
+- provider: getresponse
+  apis_io: https://apis.io/providers/getresponse/
+  crosswalk: crosswalk/getresponse.yml
+  concepts:
+  - message
+  - suppression
+  - template
+- provider: getstream
+  apis_io: https://apis.io/providers/getstream/
+  crosswalk: crosswalk/getstream.yml
+  concepts:
+  - conversation
+  - message
+- provider: gladly
+  apis_io: https://apis.io/providers/gladly/
+  crosswalk: crosswalk/gladly.yml
+  concepts:
+  - conversation
+  - message
+- provider: google-business-messages
+  apis_io: https://apis.io/providers/google-business-messages/
+  crosswalk: crosswalk/google-business-messages.yml
+  concepts:
+  - message
+- provider: google-chat
+  apis_io: https://apis.io/providers/google-chat/
+  crosswalk: crosswalk/google-chat.yml
+  concepts:
+  - message
+- provider: google-chat-integrations-for-workspace
+  apis_io: https://apis.io/providers/google-chat-integrations-for-workspace/
+  crosswalk: crosswalk/google-chat-integrations-for-workspace.yml
+  concepts:
+  - message
+- provider: google-gmail
+  apis_io: https://apis.io/providers/google-gmail/
+  crosswalk: crosswalk/google-gmail.yml
+  concepts:
+  - conversation
+  - message
+- provider: google-suites
+  apis_io: https://apis.io/providers/google-suites/
+  crosswalk: crosswalk/google-suites.yml
+  concepts:
+  - message
+- provider: gov-uk-notify
+  apis_io: https://apis.io/providers/gov-uk-notify/
+  crosswalk: crosswalk/gov-uk-notify.yml
+  concepts:
+  - message
+  - template
+- provider: greenhelix-net
+  apis_io: https://apis.io/providers/greenhelix-net/
+  crosswalk: crosswalk/greenhelix-net.yml
+  concepts:
+  - message
+- provider: hunter
+  apis_io: https://apis.io/providers/hunter/
+  crosswalk: crosswalk/hunter.yml
+  concepts:
+  - message
+  - template
+- provider: hustle
+  apis_io: https://apis.io/providers/hustle/
+  crosswalk: crosswalk/hustle.yml
+  concepts:
+  - message
+- provider: ibm-mq
+  apis_io: https://apis.io/providers/ibm-mq/
+  crosswalk: crosswalk/ibm-mq.yml
+  concepts:
+  - message
+- provider: infobip
+  apis_io: https://apis.io/providers/infobip/
+  crosswalk: crosswalk/infobip.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - suppression
+  - template
+- provider: insider
+  apis_io: https://apis.io/providers/insider/
+  crosswalk: crosswalk/insider.yml
+  concepts:
+  - message
+- provider: intercom
+  apis_io: https://apis.io/providers/intercom/
+  crosswalk: crosswalk/intercom.yml
+  concepts:
+  - conversation
+  - message
+- provider: iterable
+  apis_io: https://apis.io/providers/iterable/
+  crosswalk: crosswalk/iterable.yml
+  concepts:
+  - message
+  - template
+- provider: justcall
+  apis_io: https://apis.io/providers/justcall/
+  crosswalk: crosswalk/justcall.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - template
+- provider: kaleyra
+  apis_io: https://apis.io/providers/kaleyra/
+  crosswalk: crosswalk/kaleyra.yml
+  concepts:
+  - message
+- provider: khoros-ai
+  apis_io: https://apis.io/providers/khoros-ai/
+  crosswalk: crosswalk/khoros-ai.yml
+  concepts:
+  - conversation
+  - message
+- provider: knock
+  apis_io: https://apis.io/providers/knock/
+  crosswalk: crosswalk/knock.yml
+  concepts:
+  - message
+- provider: knock-app
+  apis_io: https://apis.io/providers/knock-app/
+  crosswalk: crosswalk/knock-app.yml
+  concepts:
+  - message
+- provider: kore-wireless
+  apis_io: https://apis.io/providers/kore-wireless/
+  crosswalk: crosswalk/kore-wireless.yml
+  concepts:
+  - message
+- provider: kpn
+  apis_io: https://apis.io/providers/kpn/
+  crosswalk: crosswalk/kpn.yml
+  concepts:
+  - message
+  - phone_number
+  - template
+- provider: kudosity
+  apis_io: https://apis.io/providers/kudosity/
+  crosswalk: crosswalk/kudosity.yml
+  concepts:
+  - message
+  - phone_number
+- provider: leadping
+  apis_io: https://apis.io/providers/leadping/
+  crosswalk: crosswalk/leadping.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - suppression
+- provider: listrak
+  apis_io: https://apis.io/providers/listrak/
+  crosswalk: crosswalk/listrak.yml
+  concepts:
+  - conversation
+  - message
+- provider: litmus
+  apis_io: https://apis.io/providers/litmus/
+  crosswalk: crosswalk/litmus.yml
+  concepts:
+  - message
+- provider: live-direct-marketing-online
+  apis_io: https://apis.io/providers/live-direct-marketing-online/
+  crosswalk: crosswalk/live-direct-marketing-online.yml
+  concepts:
+  - conversation
+  - message
+  - suppression
+  - template
+- provider: liveblocks
+  apis_io: https://apis.io/providers/liveblocks/
+  crosswalk: crosswalk/liveblocks.yml
+  concepts:
+  - conversation
+  - message
+- provider: luma-health
+  apis_io: https://apis.io/providers/luma-health/
+  crosswalk: crosswalk/luma-health.yml
+  concepts:
+  - message
+  - template
+- provider: magicbell
+  apis_io: https://apis.io/providers/magicbell/
+  crosswalk: crosswalk/magicbell.yml
+  concepts:
+  - message
+- provider: mailchimp
+  apis_io: https://apis.io/providers/mailchimp/
+  crosswalk: crosswalk/mailchimp.yml
+  concepts:
+  - conversation
+  - message
+  - sender
+  - template
+- provider: maileroo
+  apis_io: https://apis.io/providers/maileroo/
+  crosswalk: crosswalk/maileroo.yml
+  concepts:
+  - message
+  - template
+- provider: mailersend
+  apis_io: https://apis.io/providers/mailersend/
+  crosswalk: crosswalk/mailersend.yml
+  concepts:
+  - message
+  - sender
+  - template
+- provider: mailgun
+  apis_io: https://apis.io/providers/mailgun/
+  crosswalk: crosswalk/mailgun.yml
+  concepts:
+  - message
+  - suppression
+- provider: mailtrap
+  apis_io: https://apis.io/providers/mailtrap/
+  crosswalk: crosswalk/mailtrap.yml
+  concepts:
+  - message
+- provider: matrix
+  apis_io: https://apis.io/providers/matrix/
+  crosswalk: crosswalk/matrix.yml
+  concepts:
+  - message
+- provider: messagebird
+  apis_io: https://apis.io/providers/messagebird/
+  crosswalk: crosswalk/messagebird.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - template
+- provider: messaging-api
+  apis_io: https://apis.io/providers/messaging-api/
+  crosswalk: crosswalk/messaging-api.yml
+  concepts:
+  - message
+- provider: microsoft-365
+  apis_io: https://apis.io/providers/microsoft-365/
+  crosswalk: crosswalk/microsoft-365.yml
+  concepts:
+  - message
+- provider: microsoft-exchange
+  apis_io: https://apis.io/providers/microsoft-exchange/
+  crosswalk: crosswalk/microsoft-exchange.yml
+  concepts:
+  - message
+- provider: microsoft-graph
+  apis_io: https://apis.io/providers/microsoft-graph/
+  crosswalk: crosswalk/microsoft-graph.yml
+  concepts:
+  - conversation
+  - message
+  - sender
+  - template
+- provider: microsoft-outlook
+  apis_io: https://apis.io/providers/microsoft-outlook/
+  crosswalk: crosswalk/microsoft-outlook.yml
+  concepts:
+  - message
+- provider: missive
+  apis_io: https://apis.io/providers/missive/
+  crosswalk: crosswalk/missive.yml
+  concepts:
+  - conversation
+  - message
+- provider: moengage
+  apis_io: https://apis.io/providers/moengage/
+  crosswalk: crosswalk/moengage.yml
+  concepts:
+  - message
+  - template
+- provider: montran
+  apis_io: https://apis.io/providers/montran/
+  crosswalk: crosswalk/montran.yml
+  concepts:
+  - message
+- provider: mtn-group
+  apis_io: https://apis.io/providers/mtn-group/
+  crosswalk: crosswalk/mtn-group.yml
+  concepts:
+  - message
+- provider: netcorecloud
+  apis_io: https://apis.io/providers/netcorecloud/
+  crosswalk: crosswalk/netcorecloud.yml
+  concepts:
+  - message
+  - suppression
+  - template
+- provider: nextiva
+  apis_io: https://apis.io/providers/nextiva/
+  crosswalk: crosswalk/nextiva.yml
+  concepts:
+  - conversation
+  - message
+- provider: neynar
+  apis_io: https://apis.io/providers/neynar/
+  crosswalk: crosswalk/neynar.yml
+  concepts:
+  - conversation
+  - message
+- provider: novu
+  apis_io: https://apis.io/providers/novu/
+  crosswalk: crosswalk/novu.yml
+  concepts:
+  - message
+- provider: nylas
+  apis_io: https://apis.io/providers/nylas/
+  crosswalk: crosswalk/nylas.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: onesignal
+  apis_io: https://apis.io/providers/onesignal/
+  crosswalk: crosswalk/onesignal.yml
+  concepts:
+  - message
+  - template
+- provider: optus
+  apis_io: https://apis.io/providers/optus/
+  crosswalk: crosswalk/optus.yml
+  concepts:
+  - message
+  - template
+- provider: orange-business
+  apis_io: https://apis.io/providers/orange-business/
+  crosswalk: crosswalk/orange-business.yml
+  concepts:
+  - message
+- provider: pagopa
+  apis_io: https://apis.io/providers/pagopa/
+  crosswalk: crosswalk/pagopa.yml
+  concepts:
+  - message
+  - template
+- provider: paubox
+  apis_io: https://apis.io/providers/paubox/
+  crosswalk: crosswalk/paubox.yml
+  concepts:
+  - message
+- provider: phone-com
+  apis_io: https://apis.io/providers/phone-com/
+  crosswalk: crosswalk/phone-com.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+- provider: plivo
+  apis_io: https://apis.io/providers/plivo/
+  crosswalk: crosswalk/plivo.yml
+  concepts:
+  - message
+- provider: podium
+  apis_io: https://apis.io/providers/podium/
+  crosswalk: crosswalk/podium.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: postmark
+  apis_io: https://apis.io/providers/postmark/
+  crosswalk: crosswalk/postmark.yml
+  concepts:
+  - message
+  - sender
+  - suppression
+  - template
+- provider: pushbullet
+  apis_io: https://apis.io/providers/pushbullet/
+  crosswalk: crosswalk/pushbullet.yml
+  concepts:
+  - conversation
+  - message
+- provider: pushover
+  apis_io: https://apis.io/providers/pushover/
+  crosswalk: crosswalk/pushover.yml
+  concepts:
+  - message
+- provider: pypestream
+  apis_io: https://apis.io/providers/pypestream/
+  crosswalk: crosswalk/pypestream.yml
+  concepts:
+  - message
+- provider: quo
+  apis_io: https://apis.io/providers/quo/
+  crosswalk: crosswalk/quo.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+- provider: rainbow
+  apis_io: https://apis.io/providers/rainbow/
+  crosswalk: crosswalk/rainbow.yml
+  concepts:
+  - conversation
+  - message
+- provider: rasayel
+  apis_io: https://apis.io/providers/rasayel/
+  crosswalk: crosswalk/rasayel.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: regal-ai
+  apis_io: https://apis.io/providers/regal-ai/
+  crosswalk: crosswalk/regal-ai.yml
+  concepts:
+  - message
+- provider: resend
+  apis_io: https://apis.io/providers/resend/
+  crosswalk: crosswalk/resend.yml
+  concepts:
+  - message
+- provider: respond
+  apis_io: https://apis.io/providers/respond/
+  crosswalk: crosswalk/respond.yml
+  concepts:
+  - conversation
+  - message
+- provider: responsys
+  apis_io: https://apis.io/providers/responsys/
+  crosswalk: crosswalk/responsys.yml
+  concepts:
+  - message
+- provider: ringcentral
+  apis_io: https://apis.io/providers/ringcentral/
+  crosswalk: crosswalk/ringcentral.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - suppression
+  - template
+- provider: route-mobile
+  apis_io: https://apis.io/providers/route-mobile/
+  crosswalk: crosswalk/route-mobile.yml
+  concepts:
+  - message
+  - template
+- provider: rubiconnect
+  apis_io: https://apis.io/providers/rubiconnect/
+  crosswalk: crosswalk/rubiconnect.yml
+  concepts:
+  - message
+- provider: salesflare
+  apis_io: https://apis.io/providers/salesflare/
+  crosswalk: crosswalk/salesflare.yml
+  concepts:
+  - message
+- provider: salesloft
+  apis_io: https://apis.io/providers/salesloft/
+  crosswalk: crosswalk/salesloft.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: samu
+  apis_io: https://apis.io/providers/samu/
+  crosswalk: crosswalk/samu.yml
+  concepts:
+  - conversation
+  - message
+- provider: saperly
+  apis_io: https://apis.io/providers/saperly/
+  crosswalk: crosswalk/saperly.yml
+  concepts:
+  - message
+  - phone_number
+- provider: sedna
+  apis_io: https://apis.io/providers/sedna/
+  crosswalk: crosswalk/sedna.yml
+  concepts:
+  - message
+  - template
+- provider: sendbird
+  apis_io: https://apis.io/providers/sendbird/
+  crosswalk: crosswalk/sendbird.yml
+  concepts:
+  - message
+- provider: sendgrid
+  apis_io: https://apis.io/providers/sendgrid/
+  crosswalk: crosswalk/sendgrid.yml
+  concepts:
+  - message
+  - sender
+  - suppression
+  - template
+- provider: sendhq
+  apis_io: https://apis.io/providers/sendhq/
+  crosswalk: crosswalk/sendhq.yml
+  concepts:
+  - conversation
+  - message
+  - suppression
+  - template
+- provider: sendhub
+  apis_io: https://apis.io/providers/sendhub/
+  crosswalk: crosswalk/sendhub.yml
+  concepts:
+  - conversation
+  - message
+- provider: sendlane
+  apis_io: https://apis.io/providers/sendlane/
+  crosswalk: crosswalk/sendlane.yml
+  concepts:
+  - message
+  - sender
+- provider: sendpulse
+  apis_io: https://apis.io/providers/sendpulse/
+  crosswalk: crosswalk/sendpulse.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - template
+- provider: signal
+  apis_io: https://apis.io/providers/signal/
+  crosswalk: crosswalk/signal.yml
+  concepts:
+  - message
+- provider: signalwire
+  apis_io: https://apis.io/providers/signalwire/
+  crosswalk: crosswalk/signalwire.yml
+  concepts:
+  - message
+  - phone_number
+  - template
+- provider: simpletexting
+  apis_io: https://apis.io/providers/simpletexting/
+  crosswalk: crosswalk/simpletexting.yml
+  concepts:
+  - message
+- provider: sinch
+  apis_io: https://apis.io/providers/sinch/
+  crosswalk: crosswalk/sinch.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - template
+- provider: skai-kenshoo
+  apis_io: https://apis.io/providers/skai-kenshoo/
+  crosswalk: crosswalk/skai-kenshoo.yml
+  concepts:
+  - conversation
+  - message
+  - template
+- provider: sleekflow
+  apis_io: https://apis.io/providers/sleekflow/
+  crosswalk: crosswalk/sleekflow.yml
+  concepts:
+  - conversation
+  - message
+- provider: smtp2go
+  apis_io: https://apis.io/providers/smtp2go/
+  crosswalk: crosswalk/smtp2go.yml
+  concepts:
+  - message
+- provider: sonetel
+  apis_io: https://apis.io/providers/sonetel/
+  crosswalk: crosswalk/sonetel.yml
+  concepts:
+  - message
+- provider: sparkpost
+  apis_io: https://apis.io/providers/sparkpost/
+  crosswalk: crosswalk/sparkpost.yml
+  concepts:
+  - message
+  - template
+- provider: splio
+  apis_io: https://apis.io/providers/splio/
+  crosswalk: crosswalk/splio.yml
+  concepts:
+  - message
+- provider: spruce-health
+  apis_io: https://apis.io/providers/spruce-health/
+  crosswalk: crosswalk/spruce-health.yml
+  concepts:
+  - conversation
+  - message
+- provider: stocktwits
+  apis_io: https://apis.io/providers/stocktwits/
+  crosswalk: crosswalk/stocktwits.yml
+  concepts:
+  - message
+- provider: stream-io
+  apis_io: https://apis.io/providers/stream-io/
+  crosswalk: crosswalk/stream-io.yml
+  concepts:
+  - conversation
+  - message
+- provider: streamnative
+  apis_io: https://apis.io/providers/streamnative/
+  crosswalk: crosswalk/streamnative.yml
+  concepts:
+  - message
+- provider: suprsend
+  apis_io: https://apis.io/providers/suprsend/
+  crosswalk: crosswalk/suprsend.yml
+  concepts:
+  - message
+  - template
+- provider: syllable
+  apis_io: https://apis.io/providers/syllable/
+  crosswalk: crosswalk/syllable.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+- provider: symphony
+  apis_io: https://apis.io/providers/symphony/
+  crosswalk: crosswalk/symphony.yml
+  concepts:
+  - message
+- provider: syniverse
+  apis_io: https://apis.io/providers/syniverse/
+  crosswalk: crosswalk/syniverse.yml
+  concepts:
+  - message
+  - sender
+  - template
+- provider: talkjs
+  apis_io: https://apis.io/providers/talkjs/
+  crosswalk: crosswalk/talkjs.yml
+  concepts:
+  - conversation
+  - message
+- provider: talkpush
+  apis_io: https://apis.io/providers/talkpush/
+  crosswalk: crosswalk/talkpush.yml
+  concepts:
+  - message
+  - template
+- provider: tata-communications
+  apis_io: https://apis.io/providers/tata-communications/
+  crosswalk: crosswalk/tata-communications.yml
+  concepts:
+  - message
+- provider: telesign
+  apis_io: https://apis.io/providers/telesign/
+  crosswalk: crosswalk/telesign.yml
+  concepts:
+  - message
+  - template
+- provider: teliax
+  apis_io: https://apis.io/providers/teliax/
+  crosswalk: crosswalk/teliax.yml
+  concepts:
+  - message
+  - phone_number
+  - template
+- provider: telnyx
+  apis_io: https://apis.io/providers/telnyx/
+  crosswalk: crosswalk/telnyx.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - suppression
+  - template
+- provider: telstra
+  apis_io: https://apis.io/providers/telstra/
+  crosswalk: crosswalk/telstra.yml
+  concepts:
+  - message
+  - suppression
+- provider: tempmailgrab
+  apis_io: https://apis.io/providers/tempmailgrab/
+  crosswalk: crosswalk/tempmailgrab.yml
+  concepts:
+  - message
+- provider: termii
+  apis_io: https://apis.io/providers/termii/
+  crosswalk: crosswalk/termii.yml
+  concepts:
+  - message
+- provider: textmagic
+  apis_io: https://apis.io/providers/textmagic/
+  crosswalk: crosswalk/textmagic.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - template
+- provider: the-mobile-first-company
+  apis_io: https://apis.io/providers/the-mobile-first-company/
+  crosswalk: crosswalk/the-mobile-first-company.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+- provider: thecolony-ai
+  apis_io: https://apis.io/providers/thecolony-ai/
+  crosswalk: crosswalk/thecolony-ai.yml
+  concepts:
+  - conversation
+  - message
+  - suppression
+  - template
+- provider: trengo
+  apis_io: https://apis.io/providers/trengo/
+  crosswalk: crosswalk/trengo.yml
+  concepts:
+  - message
+- provider: twilio
+  apis_io: https://apis.io/providers/twilio/
+  crosswalk: crosswalk/twilio.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - sender
+  - template
+- provider: usecommune
+  apis_io: https://apis.io/providers/usecommune/
+  crosswalk: crosswalk/usecommune.yml
+  concepts:
+  - conversation
+  - message
+  - sender
+- provider: val-town
+  apis_io: https://apis.io/providers/val-town/
+  crosswalk: crosswalk/val-town.yml
+  concepts:
+  - message
+- provider: vibes-platform
+  apis_io: https://apis.io/providers/vibes-platform/
+  crosswalk: crosswalk/vibes-platform.yml
+  concepts:
+  - message
+- provider: vonage
+  apis_io: https://apis.io/providers/vonage/
+  crosswalk: crosswalk/vonage.yml
+  concepts:
+  - conversation
+  - message
+  - phone_number
+  - template
+- provider: weave
+  apis_io: https://apis.io/providers/weave/
+  crosswalk: crosswalk/weave.yml
+  concepts:
+  - message
+  - phone_number
+- provider: weavix
+  apis_io: https://apis.io/providers/weavix/
+  crosswalk: crosswalk/weavix.yml
+  concepts:
+  - message
+- provider: webex
+  apis_io: https://apis.io/providers/webex/
+  crosswalk: crosswalk/webex.yml
+  concepts:
+  - message
+  - phone_number
+  - template
+- provider: whatsapp
+  apis_io: https://apis.io/providers/whatsapp/
+  crosswalk: crosswalk/whatsapp.yml
+  concepts:
+  - message
+  - phone_number
+  - template
+- provider: whippy
+  apis_io: https://apis.io/providers/whippy/
+  crosswalk: crosswalk/whippy.yml
+  concepts:
+  - conversation
+  - message
+- provider: wunderkind
+  apis_io: https://apis.io/providers/wunderkind/
+  crosswalk: crosswalk/wunderkind.yml
+  concepts:
+  - message
+- provider: zavu
+  apis_io: https://apis.io/providers/zavu/
+  crosswalk: crosswalk/zavu.yml
+  concepts:
+  - message
+  - phone_number
+  - sender
+  - template
+- provider: zenzap
+  apis_io: https://apis.io/providers/zenzap/
+  crosswalk: crosswalk/zenzap.yml
+  concepts:
+  - message
+- provider: zoho-cliq
+  apis_io: https://apis.io/providers/zoho-cliq/
+  crosswalk: crosswalk/zoho-cliq.yml
+  concepts:
+  - conversation
+  - message
+- provider: zoho-mail
+  apis_io: https://apis.io/providers/zoho-mail/
+  crosswalk: crosswalk/zoho-mail.yml
+  concepts:
+  - message
+- provider: zulip
+  apis_io: https://apis.io/providers/zulip/
+  crosswalk: crosswalk/zulip.yml
+  concepts:
+  - message

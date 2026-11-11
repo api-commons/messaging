@@ -1,0 +1,52 @@
+provider: syniverse
+apis_io: https://apis.io/providers/syniverse/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: id
+      from: from
+      created_at: created_date
+      to: to
+      channel: type
+      status: state
+      subject: subject
+      attachments:
+      - attachments
+      - media_urls
+      conversation_id: conversation_id
+      direction: direction
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#GET /messaging/messages
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#POST /messaging/messages
+  template:
+    path_segment:
+    - message_templates
+    properties:
+      id: id
+      name: name
+      created_at: created_date
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#GET /messaging/message_templates
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#POST /messaging/message_templates
+  sender:
+    path_segment:
+    - sender_ids
+    properties:
+      id: id
+      email: address
+      name: name
+      created_at: created_date
+      country: country
+      status: state
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#DELETE /messaging/sender_ids
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#GET /messaging/sender_ids
+    - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#POST /messaging/sender_ids

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/messaging/main/schema/phone_number.json",
+  "title": "Phone Number",
+  "description": "The common phone_number in Messaging (Email, SMS, Chat), distilled from 31 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.806,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "number",
+        "phoneNumber",
+        "phone_number",
+        "msisdn",
+        "phone"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.677,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "id",
+        "sid",
+        "phone_number_id",
+        "phoneNumberId"
+      ]
+    },
+    "capabilities": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.516,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "capabilities",
+        "type",
+        "number_type",
+        "features",
+        "numberType"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.516,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "country",
+        "countryCode",
+        "country_code",
+        "region",
+        "iso_country"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.484,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "name",
+        "friendly_name",
+        "label",
+        "display_name",
+        "friendlyName"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.484,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.452,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "dateCreated",
+        "date_created",
+        "timestamp",
+        "createTime"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.323,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "date_updated",
+        "dateModified",
+        "modifiedAt",
+        "updateTime",
+        "dateUpdated"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "messaging",
+    "concept": "phone_number",
+    "providers": 31,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

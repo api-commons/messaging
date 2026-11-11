@@ -1,0 +1,57 @@
+provider: netcorecloud
+apis_io: https://apis.io/providers/netcorecloud/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - messages
+    - mail
+    - message
+    properties:
+      body: content
+      id: messageId
+      from: from
+      created_at: created
+      to: personalizations
+      status: status
+      subject: subject
+      attachments: attachments
+      metadata: tags
+      sent_at: send_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/netcorecloud-email-api-v6-openapi.yml#DELETE /suppressions/global/email
+    - openapi/_original/netcorecloud-email-api-v6-openapi.yml#GET /messages
+    - openapi/_original/netcorecloud-email-api-v6-openapi.yml#GET /suppressions/global/email
+    - openapi/_original/netcorecloud-email-api-v6-openapi.yml#GET /suppressions/global/email/{email}
+    - openapi/_original/netcorecloud-email-api-v6-openapi.yml#POST /mail/send
+  template:
+    path_segment:
+    - templates
+    - template
+    properties:
+      id:
+      - template_id
+      - id
+      name: name
+      body: content
+      updated_at:
+      - last_modified
+      - updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/netcorecloud-email-api-v5-openapi.yml#GET /template
+    - openapi/_original/netcorecloud-email-api-v5-openapi.yml#GET /templates
+    - openapi/_original/netcorecloud-email-api-v5-openapi.yml#PATCH /template
+    - openapi/_original/netcorecloud-email-api-v5-openapi.yml#POST /template
+    - openapi/_original/netcorecloud-email-api-v6-openapi.yml#DELETE /templates/{template_id}
+  suppression:
+    path_segment:
+    - blocklist
+    properties:
+      reason: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/netcorecloud-whatsapp-api-openapi.yml#POST /v2/consent/blocklist

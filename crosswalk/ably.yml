@@ -1,0 +1,15 @@
+provider: ably
+apis_io: https://apis.io/providers/ably/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      created_at: timestamp
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ably-platform-api-openapi.yml#GET /channels/{channel_id}/messages
+    - openapi/_original/ably-platform-api-openapi.yml#POST /channels/{channel_id}/messages

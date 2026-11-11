@@ -1,0 +1,19 @@
+provider: val-town
+apis_io: https://apis.io/providers/val-town/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    properties:
+      body:
+      - text
+      - html
+      from: from
+      to: to
+      subject: subject
+      attachments: attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/val-town-rest-api-openapi.yml#POST /v1/email

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/messaging/main/schema/suppression.json",
+  "title": "Suppression",
+  "description": "The common suppression in Messaging (Email, SMS, Chat), distilled from 18 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "reason": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "reason",
+        "status",
+        "type",
+        "Type"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "email",
+        "email_address",
+        "emailAddress",
+        "phoneNumber",
+        "Email"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "created_at",
+        "created_time",
+        "createdOn",
+        "createdDate"
+      ],
+      "format": "date-time"
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "id",
+        "suppressionId",
+        "ID",
+        "MessageID"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "messaging",
+    "concept": "suppression",
+    "providers": 18,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

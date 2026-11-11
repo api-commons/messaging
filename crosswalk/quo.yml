@@ -1,0 +1,56 @@
+provider: quo
+apis_io: https://apis.io/providers/quo/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - text
+      - content
+      id: id
+      from: from
+      created_at: createdAt
+      to: to
+      status: status
+      conversation_id: conversationId
+      direction: direction
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openphone-openapi-original.json#GET /v1/messages
+    - openapi/_original/openphone-openapi-original.json#GET /v1/messages/{id}
+    - openapi/_original/openphone-openapi-original.json#POST /v1/messages
+    - openapi/_original/openphone-openapi-original.json#POST /v1/webhooks/messages
+    - openapi/_original/quo-public-api-v1.json#GET /v1/messages
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+      created_at: createdAt
+      last_message_at:
+      - lastActivityAt
+      - updatedAt
+      name: name
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openphone-openapi-original.json#GET /v1/conversations
+    - openapi/_original/quo-public-api-v1.json#GET /v1/conversations
+  phone_number:
+    path_segment:
+    - phone-numbers
+    properties:
+      number: number
+      id: id
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/openphone-openapi-original.json#GET /v1/phone-numbers
+    - openapi/_original/openphone-openapi-original.json#GET /v1/phone-numbers/{phoneNumberId}
+    - openapi/_original/quo-public-api-v1.json#GET /v1/phone-numbers
+    - openapi/_original/quo-public-api-v1.json#GET /v1/phone-numbers/{phoneNumberId}

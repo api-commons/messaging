@@ -1,0 +1,31 @@
+provider: nextiva
+apis_io: https://apis.io/providers/nextiva/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - sms
+    properties:
+      from: from
+      to: to
+      attachments: files
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/nextiva-sms-messaging-openapi.yml#POST /users/api/sms
+  conversation:
+    path_segment:
+    - conversation
+    - conversations
+    properties:
+      id:
+      - _id
+      - conversationId
+      - id
+      created_at: createdAt
+      name: name
+      participants: participants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nextiva-conversation-openapi.yml#GET /analytics/api/tickets/{ticketId}/conversations
+    - openapi/_original/nextiva-conversation-openapi.yml#GET /data/api/types/conversation

@@ -1,0 +1,20 @@
+provider: alianza
+apis_io: https://apis.io/providers/alianza/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    - email
+    properties:
+      id: id
+      created_at: createdDate
+      metadata: tags
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/alianza-apidocs-swagger2-original.json#DELETE /v2/partition/{partitionId}/account/{accountId}/business-line/voicemail-box/{voicemailBoxId}/message
+    - openapi/_original/alianza-apidocs-swagger2-original.json#DELETE /v2/partition/{partitionId}/account/{accountId}/business-line/voicemail-box/{voicemailBoxId}/message/{messageId}
+    - openapi/_original/alianza-apidocs-swagger2-original.json#GET /v2/partition/{partitionId}/account/{accountId}/business-line/voicemail-box/{voicemailBoxId}/message
+    - openapi/_original/alianza-apidocs-swagger2-original.json#GET /v2/partition/{partitionId}/account/{accountId}/business-line/voicemail-box/{voicemailBoxId}/message/{messageId}
+    - openapi/_original/alianza-apidocs-swagger2-original.json#GET /v2/partition/{partitionId}/account/{accountId}/user/prevalidate/email/{email}

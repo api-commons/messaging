@@ -1,0 +1,21 @@
+provider: symphony
+apis_io: https://apis.io/providers/symphony/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id:
+      - messageId
+      - sid
+      created_at: timestamp
+      attachments: attachments
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/agent-openapi-original.yml#GET /v1/dlp/violations/message
+    - openapi/_original/agent-openapi-original.yml#GET /v1/message/{id}
+    - openapi/_original/agent-openapi-original.yml#GET /v3/dlp/violations/message
+    - openapi/_original/agent-openapi-original.yml#GET /v4/stream/{sid}/message
+    - openapi/_original/symphony-agent-api-openapi.yml#GET /v1/dlp/violations/message

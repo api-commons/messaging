@@ -1,0 +1,28 @@
+provider: diaspora
+apis_io: https://apis.io/providers/diaspora/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/diaspora-api-openapi.yml#GET /conversations/{conversation_guid}/messages
+    - openapi/_original/diaspora-api-openapi.yml#GET /notifications
+    - openapi/_original/diaspora-api-openapi.yml#GET /notifications/{notification_id}
+    - openapi/_original/diaspora-api-openapi.yml#PATCH /notifications/{notification_id}
+    - openapi/_original/diaspora-api-openapi.yml#POST /conversations/{conversation_guid}/messages
+  conversation:
+    path_segment:
+    - conversations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/diaspora-api-openapi.yml#DELETE /conversations/{conversation_guid}
+    - openapi/_original/diaspora-api-openapi.yml#GET /conversations
+    - openapi/_original/diaspora-api-openapi.yml#GET /conversations/{conversation_guid}
+    - openapi/_original/diaspora-api-openapi.yml#PATCH /conversations/{conversation_guid}
+    - openapi/_original/diaspora-api-openapi.yml#POST /conversations

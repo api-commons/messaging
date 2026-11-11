@@ -1,0 +1,19 @@
+provider: trengo
+apis_io: https://apis.io/providers/trengo/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: id
+      created_at: created_at
+      channel: type
+      attachments: attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/trengo-openapi.yml#GET /tickets/{ticket_id}/messages
+    - openapi/_original/trengo-openapi.yml#POST /tickets/{ticket_id}/messages
+    - openapi/_original/trengo-openapi.yml#POST /whatsapp/messages

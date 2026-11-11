@@ -1,0 +1,53 @@
+provider: chatwoot
+apis_io: https://apis.io/providers/chatwoot/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: content
+      id: id
+      from:
+      - sender
+      - sender_id
+      created_at: created_at
+      channel: message_type
+      status: status
+      subject: title
+      attachments:
+      - attachments
+      - attachment
+      conversation_id:
+      - conversation_id
+      - conversation
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chatwoot-application-api-openapi.yml#DELETE /api/v1/accounts/{account_id}/conversations/{conversation_id}/messages/{message_id}
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /accounts/{account_id}/conversations/{conversation_id}/messages
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /api/v1/accounts/{account_id}/conversations/{conversation_id}/messages
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations/{conversation_id}/messages
+    - openapi/_original/chatwoot-application-api-openapi.yml#PATCH /public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations/{conversation_id}/messages/{message_id}
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id:
+      - id
+      - uuid
+      created_at:
+      - created_at
+      - timestamp
+      last_message_at:
+      - updated_at
+      - last_activity_at
+      status: status
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /api/v1/accounts/{account_id}/contacts/{id}/conversations
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /api/v1/accounts/{account_id}/conversations
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /api/v1/accounts/{account_id}/conversations/{conversation_id}
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /api/v2/accounts/{account_id}/reports/conversations
+    - openapi/_original/chatwoot-application-api-openapi.yml#GET /api/v2/accounts/{account_id}/reports/conversations/

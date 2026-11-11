@@ -1,0 +1,85 @@
+provider: zavu
+apis_io: https://apis.io/providers/zavu/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - text
+      - content
+      - htmlBody
+      id: id
+      from:
+      - from
+      - senderId
+      created_at: createdAt
+      to: to
+      channel:
+      - channel
+      - messageType
+      status: status
+      subject: subject
+      attachments: attachments
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zavu-openapi-original.json#GET /v1/messages
+    - openapi/_original/zavu-openapi-original.json#GET /v1/messages/{messageId}
+    - openapi/_original/zavu-openapi-original.json#POST /v1/messages
+  template:
+    path_segment:
+    - templates
+    properties:
+      id: id
+      name: name
+      body: body
+      created_at: createdAt
+      updated_at: updatedAt
+      category: category
+      language: language
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zavu-openapi-original.json#DELETE /v1/templates/{templateId}
+    - openapi/_original/zavu-openapi-original.json#GET /v1/templates
+    - openapi/_original/zavu-openapi-original.json#GET /v1/templates/{templateId}
+    - openapi/_original/zavu-openapi-original.json#POST /v1/templates
+  phone_number:
+    path_segment:
+    - phone-numbers
+    properties:
+      number: phoneNumber
+      id:
+      - id
+      - phoneNumberId
+      capabilities: capabilities
+      name: name
+      status: status
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/zavu-openapi-original.json#DELETE /v1/10dlc/campaigns/{campaignId}/phone-numbers/{assignmentId}
+    - openapi/_original/zavu-openapi-original.json#DELETE /v1/phone-numbers/{phoneNumberId}
+    - openapi/_original/zavu-openapi-original.json#GET /v1/10dlc/campaigns/{campaignId}/phone-numbers
+    - openapi/_original/zavu-openapi-original.json#GET /v1/phone-numbers
+    - openapi/_original/zavu-openapi-original.json#GET /v1/phone-numbers/{phoneNumberId}
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: id
+      email: emailAddress
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zavu-openapi-original.json#DELETE /v1/senders/{senderId}
+    - openapi/_original/zavu-openapi-original.json#GET /v1/senders
+    - openapi/_original/zavu-openapi-original.json#GET /v1/senders/{senderId}
+    - openapi/_original/zavu-openapi-original.json#PATCH /v1/senders/{senderId}
+    - openapi/_original/zavu-openapi-original.json#POST /v1/senders

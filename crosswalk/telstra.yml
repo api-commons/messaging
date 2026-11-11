@@ -1,0 +1,29 @@
+provider: telstra
+apis_io: https://apis.io/providers/telstra/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: messageId
+      from: from
+      to: to
+      status: status
+      direction: direction
+      metadata: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/telstra-messaging-api-openapi.json#DELETE /messages/{messageId}
+    - openapi/_original/telstra-messaging-api-openapi.json#GET /messages
+    - openapi/_original/telstra-messaging-api-openapi.json#GET /messages/{messageId}
+    - openapi/_original/telstra-messaging-api-openapi.json#PATCH /messages/{messageId}
+    - openapi/_original/telstra-messaging-api-openapi.json#POST /messages
+  suppression:
+    path_segment:
+    - optouts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/telstra-messaging-api-openapi.json#GET /virtual-numbers/{virtual-number}/optouts

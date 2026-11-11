@@ -1,0 +1,16 @@
+provider: sonetel
+apis_io: https://apis.io/providers/sonetel/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id: record_id
+      channel: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/5_voice_apps.yaml#POST /prompt/{promptid}/message
+    - openapi/_original/sonetel-5-voice-apps-openapi.yml#POST /prompt/{promptid}/message
+    - openapi/_original/sonetel-voice-apps-openapi.yml#POST /prompt/{promptid}/message

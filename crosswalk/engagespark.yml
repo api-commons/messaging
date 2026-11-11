@@ -1,0 +1,18 @@
+provider: engagespark
+apis_io: https://apis.io/providers/engagespark/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      from: sender
+      created_at: created
+      to: recipient
+      direction: direction
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/engagespark-openapi-original.yml#GET /v1/organizations/{orgId}/messages/
+    - openapi/_original/engagespark-openapi-original.yml#GET /v1/organizations/{orgId}/messages/{messageId}/

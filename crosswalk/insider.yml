@@ -1,0 +1,13 @@
+provider: insider
+apis_io: https://apis.io/providers/insider/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/insider-gateway-openapi.yml#POST /api/wa/v2/conversational/messages/send
+    - openapi/_original/insider-gateway-openapi.yml#POST /api/wa/v2/transactional/messages/send

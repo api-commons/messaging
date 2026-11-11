@@ -1,0 +1,15 @@
+provider: google-suites
+apis_io: https://apis.io/providers/google-suites/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      conversation_id: threadId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/google-suites-openapi.yml#GET /gmail/v1/users/{userId}/messages
+    - openapi/_original/google-suites-openapi.yml#POST /gmail/v1/users/{userId}/messages/send

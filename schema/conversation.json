@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/messaging/main/schema/conversation.json",
+  "title": "Conversation",
+  "description": "The common conversation in Messaging (Email, SMS, Chat), distilled from 62 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.79,
+      "x-commons-providers": 49,
+      "x-commons-spellings": [
+        "id",
+        "conversationId",
+        "conversation_id",
+        "message_id",
+        "uuid",
+        "_id",
+        "sid"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.468,
+      "x-commons-providers": 29,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "timestamp",
+        "created",
+        "_createdOn",
+        "date_created",
+        "created_time"
+      ],
+      "format": "date-time"
+    },
+    "last_message_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.387,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "lastMessageAt",
+        "last_message_at",
+        "last_activity_at",
+        "lastActivityAt"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.387,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.323,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "label",
+        "friendly_name",
+        "display_name"
+      ]
+    },
+    "channel": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.306,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "type",
+        "channel",
+        "channel_type"
+      ]
+    },
+    "participants": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.29,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "participants",
+        "contacts",
+        "members",
+        "recipients",
+        "users"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "messaging",
+    "concept": "conversation",
+    "providers": 62,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

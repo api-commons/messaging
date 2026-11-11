@@ -1,0 +1,87 @@
+provider: cm-com
+apis_io: https://apis.io/providers/cm-com/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#DELETE /channels/v1/accounts/{accountId}/channels/{channelId}/configuration/email/{addressId}
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#POST /channels/v1/accounts/{accountId}/channels/{channelId}/configuration/email
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#PUT /channels/v1/accounts/{accountId}/channels/{channelId}/configuration/email/{addressId}
+  template:
+    path_segment:
+    - templates
+    properties:
+      id:
+      - id
+      - ID
+      name:
+      - name
+      - Name
+      body:
+      - HtmlBody
+      - TextBody
+      created_at:
+      - CreatedOn
+      - createdAt
+      updated_at: updatedAt
+      category:
+      - type
+      - category
+      description: Description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#DELETE /channels/v1/accounts/{accountId}/whatsapp/{channelRequestId}/templates/{templateId}
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#GET /channels/v1/accounts/{accountId}/whatsapp/{channelRequestId}/templates
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#GET /channels/v1/accounts/{accountId}/whatsapp/{channelRequestId}/templates/{templateId}
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#GET /channels/v1/administration/scenarioconfiguration/mohandlers/templates
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#POST /channels/v1/accounts/{accountId}/whatsapp/{channelRequestId}/templates
+  conversation:
+    path_segment:
+    - conversations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cm-com-halo-analytics-v1-openapi.yml#GET /analytics/v2/accounts/{account_id}/conversations
+    - openapi/_original/cm-com-halo-analytics-v1-openapi.yml#GET /analytics/v2/accounts/{account_id}/conversations/{conversation_id}
+    - openapi/_original/cm-com-halo-core-v1-openapi.yml#GET /core/v1/accounts/{account_id}/profiles/{profile_id}/conversations/{conversation_id}
+    - openapi/_original/cm-com-voice-cdr-v1-openapi.yml#GET /cdrapi/v1/{voiceAccountGuid}/conversations
+    - openapi/_original/cm-com-voice-voice-insights-v1-openapi.yml#GET /voice-insightsapi/v1/{accountGuid}/conversations
+  phone_number:
+    path_segment:
+    - phonenumbers
+    - numbers
+    properties:
+      number:
+      - number
+      - phoneNumber
+      id: id
+      capabilities:
+      - numberType
+      - type
+      country: country
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#DELETE /channels/v1/accounts/{accountId}/phonenumbers/{phoneNumberId}
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#GET /channels/v1/accounts/{accountId}/phonenumbers
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#GET /channels/v1/accounts/{accountId}/phonenumbers/{phoneNumberId}
+    - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#POST /channels/v1/accounts/{accountId}/whatsapp/{channelRequestId}/businessaccount/marketingliteapi/eligibility/numbers
+    - openapi/_original/cm-com-voice-phone-numbers-v1-openapi.yml#GET /voice-phonenumberapi/v1/{accountGuid}/phonenumbers
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/cm-com-mobile-marketing-cloud-mmc-campaigns-v1-openapi.yml#DELETE /messages/v1/accounts/{accountId}/senders/{senderId}
+    - openapi/_original/cm-com-mobile-marketing-cloud-mmc-campaigns-v1-openapi.yml#GET /messages/v1/accounts/{accountId}/senders
+    - openapi/_original/cm-com-mobile-marketing-cloud-mmc-campaigns-v1-openapi.yml#POST /messages/v1/accounts/{accountId}/senders
+    - openapi/_original/cm-com-mobile-marketing-cloud-mmc-campaigns-v1-openapi.yml#PUT /messages/v1/accounts/{accountId}/senders/{senderId}

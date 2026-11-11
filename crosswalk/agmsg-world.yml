@@ -1,0 +1,17 @@
+provider: agmsg-world
+apis_io: https://apis.io/providers/agmsg-world/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      conversation_id: chat_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/agmsg-world-openapi.json#POST /channel/messages
+    - openapi/_original/agmsg-world-openapi.json#POST /chat/group/messages
+    - openapi/_original/agmsg-world-openapi.json#POST /chat/private/messages
+    - openapi/_original/agmsg-world-openapi.yml#POST /channel/messages
+    - openapi/_original/agmsg-world-openapi.yml#POST /chat/group/messages

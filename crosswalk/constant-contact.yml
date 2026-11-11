@@ -1,0 +1,32 @@
+provider: constant-contact
+apis_io: https://apis.io/providers/constant-contact/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    - sends
+    properties:
+      created_at:
+      - created_at
+      - created_time
+      channel: type
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/constant-contact-v3-openapi.yml#DELETE /emails/{campaign_id}
+    - openapi/_original/constant-contact-v3-openapi.yml#GET /account/emails
+    - openapi/_original/constant-contact-v3-openapi.yml#GET /emails
+    - openapi/_original/constant-contact-v3-openapi.yml#GET /emails/{campaign_id}
+    - openapi/_original/constant-contact-v3-openapi.yml#GET /reports/email_reports/{campaign_activity_id}/tracking/sends
+  suppression:
+    path_segment:
+    - optouts
+    - bounces
+    properties:
+      address: email_address
+      created_at: created_time
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/constant-contact-v3-openapi.yml#GET /reports/email_reports/{campaign_activity_id}/tracking/bounces
+    - openapi/_original/constant-contact-v3-openapi.yml#GET /reports/email_reports/{campaign_activity_id}/tracking/optouts

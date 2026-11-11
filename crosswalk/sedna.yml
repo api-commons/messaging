@@ -1,0 +1,27 @@
+provider: sedna
+apis_io: https://apis.io/providers/sedna/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id: id
+      channel: type
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/sedna-openapi.json#DELETE /2019-01-01/category-tag/{id}/relationships/message
+    - openapi/_original/sedna-openapi.json#DELETE /2019-01-01/job-reference/{id}/relationships/message
+    - openapi/_original/sedna-openapi.json#GET /2019-01-01/category-tag/{id}/message
+    - openapi/_original/sedna-openapi.json#GET /2019-01-01/category-tag/{id}/relationships/message
+    - openapi/_original/sedna-openapi.json#GET /2019-01-01/download/message/{id}
+  template:
+    path_segment:
+    - template
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sedna-openapi.json#GET /2019-01-01/template
+    - openapi/_original/sedna-openapi.json#GET /2019-01-01/template/{id}

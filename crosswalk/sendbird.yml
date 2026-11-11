@@ -1,0 +1,18 @@
+provider: sendbird
+apis_io: https://apis.io/providers/sendbird/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: message_id
+      created_at: created_at
+      channel:
+      - type
+      - message_type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/sendbird-platform-openapi.yml#GET /group_channels/{channel_url}/messages
+    - openapi/_original/sendbird-platform-openapi.yml#POST /group_channels/{channel_url}/messages

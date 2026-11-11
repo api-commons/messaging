@@ -1,0 +1,23 @@
+provider: pushbullet
+apis_io: https://apis.io/providers/pushbullet/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - texts
+    properties:
+      id: guid
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/pushbullet-openapi.yml#POST /texts
+  conversation:
+    path_segment:
+    - chats
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pushbullet-openapi.yml#DELETE /chats/{iden}
+    - openapi/_original/pushbullet-openapi.yml#GET /chats
+    - openapi/_original/pushbullet-openapi.yml#POST /chats
+    - openapi/_original/pushbullet-openapi.yml#POST /chats/{iden}

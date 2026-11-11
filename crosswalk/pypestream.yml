@@ -1,0 +1,19 @@
+provider: pypestream
+apis_io: https://apis.io/providers/pypestream/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    - message
+    properties:
+      body: content
+      from:
+      - senderId
+      - from
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pypestream-contact-center-api-openapi.json#PUT /contactCenter/v1/conversations/{conversationId}/messages/{messageId}
+    - openapi/_original/pypestream-engagement-api-openapi.json#POST /messaging/v1/chats/{chat_id}/message
+    - openapi/_original/pypestream-middleware-api-openapi.json#PUT /contactCenter/v1/conversations/{conversationId}/messages/{messageId}

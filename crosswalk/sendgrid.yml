@@ -1,0 +1,86 @@
+provider: sendgrid
+apis_io: https://apis.io/providers/sendgrid/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - email
+    - messages
+    - mail
+    - emails
+    properties:
+      body: content
+      id: msg_id
+      from:
+      - from_email
+      - source
+      - from
+      to:
+      - to_email
+      - personalizations
+      status: status
+      subject: subject
+      attachments: attachments
+      metadata: custom_args
+      sent_at: send_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tsg_domain_authentication_v3.yaml#POST /v3/whitelabel/dns/email
+    - openapi/_original/tsg_email_activity_v3.yaml#GET /v3/messages
+    - openapi/_original/tsg_email_activity_v3.yaml#GET /v3/messages/{msg_id}
+    - openapi/_original/tsg_email_validation_v3.yaml#POST /v3/validations/email
+    - openapi/_original/tsg_mail_v3.yaml#POST /v3/mail/batch
+  template:
+    path_segment:
+    - templates
+    - template
+    properties:
+      id: id
+      name: name
+      body: html_content
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tsg_mail_settings_v3.yaml#GET /v3/mail_settings/template
+    - openapi/_original/tsg_mail_settings_v3.yaml#PATCH /v3/mail_settings/template
+    - openapi/_original/tsg_templates_v3.yaml#DELETE /v3/templates/{template_id}
+    - openapi/_original/tsg_templates_v3.yaml#GET /v3/templates
+    - openapi/_original/tsg_templates_v3.yaml#GET /v3/templates/{template_id}
+  sender:
+    path_segment:
+    - senders
+    - verified_senders
+    properties:
+      id: id
+      email:
+      - from
+      - address
+      - from_email
+      created_at: created_at
+      country: country
+      updated_at: updated_at
+      verified: verified
+      from_name: from_name
+      status: state
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tsg_lmc_senders_v3.yaml#DELETE /v3/senders/{sender_id}
+    - openapi/_original/tsg_lmc_senders_v3.yaml#GET /v3/senders
+    - openapi/_original/tsg_lmc_senders_v3.yaml#GET /v3/senders/{sender_id}
+    - openapi/_original/tsg_lmc_senders_v3.yaml#PATCH /v3/senders/{sender_id}
+    - openapi/_original/tsg_lmc_senders_v3.yaml#POST /v3/senders
+  suppression:
+    path_segment:
+    - suppressions
+    properties:
+      address: email
+      created_at: created_at
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/asm/groups/{group_id}/suppressions/{email}
+    - openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/groups/{group_id}/suppressions
+    - openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/suppressions
+    - openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/suppressions/{email}
+    - openapi/_original/tsg_suppressions_v3.yaml#POST /v3/asm/groups/{group_id}/suppressions

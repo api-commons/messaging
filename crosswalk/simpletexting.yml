@@ -1,0 +1,20 @@
+provider: simpletexting
+apis_io: https://apis.io/providers/simpletexting/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body:
+      - content
+      - text
+      id: id
+      created_at: timestamp
+      subject: subject
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/simpletexting-openapi.yml#GET /api/messages
+    - openapi/_original/simpletexting-openapi.yml#GET /api/messages/{messageId}
+    - openapi/_original/simpletexting-openapi.yml#POST /api/messages

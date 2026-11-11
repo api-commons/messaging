@@ -1,0 +1,23 @@
+provider: mailgun
+apis_io: https://apis.io/providers/mailgun/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mailgun-openapi.yml#POST /{domain}/messages
+  suppression:
+    path_segment:
+    - bounces
+    - unsubscribes
+    - complaints
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mailgun-openapi.yml#GET /{domain}/bounces
+    - openapi/_original/mailgun-openapi.yml#GET /{domain}/complaints
+    - openapi/_original/mailgun-openapi.yml#GET /{domain}/unsubscribes

@@ -1,0 +1,20 @@
+provider: messaging-api
+apis_io: https://apis.io/providers/messaging-api/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: text
+      from: sender
+      to: recipient
+      sent_at: dateSent
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/messaging-api-openapi.yml#DELETE /messages/{messageId}
+    - openapi/_original/messaging-api-openapi.yml#GET /messages
+    - openapi/_original/messaging-api-openapi.yml#GET /messages/{messageId}
+    - openapi/_original/messaging-api-openapi.yml#POST /messages
+    - openapi/_original/messaging-api-openapi.yml#PUT /messages/{messageId}

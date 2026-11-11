@@ -1,0 +1,33 @@
+provider: liveblocks
+apis_io: https://apis.io/providers/liveblocks/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      created_at:
+      - createdAt
+      - timestamp
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/liveblocks-openapi.json#DELETE /rooms/{roomId}/feeds/{feedId}/messages/{messageId}
+    - openapi/_original/liveblocks-openapi.json#GET /rooms/{roomId}/feeds/{feedId}/messages
+    - openapi/_original/liveblocks-openapi.json#PATCH /rooms/{roomId}/feeds/{feedId}/messages/{messageId}
+    - openapi/_original/liveblocks-openapi.json#POST /rooms/{roomId}/feeds/{feedId}/messages
+  conversation:
+    path_segment:
+    - threads
+    properties:
+      id: id
+      created_at: createdAt
+      last_message_at: updatedAt
+      channel: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/liveblocks-openapi.json#DELETE /rooms/{roomId}/threads/{threadId}
+    - openapi/_original/liveblocks-openapi.json#GET /rooms/{roomId}/threads
+    - openapi/_original/liveblocks-openapi.json#GET /rooms/{roomId}/threads/{threadId}
+    - openapi/_original/liveblocks-openapi.json#POST /rooms/{roomId}/threads

@@ -1,0 +1,15 @@
+provider: ibm-mq
+apis_io: https://apis.io/providers/ibm-mq/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/ibm-mq-messaging-rest-openapi.yml#DELETE /messaging/qmgr/{qmgrName}/queue/{queueName}/message
+    - openapi/_original/ibm-mq-messaging-rest-openapi.yml#GET /messaging/qmgr/{qmgrName}/queue/{queueName}/message
+    - openapi/_original/ibm-mq-messaging-rest-openapi.yml#POST /messaging/qmgr/{qmgrName}/queue/{queueName}/message
+    - openapi/_original/ibm-mq-messaging-rest-openapi.yml#POST /messaging/qmgr/{qmgrName}/topic/{topicString}/message

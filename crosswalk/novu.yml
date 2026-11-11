@@ -1,0 +1,34 @@
+provider: novu
+apis_io: https://apis.io/providers/novu/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - notifications
+    - messages
+    properties:
+      body:
+      - body
+      - content
+      id:
+      - _id
+      - id
+      created_at: createdAt
+      to: to
+      channel:
+      - channelType
+      - channel
+      status: status
+      subject:
+      - subject
+      - title
+      metadata: tags
+      sent_at: deliveredAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/novu-openapi.yml#DELETE /v1/messages/{messageId}
+    - openapi/_original/novu-openapi.yml#DELETE /v2/subscribers/{subscriberId}/notifications/{notificationId}
+    - openapi/_original/novu-openapi.yml#GET /v1/messages
+    - openapi/_original/novu-openapi.yml#GET /v1/notifications
+    - openapi/_original/novu-openapi.yml#GET /v1/notifications/{notificationId}

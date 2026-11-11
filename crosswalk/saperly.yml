@@ -1,0 +1,39 @@
+provider: saperly
+apis_io: https://apis.io/providers/saperly/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      body: body
+      id: id
+      from: from
+      created_at: createdAt
+      to: to
+      status: status
+      direction: direction
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/api-saperly-com-openapi.json#GET /messages
+    - openapi/_original/api-saperly-com-openapi.json#POST /messages
+    - openapi/_original/saperly-com-openapi-bundled.json#GET /messages
+    - openapi/_original/saperly-com-openapi-bundled.json#POST /messages
+    - openapi/_original/saperly-openapi.yml#GET /messages
+  phone_number:
+    path_segment:
+    - numbers
+    properties:
+      number: phoneNumber
+      id: id
+      capabilities: numberType
+      country: country
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/api-saperly-com-openapi.json#GET /numbers
+    - openapi/_original/api-saperly-com-openapi.json#GET /numbers/{id}
+    - openapi/_original/api-saperly-com-openapi.json#POST /numbers
+    - openapi/_original/saperly-com-openapi-bundled.json#GET /numbers
+    - openapi/_original/saperly-com-openapi-bundled.json#GET /numbers/{id}

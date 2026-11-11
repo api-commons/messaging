@@ -1,0 +1,24 @@
+provider: respond
+apis_io: https://apis.io/providers/respond/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties:
+      id: messageId
+      created_at: timestamp
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/respond-openapi.yml#GET /contact/{identifier}/message/{messageId}
+    - openapi/_original/respond-openapi.yml#POST /contact/{identifier}/message
+  conversation:
+    path_segment:
+    - conversation
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/respond-openapi.yml#POST /contact/{identifier}/conversation

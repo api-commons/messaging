@@ -1,0 +1,33 @@
+provider: sendlane
+apis_io: https://apis.io/providers/sendlane/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - emails
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/sendlane-openapi.yml#GET /suppression/emails
+    - openapi/_original/sendlane-openapi.yml#POST /suppression/emails
+    - openapi/_original/sendlane-v2.v2.yaml#GET /suppression/emails
+    - openapi/_original/sendlane-v2.v2.yaml#POST /suppression/emails
+  sender:
+    path_segment:
+    - senders
+    properties:
+      id: id
+      email: from_email
+      created_at: created_at
+      country: country
+      updated_at: updated_at
+      from_name: from_name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sendlane-openapi.yml#DELETE /senders/{senderId}
+    - openapi/_original/sendlane-openapi.yml#GET /senders
+    - openapi/_original/sendlane-openapi.yml#GET /senders/{senderId}
+    - openapi/_original/sendlane-openapi.yml#PATCH /senders/{senderId}
+    - openapi/_original/sendlane-openapi.yml#POST /senders

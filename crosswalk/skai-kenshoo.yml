@@ -1,0 +1,38 @@
+provider: skai-kenshoo
+apis_io: https://apis.io/providers/skai-kenshoo/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v1/spotlights/ai/conversation/message/{messageId}
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/spotlights/ai/conversation/message
+    - openapi/_original/skai-kenshoo-openapi-original.yml#GET /api/v1/spotlights/ai/conversation/message/{messageId}
+    - openapi/_original/skai-kenshoo-openapi-original.yml#POST /api/v1/spotlights/ai/conversation/message
+  template:
+    path_segment:
+    - templates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v1/templates/{type}
+    - openapi/_original/skai-kenshoo-api-openapi.yml#PATCH /api/v1/templates/{type}
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/templates/{type}
+    - openapi/_original/skai-kenshoo-api-openapi.yml#PUT /api/v1/templates/{type}
+    - openapi/_original/skai-kenshoo-openapi-original.yml#GET /api/v1/templates/{type}
+  conversation:
+    path_segment:
+    - chats
+    - conversation
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#DELETE /api/v1/chats/{chat_id}
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v1/chats
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/chats
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/spotlights/ai/conversation
+    - openapi/_original/skai-kenshoo-openapi-original.yml#DELETE /api/v1/chats/{chat_id}
