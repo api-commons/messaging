@@ -11,7 +11,9 @@ concepts:
       id: id
       body: content
       created_at: created_at
+      channel: type
       attachments: media
+      updated_at: updated_at
     core_coverage: 0.667
     evidence:
     - openapi/_original/usecommune-openapi.json#GET /messages/{message}
@@ -28,6 +30,7 @@ concepts:
       last_message_at:
       - updated_at
       - last_activity_at
+      channel: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/usecommune-openapi.json#GET /newsletters/{newsletter}/threads

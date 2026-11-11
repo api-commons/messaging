@@ -15,6 +15,7 @@ concepts:
       attachments:
       - files
       - attachments
+      updated_at: updated
     core_coverage: 0.667
     evidence:
     - openapi/_original/webex-contact-center-openapi.json#POST /v2/tasks/{taskId}/messages
@@ -37,7 +38,7 @@ concepts:
       language: locale
       subject: title
       description: description
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/webex-admin-openapi.json#GET /partner/reports/templates
     - openapi/_original/webex-admin-openapi.json#GET /report/templates

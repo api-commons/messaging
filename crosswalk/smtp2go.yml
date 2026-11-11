@@ -8,6 +8,7 @@ concepts:
     - email
     - sms
     properties:
+      id: message_id
       body:
       - html_body
       - text_body
@@ -17,10 +18,11 @@ concepts:
       - recipient
       - to
       - destination
+      status: status
       subject: subject
       attachments: attachments
       sent_at: sent
-    core_coverage: 0.667
+    core_coverage: 1.0
     evidence:
     - openapi/_original/smtp2go-openapi-original.yml#POST /archive/email
     - openapi/_original/smtp2go-openapi-original.yml#POST /email/batch

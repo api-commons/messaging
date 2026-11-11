@@ -6,14 +6,19 @@ concepts:
   message:
     path_segment:
     - messages
-    properties: {}
+    properties:
+      metadata: metadata
     core_coverage: 0.0
     evidence:
     - openapi/_original/iterable-api-openapi.json#GET /api/embedded-messaging/messages
   template:
     path_segment:
     - templates
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: templateId
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.75
     evidence:
     - openapi/_original/iterable-api-openapi.json#GET /api/templates

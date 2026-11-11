@@ -12,6 +12,7 @@ concepts:
       channel:
       - type
       - message_type
+      updated_at: updated_at
     core_coverage: 0.333
     evidence:
     - openapi/_original/sendbird-platform-openapi.yml#GET /group_channels/{channel_url}/messages

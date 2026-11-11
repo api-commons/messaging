@@ -8,9 +8,16 @@ concepts:
     - messages
     - message
     properties:
-      body: text
+      id: id
+      body:
+      - text
+      - html
+      created_at: created_at
+      channel: type
       attachments: attachments
-    core_coverage: 0.333
+      metadata: custom
+      updated_at: updated_at
+    core_coverage: 0.667
     evidence:
     - openapi/_original/getstream-openapi.yml#DELETE /messages/{id}
     - openapi/_original/getstream-openapi.yml#GET /messages/{id}
@@ -20,8 +27,15 @@ concepts:
   conversation:
     path_segment:
     - threads
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      created_at: created_at
+      last_message_at:
+      - last_message_at
+      - updated_at
+      name: title
+      channel: channel
+      metadata: custom
+    core_coverage: 0.5
     evidence:
     - openapi/_original/getstream-openapi.yml#GET /threads/{message_id}
     - openapi/_original/getstream-openapi.yml#PATCH /threads/{message_id}

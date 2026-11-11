@@ -30,7 +30,7 @@ concepts:
     - templates
     properties:
       name: name
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/sendhq-api-openapi.yml#GET /templates
     - openapi/_original/sendhq-api-openapi.yml#GET /templates/{id}
@@ -42,7 +42,7 @@ concepts:
     - threads
     properties:
       id: id
-    core_coverage: 1.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/sendhq-api-openapi.yml#GET /threads/{id}
     - openapi/_original/sendhq-openapi.json#GET /threads/{id}

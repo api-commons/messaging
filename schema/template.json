@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.741,
-      "x-commons-providers": 43,
+      "x-commons-share": 0.793,
+      "x-commons-providers": 46,
       "x-commons-spellings": [
         "id",
         "template_id",
@@ -24,28 +24,28 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.724,
-      "x-commons-providers": 42,
+      "x-commons-share": 0.741,
+      "x-commons-providers": 43,
       "x-commons-spellings": [
         "name",
         "Name",
+        "label",
         "friendlyName",
         "displayName",
-        "label",
         "friendly_name"
       ]
     },
     "body": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.569,
-      "x-commons-providers": 33,
+      "x-commons-share": 0.586,
+      "x-commons-providers": 34,
       "x-commons-spellings": [
         "content",
         "components",
+        "text",
         "body",
         "html",
-        "text",
         "htmlContent",
         "HtmlBody",
         "TextBody"
@@ -53,26 +53,26 @@
     },
     "created_at": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.483,
-      "x-commons-providers": 28,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 29,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
+        "createdOn",
         "created_date",
         "creationDate",
         "CreatedOn",
         "_createdOn",
-        "dateCreated",
-        "createdOn"
+        "dateCreated"
       ],
       "format": "date-time"
     },
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.448,
-      "x-commons-providers": 26,
+      "x-commons-share": 0.466,
+      "x-commons-providers": 27,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
@@ -87,8 +87,8 @@
     "category": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.379,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.397,
+      "x-commons-providers": 23,
       "x-commons-spellings": [
         "category",
         "type",
@@ -107,6 +107,17 @@
         "locale"
       ]
     },
+    "subject": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.31,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "subject",
+        "title",
+        "Subject"
+      ]
+    },
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -117,22 +128,11 @@
         "state"
       ]
     },
-    "subject": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.259,
-      "x-commons-providers": 15,
-      "x-commons-spellings": [
-        "subject",
-        "title",
-        "Subject"
-      ]
-    },
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.207,
-      "x-commons-providers": 12,
+      "x-commons-share": 0.224,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "description",
         "Description"

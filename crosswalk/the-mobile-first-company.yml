@@ -24,9 +24,10 @@ concepts:
     - conversation
     - conversations
     properties:
+      id: id
+      name: name
       channel: type
-      participants: contacts
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/contact/{contact_id}/conversation
     - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/conversations
@@ -35,9 +36,7 @@ concepts:
     - numbers
     properties:
       number: number
-      capabilities:
-      - type
-      - capabilities
+      id: id
       country: country
       name: name
     core_coverage: 0.667

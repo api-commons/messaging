@@ -21,6 +21,6 @@ concepts:
       id: id
       name: label
       category: template_type
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/moengage-offerings-openapi.yml#GET /v5/offers/templates

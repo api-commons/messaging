@@ -13,8 +13,9 @@ concepts:
       created_at: createdAt
       subject: title
       conversation_id: conversation_id
-      direction: direction
       metadata: metadata
+      direction: direction
+      updated_at: updatedAt
     core_coverage: 0.667
     evidence:
     - openapi/_original/sinch-chatlayer-analytics-api-openapi.yaml#GET /v1/bots/{bot_id}/messages
@@ -39,7 +40,7 @@ concepts:
       - state
       - status
       description: description
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/sinch-fax-api-openapi.yaml#GET /v3/projects/{projectId}/services/{serviceId}/domains/{domainName}/templates
     - openapi/_original/sinch-fax-api-openapi.yaml#GET /v3/projects/{projectId}/services/{serviceId}/domains/{domainName}/templates/{templateName}
@@ -51,7 +52,8 @@ concepts:
     - conversations
     properties:
       id: id
-    core_coverage: 1.0
+      metadata: metadata
+    core_coverage: 0.5
     evidence:
     - openapi/_original/sinch-chatlayer-analytics-api-openapi.yaml#GET /v1/bots/{bot_id}/conversations
     - openapi/_original/sinch-chatlayer-analytics-api-openapi.yaml#GET /v1/teams/{team_id}/conversations

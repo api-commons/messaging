@@ -10,8 +10,8 @@ concepts:
       id: id
       body: body
       from: from
-      to: to
       created_at: created_date
+      to: to
       channel: type
       status: state
       subject: subject
@@ -31,7 +31,7 @@ concepts:
       id: id
       name: name
       created_at: created_date
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#GET /messaging/message_templates
     - openapi/_original/syniverse-omni-channel-messaging-openapi.yml#POST /messaging/message_templates

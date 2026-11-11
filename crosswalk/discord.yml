@@ -28,7 +28,7 @@ concepts:
       created_at: created_at
       updated_at: updated_at
       description: description
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/discord-openapi.json#DELETE /guilds/{guild_id}/templates/{code}
     - openapi/_original/discord-openapi.json#GET /guilds/templates/{code}
@@ -42,7 +42,7 @@ concepts:
       id: id
       name: name
       channel: type
-    core_coverage: 1.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/discord-openapi.json#POST /channels/{channel_id}/messages/{message_id}/threads
     - openapi/_original/discord-openapi.json#POST /channels/{channel_id}/threads

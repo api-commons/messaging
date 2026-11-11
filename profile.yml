@@ -87,8 +87,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 122
-      share: 0.674
+      providers: 130
+      share: 0.718
       type: string
       spellings:
       - id
@@ -101,22 +101,22 @@ concepts:
       - messageID
     - name: body
       tier: core
-      providers: 121
-      share: 0.669
+      providers: 125
+      share: 0.691
       type: string
       spellings:
       - body
       - text
       - content
       - html
+      - html_content
       - htmlContent
       - htmlBody
       - html_body
-      - text_body
     - name: from
       tier: core
-      providers: 99
-      share: 0.547
+      providers: 100
+      share: 0.552
       type: string
       spellings:
       - from
@@ -124,9 +124,23 @@ concepts:
       - source
       - senderId
       - sender_id
+      - from_email
       - from_number
       - originator
-      - from_email
+    - name: created_at
+      tier: extended
+      providers: 85
+      share: 0.47
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - timestamp
+      - created
+      - createdDate
+      - date_created
+      - createTime
+      - create_time
     - name: to
       tier: extended
       providers: 81
@@ -141,24 +155,10 @@ concepts:
       - receiver
       - personalizations
       - msisdn
-    - name: created_at
-      tier: extended
-      providers: 80
-      share: 0.442
-      type: string
-      spellings:
-      - created_at
-      - createdAt
-      - timestamp
-      - created
-      - createdDate
-      - date_created
-      - createTime
-      - CreationDate
     - name: channel
       tier: extended
-      providers: 69
-      share: 0.381
+      providers: 77
+      share: 0.425
       type: string
       spellings:
       - type
@@ -171,8 +171,8 @@ concepts:
       - kind
     - name: status
       tier: extended
-      providers: 66
-      share: 0.365
+      providers: 69
+      share: 0.381
       type: string
       spellings:
       - status
@@ -182,8 +182,8 @@ concepts:
       - messageStatus
     - name: subject
       tier: extended
-      providers: 64
-      share: 0.354
+      providers: 66
+      share: 0.365
       type: string
       spellings:
       - subject
@@ -191,8 +191,8 @@ concepts:
       - Subject
     - name: attachments
       tier: extended
-      providers: 63
-      share: 0.348
+      providers: 64
+      share: 0.354
       type: array
       spellings:
       - attachments
@@ -205,8 +205,8 @@ concepts:
       - media_url
     - name: conversation_id
       tier: extended
-      providers: 40
-      share: 0.221
+      providers: 41
+      share: 0.227
       type: string
       spellings:
       - conversationId
@@ -217,6 +217,20 @@ concepts:
       - chatId
       - chat_id
       - chatID
+    - name: metadata
+      tier: extended
+      providers: 40
+      share: 0.221
+      type: object
+      spellings:
+      - metadata
+      - tags
+      - attributes
+      - custom
+      - variables
+      - customFields
+      - properties
+      - custom_args
     - name: direction
       tier: extended
       providers: 38
@@ -225,20 +239,20 @@ concepts:
       spellings:
       - direction
       - inbound
-    - name: metadata
+    - name: updated_at
       tier: extended
-      providers: 37
-      share: 0.204
-      type: object
+      providers: 38
+      share: 0.21
+      type: string
       spellings:
-      - tags
-      - metadata
-      - attributes
-      - variables
-      - customFields
-      - properties
-      - custom_args
-      - custom
+      - updated_at
+      - updatedAt
+      - date_updated
+      - updated
+      - updatedDate
+      - update_time
+      - dateModified
+      - modifiedDate
     - name: sent_at
       tier: extended
       providers: 37
@@ -247,54 +261,54 @@ concepts:
       spellings:
       - send_at
       - sent_at
-      - sentAt
       - scheduled_at
       - delivered_at
+      - sentAt
       - date_sent
       - sent
       - deliveredAt
-    long_tail_count: 1855
+    long_tail_count: 1921
     long_tail_sample:
-    - updated_at
     - reply_to
     - template_id
-    - error_code
     - name
+    - error_code
     - bcc
     - cc
-    - campaign_id
     - headers
-    - channel_id
+    - campaign_id
+    - reactions
     - cost
     - segments
     - user
-    - contact_id
-    - reactions
-    - read_at
     - account_id
+    - channel_id
+    - contact_id
+    - read_at
+    - content_type
     - external_id
     - is_read
     - user_id
-    - content_type
     - from_address
     - priority
     - read
+    - sender_name
     - author
     - category
-    - limit
-    - sender_name
+    - from_name
+    - mentions
+    - size
     - agent_id
     - date
     - encoding
-    - from_name
-    - mentions
+    - key
+    - reference
     - references
     - result
     - application_id
     - archived_at
     - author_id
     - batch_id
-    - categories
   template:
     segments_seen:
       templates: 54
@@ -340,8 +354,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 43
-      share: 0.741
+      providers: 46
+      share: 0.793
       type: string
       spellings:
       - id
@@ -354,48 +368,48 @@ concepts:
       - sid
     - name: name
       tier: core
-      providers: 42
-      share: 0.724
+      providers: 43
+      share: 0.741
       type: string
       spellings:
       - name
       - Name
+      - label
       - friendlyName
       - displayName
-      - label
       - friendly_name
     - name: body
       tier: core
-      providers: 33
-      share: 0.569
+      providers: 34
+      share: 0.586
       type: string
       spellings:
       - content
       - components
+      - text
       - body
       - html
-      - text
       - htmlContent
       - HtmlBody
       - TextBody
     - name: created_at
-      tier: extended
-      providers: 28
-      share: 0.483
+      tier: core
+      providers: 29
+      share: 0.5
       type: string
       spellings:
       - createdAt
       - created_at
+      - createdOn
       - created_date
       - creationDate
       - CreatedOn
       - _createdOn
       - dateCreated
-      - createdOn
     - name: updated_at
       tier: extended
-      providers: 26
-      share: 0.448
+      providers: 27
+      share: 0.466
       type: string
       spellings:
       - updated_at
@@ -407,8 +421,8 @@ concepts:
       - update_time
     - name: category
       tier: extended
-      providers: 22
-      share: 0.379
+      providers: 23
+      share: 0.397
       type: string
       spellings:
       - category
@@ -424,6 +438,15 @@ concepts:
       - language
       - lang
       - locale
+    - name: subject
+      tier: extended
+      providers: 18
+      share: 0.31
+      type: string
+      spellings:
+      - subject
+      - title
+      - Subject
     - name: status
       tier: extended
       providers: 17
@@ -432,65 +455,56 @@ concepts:
       spellings:
       - status
       - state
-    - name: subject
-      tier: extended
-      providers: 15
-      share: 0.259
-      type: string
-      spellings:
-      - subject
-      - title
-      - Subject
     - name: description
       tier: extended
-      providers: 12
-      share: 0.207
+      providers: 13
+      share: 0.224
       type: string
       spellings:
       - description
       - Description
-    long_tail_count: 412
+    long_tail_count: 426
     long_tail_sample:
     - metadata
-    - variables
-    - attachments
     - created_by
     - template_name
+    - variables
     - version
+    - attachments
+    - active
+    - is_default
     - rejected_reason
+    - add_security_recommendation
     - app_id
     - application_id
+    - buttons
     - channel
+    - code_expiration_minutes
     - content_type
+    - editor
+    - format
     - from
     - is_active
-    - is_default
-    - pagination
     - parameter_format
     - rejection_reason
     - reply_to
+    - slug
     - to
     - translations
-    - versions
     - account_id
-    - active
-    - allow_category_change
     - attachment_url
     - channel_id
     - channels
     - code
     - default_language
     - enabled_languages
+    - example
     - folder_id
+    - generate_plain_content
     - generation
     - href
     - languages
     - last_used_at
-    - order
-    - page_size
-    - published
-    - quality_score
-    - schema
   conversation:
     segments_seen:
       conversations: 46
@@ -531,8 +545,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 50
-      share: 0.794
+      providers: 52
+      share: 0.825
       type: string
       spellings:
       - id
@@ -543,43 +557,43 @@ concepts:
       - _id
       - sid
     - name: created_at
-      tier: extended
-      providers: 30
-      share: 0.476
+      tier: core
+      providers: 34
+      share: 0.54
       type: string
       spellings:
-      - createdAt
       - created_at
+      - createdAt
       - timestamp
       - createdTime
-      - created
+      - createdOn
       - _createdOn
       - date_created
       - created_time
+    - name: last_message_at
+      tier: extended
+      providers: 27
+      share: 0.429
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - last_message_at
+      - lastMessageAt
+      - last_activity_at
+      - lastActivityAt
     - name: status
       tier: extended
-      providers: 25
-      share: 0.397
+      providers: 27
+      share: 0.429
       type: string
       spellings:
       - status
       - state
-    - name: last_message_at
+    - name: name
       tier: extended
       providers: 24
       share: 0.381
-      type: string
-      spellings:
-      - updatedAt
-      - updated_at
-      - lastMessageAt
-      - last_message_at
-      - last_activity_at
-      - lastActivityAt
-    - name: name
-      tier: extended
-      providers: 20
-      share: 0.317
       type: string
       spellings:
       - name
@@ -589,8 +603,8 @@ concepts:
       - display_name
     - name: channel
       tier: extended
-      providers: 19
-      share: 0.302
+      providers: 22
+      share: 0.349
       type: string
       spellings:
       - type
@@ -598,57 +612,68 @@ concepts:
       - channel_type
     - name: participants
       tier: extended
-      providers: 18
-      share: 0.286
+      providers: 16
+      share: 0.254
       type: array
       spellings:
       - participants
-      - contacts
       - members
+      - contacts
       - recipients
-      - users
-    long_tail_count: 683
+    - name: metadata
+      tier: extended
+      providers: 13
+      share: 0.206
+      type: object
+      spellings:
+      - metadata
+      - tags
+      - custom
+      - attributes
+      - custom_fields
+      - properties
+    long_tail_count: 717
     long_tail_sample:
-    - metadata
     - subject
-    - messages
     - unread_count
-    - contact_id
     - attachments
+    - contact_id
     - description
     - message_count
+    - messages
+    - created_by
     - last_message
     - agent_id
     - contact
     - direction
     - inbox_id
-    - limit
+    - labels
     - page_size
     - priority
     - account_id
     - channel_id
     - closed
-    - created_by
+    - deleted_at
     - email
     - from
-    - labels
     - last_message_id
     - last_message_preview
+    - participant_count
+    - reply_to
     - team_id
-    - updated_at
+    - thread_id
     - user_id
     - assignee
     - bcc
+    - body
     - campaign_id
     - cc
     - channels
     - custom_attributes
+    - draft
     - filters
     - has_attachments
     - last_modified_time
-    - next_cursor
-    - next_page_token
-    - page_count
   phone_number:
     segments_seen:
       numbers: 22
@@ -695,8 +720,8 @@ concepts:
     properties:
     - name: number
       tier: core
-      providers: 26
-      share: 0.812
+      providers: 28
+      share: 0.875
       type: string
       spellings:
       - number
@@ -706,8 +731,8 @@ concepts:
       - phone
     - name: id
       tier: core
-      providers: 22
-      share: 0.688
+      providers: 23
+      share: 0.719
       type: string
       spellings:
       - id
@@ -716,19 +741,19 @@ concepts:
       - phoneNumberId
     - name: capabilities
       tier: core
-      providers: 18
-      share: 0.562
+      providers: 21
+      share: 0.656
       type: string
       spellings:
-      - capabilities
       - type
+      - capabilities
       - number_type
       - features
       - numberType
     - name: country
       tier: core
-      providers: 16
-      share: 0.5
+      providers: 18
+      share: 0.562
       type: string
       spellings:
       - country
@@ -738,8 +763,8 @@ concepts:
       - iso_country
     - name: name
       tier: core
-      providers: 16
-      share: 0.5
+      providers: 17
+      share: 0.531
       type: string
       spellings:
       - name
@@ -770,59 +795,59 @@ concepts:
       - createTime
     - name: updated_at
       tier: extended
-      providers: 10
-      share: 0.312
+      providers: 11
+      share: 0.344
       type: string
       spellings:
       - updated_at
+      - dateUpdated
       - updatedAt
       - date_updated
       - dateModified
       - modifiedAt
       - updateTime
-      - dateUpdated
-    long_tail_count: 451
+    long_tail_count: 492
     long_tail_sample:
     - area_code
-    - metadata
-    - page_size
+    - account_id
     - campaign_id
     - enabled
     - locality
+    - location
+    - metadata
     - number_id
+    - page_size
+    - phone_number_type
     - quality_rating
     - released_at
     - sms_url
     - trunk_sid
-    - account_id
     - account_sid
     - action
     - address_id
     - address_requirements
     - api_version
+    - assigned
     - beta
     - billing_interval_months
     - caller_id_name
     - capability
     - connection_id
+    - description
     - destination_number
     - emergency_status
     - error
+    - extension
     - is_official_business_account
     - items
-    - limit
-    - location
+    - mo_http_url
     - note
     - origin
-    - page_count
     - page_number
-    - phone_number_type
     - purchased_at
     - removed
     - renewal_at
     - routing
-    - shared
-    - size
   sender:
     segments_seen:
       senders: 12
@@ -944,9 +969,10 @@ concepts:
       type: string
       spellings:
       - state
-    long_tail_count: 218
+    long_tail_count: 215
     long_tail_sample:
     - city
+    - domain
     - is_default
     - phone_number
     - address2
@@ -955,7 +981,6 @@ concepts:
     - company
     - country_code
     - description
-    - domain
     - hosting_region
     - nickname
     - reply_to
@@ -970,9 +995,9 @@ concepts:
     - admin_comment
     - alias
     - api_version
+    - app_id
     - application_id
     - applied_charges
-    - audit_records
     - auth_name
     - auth_token
     - authentication_code
@@ -1030,6 +1055,18 @@ concepts:
       share: 0.045
       tier: long-tail
     properties:
+    - name: address
+      tier: core
+      providers: 12
+      share: 0.632
+      type: string
+      spellings:
+      - email
+      - email_address
+      - emailAddress
+      - phoneNumber
+      - recipient
+      - Email
     - name: reason
       tier: core
       providers: 12
@@ -1040,21 +1077,10 @@ concepts:
       - status
       - type
       - Type
-    - name: address
-      tier: core
-      providers: 10
-      share: 0.526
-      type: string
-      spellings:
-      - email
-      - email_address
-      - emailAddress
-      - phoneNumber
-      - Email
     - name: created_at
       tier: core
-      providers: 10
-      share: 0.526
+      providers: 11
+      share: 0.579
       type: string
       spellings:
       - created_at
@@ -1072,13 +1098,19 @@ concepts:
       - suppressionId
       - ID
       - MessageID
+    - name: source
+      tier: extended
+      providers: 4
+      share: 0.211
+      type: string
+      spellings:
+      - source
     long_tail_count: 96
     long_tail_sample:
     - emails
     - from
     - name
     - scope
-    - source
     - channel
     - contact_id
     - delete_all
@@ -1086,6 +1118,7 @@ concepts:
     - domain
     - expires_at
     - group_id
+    - ip
     - suppressed
     - to
     - active
@@ -1097,11 +1130,12 @@ concepts:
     - cached_at
     - campaign_activity_id
     - can_activate
-    - category
+    - cio_id
     - compared_to
     - content
     - current_email_address
-    - days
+    - customer_id
+    - date
     - deleted_at
     - destination
     - details
@@ -1113,4 +1147,3 @@ concepts:
     - ended_at
     - ended_effective_at
     - ended_reason
-    - expires_in_days

@@ -9,8 +9,8 @@ concepts:
     properties:
       id: id
       from: sender
-      to: recipient
       created_at: created
+      to: recipient
       direction: direction
     core_coverage: 0.667
     evidence:

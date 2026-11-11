@@ -17,10 +17,10 @@ concepts:
       from:
       - from
       - source
+      created_at: date_created
       to:
       - to
       - personalizations
-      created_at: date_created
       channel: type
       status: status
       subject:
@@ -29,10 +29,11 @@ concepts:
       attachments:
       - media
       - attachments
-      direction: direction
       metadata:
       - attributes
       - tags
+      direction: direction
+      updated_at: date_updated
       sent_at:
       - date_sent
       - send_at
@@ -49,12 +50,17 @@ concepts:
     properties:
       id:
       - id
+      - template_id
       - sid
       name:
       - name
       - friendly_name
+      body:
+      - html_content
+      - plain_content
       updated_at: updated_at
-    core_coverage: 0.667
+      subject: subject
+    core_coverage: 0.75
     evidence:
     - openapi/_original/twilio-sendgrid-openapi.yml#DELETE /templates/{template_id}
     - openapi/_original/twilio-sendgrid-openapi.yml#GET /templates
@@ -71,14 +77,15 @@ concepts:
       created_at:
       - date_created
       - createdAt
+      last_message_at: updatedAt
       status:
       - state
       - status
-      last_message_at: updatedAt
       name:
       - friendly_name
       - name
       participants: participants
+      metadata: attributes
     core_coverage: 1.0
     evidence:
     - openapi/_original/conversations-openapi-original.yml#DELETE /v1/Conversations/{Sid}
@@ -136,10 +143,10 @@ concepts:
     - blocks
     - unsubscribes
     properties:
+      address: email
       reason:
       - status
       - reason
-      address: email
       created_at: created
     core_coverage: 1.0
     evidence:

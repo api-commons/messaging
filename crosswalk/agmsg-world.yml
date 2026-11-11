@@ -7,8 +7,12 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: message_id
+      body: content
+      from: sender_id
+      created_at: created_at
       conversation_id: chat_id
-    core_coverage: 0.0
+    core_coverage: 1.0
     evidence:
     - openapi/_original/agmsg-world-openapi.json#POST /channel/messages
     - openapi/_original/agmsg-world-openapi.json#POST /chat/group/messages

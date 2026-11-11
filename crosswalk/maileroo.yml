@@ -25,6 +25,6 @@ concepts:
       id: template_id
       body: html
       subject: subject
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/maileroo-email-api-openapi.yml#POST /emails/template

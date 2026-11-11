@@ -8,6 +8,7 @@ concepts:
     - messages
     properties:
       from: from
+      created_at: date-created
       to: msisdn
       status: status
     core_coverage: 0.333

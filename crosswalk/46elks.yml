@@ -10,8 +10,8 @@ concepts:
     properties:
       id: id
       from: from
-      to: to
       created_at: created
+      to: to
       status: status
       direction: direction
     core_coverage: 0.667

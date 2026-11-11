@@ -10,15 +10,18 @@ concepts:
     properties:
       id: id
       body: content
-      to: recipient
       created_at:
       - created_at
       - created
+      to: recipient
       status:
       - status
       - state
       subject: title
       metadata: tags
+      updated_at:
+      - updated_at
+      - updated
       sent_at: sent
     core_coverage: 0.667
     evidence:
@@ -33,7 +36,7 @@ concepts:
     properties:
       id: id
       body: content
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/courier-openapi.yml#GET /tenants/{tenant_id}/templates
     - openapi/_original/courier-openapi.yml#GET /tenants/{tenant_id}/templates/{template_id}

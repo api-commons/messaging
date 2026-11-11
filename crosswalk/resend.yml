@@ -12,8 +12,8 @@ concepts:
       - html
       - text
       from: from
-      to: to
       created_at: created_at
+      to: to
       subject: subject
       attachments: attachments
       metadata: tags

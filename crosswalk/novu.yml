@@ -14,8 +14,8 @@ concepts:
       body:
       - body
       - content
-      to: to
       created_at: createdAt
+      to: to
       channel:
       - channelType
       - channel
@@ -24,6 +24,7 @@ concepts:
       - subject
       - title
       metadata: tags
+      updated_at: updatedAt
       sent_at: deliveredAt
     core_coverage: 0.667
     evidence:

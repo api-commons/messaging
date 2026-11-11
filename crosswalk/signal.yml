@@ -7,7 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      created_at: timestamp
-    core_coverage: 0.0
+      body: content
+      channel: type
+    core_coverage: 0.333
     evidence:
     - openapi/_original/signal-server-openapi.yml#PUT /v1/messages/{destinationUuid}

@@ -7,8 +7,17 @@ concepts:
     path_segment:
     - messages
     - message
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      body:
+      - html
+      - text
+      created_at: created_at
+      channel: type
+      attachments: attachments
+      metadata: custom
+      updated_at: updated_at
+    core_coverage: 0.667
     evidence:
     - openapi/_original/stream-io-chat-openapi.yml#DELETE /messages/{id}
     - openapi/_original/stream-io-chat-openapi.yml#GET /channels/{type}/{id}/messages
@@ -18,8 +27,15 @@ concepts:
   conversation:
     path_segment:
     - threads
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      created_at: created_at
+      last_message_at:
+      - last_message_at
+      - updated_at
+      name: title
+      channel: channel
+      metadata: custom
+    core_coverage: 0.5
     evidence:
     - openapi/_original/stream-io-chat-openapi.yml#GET /threads/{message_id}
     - openapi/_original/stream-io-chat-openapi.yml#PATCH /threads/{message_id}

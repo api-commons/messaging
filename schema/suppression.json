@@ -5,6 +5,20 @@
   "description": "The common suppression in Messaging (Email, SMS, Chat), distilled from 19 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
+    "address": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.632,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "email",
+        "email_address",
+        "emailAddress",
+        "phoneNumber",
+        "recipient",
+        "Email"
+      ]
+    },
     "reason": {
       "type": "string",
       "x-commons-tier": "core",
@@ -17,24 +31,11 @@
         "Type"
       ]
     },
-    "address": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.526,
-      "x-commons-providers": 10,
-      "x-commons-spellings": [
-        "email",
-        "email_address",
-        "emailAddress",
-        "phoneNumber",
-        "Email"
-      ]
-    },
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.526,
-      "x-commons-providers": 10,
+      "x-commons-share": 0.579,
+      "x-commons-providers": 11,
       "x-commons-spellings": [
         "created_at",
         "created",
@@ -54,6 +55,15 @@
         "suppressionId",
         "ID",
         "MessageID"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "source"
       ]
     }
   },

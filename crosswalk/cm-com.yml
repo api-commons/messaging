@@ -8,6 +8,7 @@ concepts:
     - email
     properties:
       id: id
+      to: address
     core_coverage: 0.333
     evidence:
     - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#DELETE /channels/v1/accounts/{accountId}/channels/{channelId}/configuration/email/{addressId}
@@ -44,8 +45,10 @@ concepts:
   conversation:
     path_segment:
     - conversations
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      created_at: createdOn
+      status: state
+    core_coverage: 0.5
     evidence:
     - openapi/_original/cm-com-halo-analytics-v1-openapi.yml#GET /analytics/v2/accounts/{account_id}/conversations
     - openapi/_original/cm-com-halo-analytics-v1-openapi.yml#GET /analytics/v2/accounts/{account_id}/conversations/{conversation_id}

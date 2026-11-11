@@ -17,12 +17,12 @@ providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| message | 198 | 181 | id 67%, body 67%, from 55% | messages 143, email 33, sms 32, message 31 |
-| template | 66 | 58 | id 74%, name 72%, body 57% | templates 54, template 17, message_templates 4, email_templates 3 |
-| conversation | 71 | 63 | id 79% | conversations 46, threads 18, chats 13, conversation 12 |
-| phone_number | 33 | 32 | number 81%, id 69%, capabilities 56%, country 50%, name 50%, status 50% | numbers 22, phone-numbers 11, phonenumbers 5, phone_numbers 4 |
+| message | 198 | 181 | id 72%, body 69%, from 55% | messages 143, email 33, sms 32, message 31 |
+| template | 66 | 58 | id 79%, name 74%, body 59%, created_at 50% | templates 54, template 17, message_templates 4, email_templates 3 |
+| conversation | 71 | 63 | id 82%, created_at 54% | conversations 46, threads 18, chats 13, conversation 12 |
+| phone_number | 33 | 32 | number 88%, id 72%, capabilities 66%, country 56%, name 53%, status 50% | numbers 22, phone-numbers 11, phonenumbers 5, phone_numbers 4 |
 | sender | 19 | 17 | id 82%, email 71%, name 59% | senders 12, identities 4, verified_senders 2, sender_identities 1 |
-| suppression | 22 | 19 | reason 63%, address 53%, created_at 53% | suppressions 10, bounces 6, unsubscribes 5, blocklist 3 |
+| suppression | 22 | 19 | address 63%, reason 63%, created_at 58% | suppressions 10, bounces 6, unsubscribes 5, blocklist 3 |
 
 Cohort: 365 providers with harvested OpenAPI, 198 crosswalks. Of the providers exposing a message: 84% create, 70% list, 50% fetch, 27% update, 30% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -30,8 +30,8 @@ Cohort: 365 providers with harvested OpenAPI, 198 crosswalks. Of the providers e
 Shares are of the providers with a readable resource schema for that concept. The
 extended tier and the long tail of every concept are in [profile.yml](profile.yml).
 
-One shape is worth knowing before mapping to it: a message's `to` is in only 44% of message
-resources, below `from` (54%). Many providers return the message as *received* -- inbound
+One shape is worth knowing before mapping to it: a message's `to` is in only 45% of message
+resources, below `from` (55%). Many providers return the message as *received* -- inbound
 webhooks and conversation history -- where the recipient is the account itself and is left
 out. Channel-agnostic providers carry it as `recipients` or `personalizations`, which the
 aliases fold in.
@@ -58,7 +58,7 @@ These are calls, not measurements, recorded so they can be revisited as the meth
   Campaigns and lists belong to a marketing context; verification and finder are data
   products; and a message on a queue is infrastructure, not communication.
 - **One message concept across channels.** Email, SMS, MMS, chat-app and push messages share
-  `body`, `id` and `from` in their core; the channel is a property (`channel`, 39%), not a
+  `body`, `id` and `from` in their core; the channel is a property (`channel`, 43%), not a
   separate resource. Sending by action path (`/mail/send`, `/email/batch`,
   `/messages/send`) counts as creating messages.
 - **Phone numbers are `/phone-numbers`, though 21 providers say `/numbers`.** The

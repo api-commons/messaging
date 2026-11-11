@@ -21,7 +21,7 @@ concepts:
     properties:
       id: templateId
       description: description
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/pagopa-print-payment-notices-openapi.yml#GET /notices/templates
     - openapi/_original/pagopa-print-payment-notices-openapi.yml#GET /notices/templates/{template_id}

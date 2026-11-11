@@ -7,8 +7,13 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body: text
-    core_coverage: 0.333
+      from: senderId
+      created_at: createdAt
+      attachments: attachments
+      updated_at: updatedAt
+    core_coverage: 1.0
     evidence:
     - openapi/_original/zenzap-openapi-original.yml#DELETE /v2/messages/{messageId}
     - openapi/_original/zenzap-openapi-original.yml#GET /v2/topics/{topicId}/messages

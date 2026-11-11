@@ -18,15 +18,16 @@ concepts:
       from:
       - sender
       - from
+      created_at: created_at
       to:
       - recipient
       - recipients
-      created_at: created_at
       status: status
       subject: subject
       attachments: attachments
-      direction: direction
       metadata: tags
+      direction: direction
+      updated_at: updated_at
       sent_at:
       - sent_at
       - delivered_at
@@ -39,7 +40,8 @@ concepts:
   conversation:
     path_segment:
     - conversation
-    properties: {}
+    properties:
+      metadata: tags
     core_coverage: 0.0
     evidence:
     - openapi/_original/ahasend-openapi-v2.yaml#POST /v2/accounts/{account_id}/messages/conversation
@@ -47,8 +49,8 @@ concepts:
     path_segment:
     - suppressions
     properties:
-      reason: reason
       address: email
+      reason: reason
       created_at: created_at
       id: id
     core_coverage: 1.0

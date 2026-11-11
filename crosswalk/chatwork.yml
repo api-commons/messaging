@@ -9,6 +9,7 @@ concepts:
     properties:
       id: message_id
       body: body
+      updated_at: update_time
       sent_at: send_time
     core_coverage: 0.667
     evidence:

@@ -10,8 +10,8 @@ concepts:
       id: id
       body: body
       from: from
-      to: to
       created_at: createdTime
+      to: to
       status: status
       subject: subject
       attachments: attachments

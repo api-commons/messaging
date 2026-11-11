@@ -12,6 +12,7 @@ concepts:
       created_at: created_at
       status: status
       subject: title
+      updated_at: updated_at
       sent_at: sent_at
     core_coverage: 0.667
     evidence:

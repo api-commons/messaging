@@ -18,12 +18,18 @@ concepts:
       from:
       - from
       - senderId
-      to: to
+      - sender
       created_at: createdAt
+      to:
+      - to
+      - destination
+      - destinations
       channel: channel
       status: status
       conversation_id: conversationId
       direction: direction
+      updated_at: updatedAt
+      sent_at: sendAt
     core_coverage: 1.0
     evidence:
     - openapi/_original/infobip-2fa-openapi.json#GET /2fa/2/applications/{appId}/messages
@@ -38,8 +44,8 @@ concepts:
     properties:
       id:
       - id
-      - templateId
       - messageId
+      - templateId
       name:
       - name
       - displayName
@@ -58,8 +64,8 @@ concepts:
       - templateType
       - type
       language: language
-      status: status
       subject: subject
+      status: status
     core_coverage: 1.0
     evidence:
     - openapi/_original/infobip-conversations-openapi.json#GET /ccaas/1/templates
@@ -73,8 +79,8 @@ concepts:
     properties:
       id: id
       created_at: createdAt
-      status: status
       last_message_at: updatedAt
+      status: status
     core_coverage: 1.0
     evidence:
     - openapi/_original/infobip-conversations-openapi.json#GET /ccaas/1/agents/{agentId}/conversations
@@ -120,10 +126,10 @@ concepts:
     path_segment:
     - suppressions
     properties:
+      address: emailAddress
       reason:
       - type
       - reason
-      address: emailAddress
       created_at: createdDate
     core_coverage: 1.0
     evidence:

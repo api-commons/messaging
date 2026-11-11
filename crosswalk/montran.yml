@@ -11,11 +11,12 @@ concepts:
       body: content
       created_at: createdAt
       channel:
-      - channel
       - messageType
+      - channel
       status: status
-      direction: direction
       metadata: metadata
+      direction: direction
+      updated_at: updatedAt
     core_coverage: 0.667
     evidence:
     - openapi/_original/montran-payments-connectivity-openapi.yml#GET /messages

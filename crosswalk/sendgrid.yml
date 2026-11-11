@@ -36,11 +36,16 @@ concepts:
     - templates
     - template
     properties:
-      id: id
+      id:
+      - id
+      - template_id
       name: name
-      body: html_content
+      body:
+      - html_content
+      - plain_content
       updated_at: updated_at
-    core_coverage: 1.0
+      subject: subject
+    core_coverage: 0.75
     evidence:
     - openapi/_original/tsg_mail_settings_v3.yaml#GET /v3/mail_settings/template
     - openapi/_original/tsg_mail_settings_v3.yaml#PATCH /v3/mail_settings/template
@@ -78,10 +83,10 @@ concepts:
     - spam_reports
     - unsubscribes
     properties:
+      address: email
       reason:
       - reason
       - status
-      address: email
       created_at:
       - created_at
       - created

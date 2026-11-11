@@ -12,13 +12,14 @@ concepts:
       - text
       - html
       from: from
-      to: to
       created_at:
       - timestamp
       - created_at
+      to: to
       subject: subject
       attachments: attachments
       conversation_id: thread_id
+      updated_at: updated_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/inboxes/{inbox_id}/messages/{message_id}
@@ -35,7 +36,7 @@ concepts:
       - created_at
       last_message_at: updated_at
       participants: recipients
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/inboxes/{inbox_id}/threads/{thread_id}
     - openapi/_original/agentmail-openapi-original.yml#DELETE /v0/pods/{pod_id}/threads/{thread_id}

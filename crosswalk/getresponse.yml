@@ -24,7 +24,7 @@ concepts:
       body: content
       created_at: createdOn
       subject: subject
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/getresponse-open-api-original.json#DELETE /transactional-emails/templates/{transactionalEmailTemplateId}
     - openapi/_original/getresponse-open-api-original.json#GET /transactional-emails/templates

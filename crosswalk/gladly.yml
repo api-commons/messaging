@@ -10,8 +10,6 @@ concepts:
     properties:
       body: body
       from: from
-      to: to
-      subject: subject
     core_coverage: 0.667
     evidence:
     - openapi/_original/gladly-rest-api-openapi.yml#POST /api/v1/communications/email

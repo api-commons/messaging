@@ -17,6 +17,7 @@ concepts:
       - subject
       - title
       metadata: customFields
+      updated_at: updatedDate
     core_coverage: 0.333
     evidence:
     - openapi/_original/act-on-api-1.json#DELETE /api/1/message/{id}

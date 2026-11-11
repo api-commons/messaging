@@ -8,10 +8,11 @@ concepts:
     - message
     properties:
       id: message_id
-      to: recipient
       created_at: created_at
+      to: recipient
       channel: channel
       status: status
+      updated_at: updated_at
       sent_at: delivered_at
     core_coverage: 0.333
     evidence:
@@ -27,7 +28,7 @@ concepts:
       updated_at: updated_at
       status: status
       description: description
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/suprsend-rest-api-openapi.yml#GET /v1/template/
     - openapi/_original/suprsend-rest-api-openapi.yml#GET /v1/template/{template_slug}/

@@ -32,7 +32,7 @@ concepts:
       subject:
       - subject
       - title
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/podium-messenger-openapi-original.json#DELETE /v4/templates/{uid}
     - openapi/_original/podium-messenger-openapi-original.json#GET /v4/templates
@@ -46,7 +46,7 @@ concepts:
       created_at: createdAt
       last_message_at: updatedAt
       channel: channel
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/podium-conversations-openapi-original.json#GET /v4/conversations
     - openapi/_original/podium-conversations-openapi-original.json#GET /v4/conversations/{uid}

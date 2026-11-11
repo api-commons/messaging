@@ -13,8 +13,8 @@ concepts:
       id: messageId
       body: content
       from: from
-      to: personalizations
       created_at: created
+      to: personalizations
       status: status
       subject: subject
       attachments: attachments
@@ -40,7 +40,7 @@ concepts:
       updated_at:
       - last_modified
       - updated_at
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/netcorecloud-email-api-v5-openapi.yml#GET /template
     - openapi/_original/netcorecloud-email-api-v5-openapi.yml#GET /templates
@@ -51,7 +51,8 @@ concepts:
     path_segment:
     - blocklist
     properties:
-      reason: type
+      address: recipient
+      source: source
     core_coverage: 0.333
     evidence:
     - openapi/_original/netcorecloud-whatsapp-api-openapi.yml#POST /v2/consent/blocklist

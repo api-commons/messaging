@@ -29,7 +29,9 @@ concepts:
   template:
     path_segment:
     - templates
-    properties: {}
+    properties:
+      subject: title
+      description: description
     core_coverage: 0.0
     evidence:
     - openapi/_original/thecolony-ai-openapi.json#GET /api/v1/messages/groups/templates
@@ -39,7 +41,10 @@ concepts:
     - conversations
     - conversation
     properties:
-      id: id
+      id:
+      - id
+      - conversation_id
+      created_at: created_at
       last_message_at: last_message_at
     core_coverage: 1.0
     evidence:

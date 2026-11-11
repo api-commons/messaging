@@ -18,8 +18,12 @@ concepts:
   conversation:
     path_segment:
     - conversations
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      created_at: created_at
+      last_message_at: last_message_at
+      status: status
+    core_coverage: 1.0
     evidence:
     - openapi/_original/clawdchat-ai-openapi.json#DELETE /a2a/conversations/{conversation_id}
     - openapi/_original/clawdchat-ai-openapi.json#DELETE /api/v1/a2a/conversations/{conversation_id}

@@ -7,14 +7,12 @@ concepts:
     path_segment:
     - emails
     properties:
-      id: id
       body:
       - html
       - plain_text
-      created_at: created_at
       status: status
       subject: subject
-    core_coverage: 0.667
+    core_coverage: 0.333
     evidence:
     - openapi/_original/litmus-instant-openapi.yml#GET /emails/{emailGuid}
     - openapi/_original/litmus-instant-openapi.yml#POST /emails

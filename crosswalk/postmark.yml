@@ -36,7 +36,7 @@ concepts:
       - HtmlBody
       - TextBody
       subject: Subject
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/postmark-api-openapi.yml#DELETE /templates/{templateIdOrAlias}
     - openapi/_original/postmark-api-openapi.yml#GET /templates
@@ -63,8 +63,8 @@ concepts:
     path_segment:
     - bounces
     properties:
-      reason: Type
       address: Email
+      reason: Type
       id:
       - ID
       - MessageID

@@ -11,8 +11,8 @@ concepts:
       from: from_number
       to: to_number
       channel:
-      - type
       - message_type
+      - type
       attachments: media_urls
     core_coverage: 0.667
     evidence:

@@ -8,8 +8,8 @@
     "number": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.812,
-      "x-commons-providers": 26,
+      "x-commons-share": 0.875,
+      "x-commons-providers": 28,
       "x-commons-spellings": [
         "number",
         "phoneNumber",
@@ -21,8 +21,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.688,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.719,
+      "x-commons-providers": 23,
       "x-commons-spellings": [
         "id",
         "sid",
@@ -33,11 +33,11 @@
     "capabilities": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.562,
-      "x-commons-providers": 18,
+      "x-commons-share": 0.656,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
-        "capabilities",
         "type",
+        "capabilities",
         "number_type",
         "features",
         "numberType"
@@ -46,8 +46,8 @@
     "country": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 16,
+      "x-commons-share": 0.562,
+      "x-commons-providers": 18,
       "x-commons-spellings": [
         "country",
         "countryCode",
@@ -59,8 +59,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 16,
+      "x-commons-share": 0.531,
+      "x-commons-providers": 17,
       "x-commons-spellings": [
         "name",
         "friendly_name",
@@ -98,16 +98,16 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.312,
-      "x-commons-providers": 10,
+      "x-commons-share": 0.344,
+      "x-commons-providers": 11,
       "x-commons-spellings": [
         "updated_at",
+        "dateUpdated",
         "updatedAt",
         "date_updated",
         "dateModified",
         "modifiedAt",
-        "updateTime",
-        "dateUpdated"
+        "updateTime"
       ],
       "format": "date-time"
     }

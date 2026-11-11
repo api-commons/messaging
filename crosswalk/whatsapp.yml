@@ -21,11 +21,15 @@ concepts:
     properties:
       id: id
       name: name
-      body: components
-      category: category
+      body:
+      - components
+      - text
+      category:
+      - category
+      - type
       language: language
       status: status
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/whatsapp-business-management-api-openapi.yml#DELETE /{waba-id}/message_templates
     - openapi/_original/whatsapp-business-management-api-openapi.yml#GET /{waba-id}/message_templates

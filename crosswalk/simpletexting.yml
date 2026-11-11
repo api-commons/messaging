@@ -8,9 +8,7 @@ concepts:
     - messages
     properties:
       id: id
-      body:
-      - content
-      - text
+      body: text
       created_at: timestamp
       subject: subject
     core_coverage: 0.667

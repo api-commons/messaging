@@ -13,8 +13,8 @@ concepts:
       body: content
       created_at: createdAt
       attachments: attachments
-      direction: direction
       metadata: attributes
+      direction: direction
     core_coverage: 0.667
     evidence:
     - openapi/_original/dixa-api.yaml#GET /beta/conversations/{conversationId}/messages

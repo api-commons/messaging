@@ -20,7 +20,10 @@ concepts:
   template:
     path_segment:
     - email_templates
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      category: category
+    core_coverage: 0.5
     evidence:
     - openapi/_original/openapi.json#GET /v4/email_templates

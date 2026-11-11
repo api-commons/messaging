@@ -33,7 +33,7 @@ concepts:
     properties:
       id: id
       name: name
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/kpn-mobile-services-management-openapi.yml#GET /contracting/basket/templates
     - openapi/_original/kpn-mobile-services-management-openapi.yml#GET /contracting/templates
@@ -41,7 +41,12 @@ concepts:
   phone_number:
     path_segment:
     - numbers
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      number: msisdn
+      capabilities:
+      - type
+      - features
+      country: country
+    core_coverage: 0.5
     evidence:
     - openapi/_original/vonage-phone-numbers-openapi.yml#GET /account/numbers

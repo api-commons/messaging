@@ -11,8 +11,8 @@ concepts:
       from: from
       to: to
       status: status
-      direction: direction
       metadata: tags
+      direction: direction
     core_coverage: 0.667
     evidence:
     - openapi/_original/telstra-messaging-api-openapi.json#DELETE /messages/{messageId}

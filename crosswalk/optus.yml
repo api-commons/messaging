@@ -25,6 +25,6 @@ concepts:
     properties:
       id: id
       name: name
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/optus-sms-suite-campaign-manager-openapi.yml#GET /{application_name}/templates

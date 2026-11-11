@@ -40,6 +40,7 @@ concepts:
       created_at: createdAt
       last_message_at: lastMessageAt
       participants: participants
+      metadata: metadata
     core_coverage: 1.0
     evidence:
     - openapi/_original/agentphone-openapi-original.json#GET /v1/agents/{agent_id}/conversations

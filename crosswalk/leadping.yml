@@ -18,6 +18,7 @@ concepts:
       - mediaUrls
       conversation_id: conversationId
       direction: direction
+      updated_at: modifiedAt
       sent_at:
       - sentAt
       - deliveredAt
@@ -60,13 +61,14 @@ concepts:
     path_segment:
     - suppressions
     properties:
-      reason:
-      - status
-      - reason
       address:
       - phoneNumber
       - email
+      reason:
+      - status
+      - reason
       id: id
+      source: source
     core_coverage: 0.667
     evidence:
     - openapi/_original/leadping-openapi.json#GET /suppressions/{id}

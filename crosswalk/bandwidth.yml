@@ -7,11 +7,13 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body: text
       from: from
       to: to
       attachments: media
-    core_coverage: 0.667
+      direction: direction
+    core_coverage: 1.0
     evidence:
     - openapi/_original/bandwidth-messaging-api-openapi.yml#GET /users/{accountId}/messages
     - openapi/_original/bandwidth-messaging-api-openapi.yml#POST /users/{accountId}/messages

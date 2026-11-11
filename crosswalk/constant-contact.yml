@@ -8,11 +8,15 @@ concepts:
     - emails
     - sends
     properties:
+      body: html_content
+      from: from_email
       created_at:
       - created_at
       - created_time
       channel: type
-    core_coverage: 0.0
+      subject: subject
+      updated_at: updated_at
+    core_coverage: 0.667
     evidence:
     - openapi/_original/constant-contact-v3-openapi.yml#DELETE /emails/{campaign_id}
     - openapi/_original/constant-contact-v3-openapi.yml#GET /account/emails

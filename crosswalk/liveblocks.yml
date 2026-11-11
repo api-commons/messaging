@@ -11,6 +11,7 @@ concepts:
       created_at:
       - createdAt
       - timestamp
+      updated_at: updatedAt
     core_coverage: 0.333
     evidence:
     - openapi/_original/liveblocks-openapi.json#DELETE /rooms/{roomId}/feeds/{feedId}/messages/{messageId}
@@ -25,6 +26,7 @@ concepts:
       created_at: createdAt
       last_message_at: updatedAt
       channel: type
+      metadata: metadata
     core_coverage: 1.0
     evidence:
     - openapi/_original/liveblocks-openapi.json#DELETE /rooms/{roomId}/threads/{threadId}

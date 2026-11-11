@@ -46,7 +46,7 @@ concepts:
     properties:
       id: id
       participants: participants
-    core_coverage: 1.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/nylas-api-openapi.yml#DELETE /v3/grants/{grant_id}/threads/{thread_id}
     - openapi/_original/nylas-api-openapi.yml#GET /v3/grants/{grant_id}/threads

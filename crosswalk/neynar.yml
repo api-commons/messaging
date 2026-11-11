@@ -8,8 +8,15 @@ concepts:
     - notifications
     - message
     - messages
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      body: body
+      created_at: created_at
+      channel: type
+      status: status
+      subject: title
+      conversation_id: conversation_id
+    core_coverage: 0.667
     evidence:
     - openapi/_original/neynar-farcaster-api.yaml#GET /v2/farcaster/frame/notifications/
     - openapi/_original/neynar-farcaster-api.yaml#GET /v2/farcaster/notifications/

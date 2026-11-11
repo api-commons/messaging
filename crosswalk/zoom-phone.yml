@@ -21,7 +21,9 @@ concepts:
       number:
       - phone_number
       - number
-      id: id
+      id:
+      - id
+      - phone_number_id
       capabilities: number_type
       name:
       - display_name

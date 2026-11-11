@@ -13,8 +13,8 @@ concepts:
       body:
       - content
       - body
-      to: phone_number
       created_at: created_at
+      to: phone_number
       channel: type
       status: status
       subject: subject

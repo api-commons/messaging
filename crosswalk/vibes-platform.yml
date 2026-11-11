@@ -12,10 +12,11 @@ concepts:
       - text
       - content
       from: from
-      to: to
       created_at: created_at
+      to: to
       status: status
       subject: subject
+      updated_at: updated_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/vibes-connect-openapi.yml#POST /api/v1/mms/messages

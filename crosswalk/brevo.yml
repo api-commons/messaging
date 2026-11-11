@@ -13,6 +13,7 @@ concepts:
       id:
       - id
       - messageId
+      - uuid
       body:
       - text
       - html
@@ -24,10 +25,10 @@ concepts:
       - from
       - source
       - sender
+      created_at: createdAt
       to:
       - to
       - recipient
-      created_at: createdAt
       channel:
       - type
       - messageType

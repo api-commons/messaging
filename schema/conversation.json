@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.794,
-      "x-commons-providers": 50,
+      "x-commons-share": 0.825,
+      "x-commons-providers": 52,
       "x-commons-spellings": [
         "id",
         "conversationId",
@@ -22,51 +22,51 @@
     },
     "created_at": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.476,
-      "x-commons-providers": 30,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.54,
+      "x-commons-providers": 34,
       "x-commons-spellings": [
-        "createdAt",
         "created_at",
+        "createdAt",
         "timestamp",
         "createdTime",
-        "created",
+        "createdOn",
         "_createdOn",
         "date_created",
         "created_time"
       ],
       "format": "date-time"
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.397,
-      "x-commons-providers": 25,
-      "x-commons-spellings": [
-        "status",
-        "state"
-      ]
-    },
     "last_message_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.381,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.429,
+      "x-commons-providers": 27,
       "x-commons-spellings": [
-        "updatedAt",
         "updated_at",
-        "lastMessageAt",
+        "updatedAt",
         "last_message_at",
+        "lastMessageAt",
         "last_activity_at",
         "lastActivityAt"
       ],
       "format": "date-time"
     },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.429,
+      "x-commons-providers": 27,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.317,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.381,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "name",
         "title",
@@ -78,8 +78,8 @@
     "channel": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.302,
-      "x-commons-providers": 19,
+      "x-commons-share": 0.349,
+      "x-commons-providers": 22,
       "x-commons-spellings": [
         "type",
         "channel",
@@ -89,14 +89,27 @@
     "participants": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
-      "x-commons-providers": 18,
+      "x-commons-share": 0.254,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "participants",
-        "contacts",
         "members",
-        "recipients",
-        "users"
+        "contacts",
+        "recipients"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.206,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "metadata",
+        "tags",
+        "custom",
+        "attributes",
+        "custom_fields",
+        "properties"
       ]
     }
   },

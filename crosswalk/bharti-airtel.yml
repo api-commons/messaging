@@ -15,9 +15,12 @@ concepts:
     path_segment:
     - template
     properties:
-      created_at: creationDate
+      id: templateId
+      created_at:
+      - creationDate
+      - createdOn
       status: status
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/airtel-iot.json#GET /template/
     - openapi/_original/airtel-iot.json#POST /bulk/sim/download/template
