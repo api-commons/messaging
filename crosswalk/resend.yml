@@ -7,13 +7,13 @@ concepts:
     path_segment:
     - emails
     properties:
+      id: id
       body:
       - html
       - text
-      id: id
       from: from
-      created_at: created_at
       to: to
+      created_at: created_at
       subject: subject
       attachments: attachments
       metadata: tags

@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - content
       - text
-      id: id
       created_at: timestamp
       subject: subject
     core_coverage: 0.667

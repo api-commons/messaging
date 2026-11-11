@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - emails
     properties:
-      body: body
       id: id
+      body: body
       from: source
       created_at: creation_date
       status: status

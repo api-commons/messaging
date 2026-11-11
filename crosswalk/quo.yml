@@ -7,13 +7,13 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - text
       - content
-      id: id
       from: from
-      created_at: createdAt
       to: to
+      created_at: createdAt
       status: status
       conversation_id: conversationId
       direction: direction

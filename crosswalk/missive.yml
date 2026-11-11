@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: body
       id: id
+      body: body
       created_at: created_at
       channel: type
       subject: subject

@@ -8,8 +8,8 @@ concepts:
     - sms
     - notifications
     properties:
-      body: text
       id: id
+      body: text
       created_at: createdAt
       channel: type
       status: status

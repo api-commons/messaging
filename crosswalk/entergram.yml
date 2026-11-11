@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: text
       id: id
+      body: text
       from: sender
       channel: messageType
       attachments: media
@@ -25,8 +25,8 @@ concepts:
     - chats
     properties:
       id: id
-      last_message_at: updatedAt
       status: status
+      last_message_at: updatedAt
       name:
       - name
       - title

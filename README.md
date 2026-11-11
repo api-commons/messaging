@@ -17,14 +17,14 @@ providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| message | 194 | 178 | body 67%, id 67%, from 54% | messages 140, email 32, sms 31, message 30 |
+| message | 198 | 181 | id 67%, body 67%, from 55% | messages 143, email 33, sms 32, message 31 |
 | template | 66 | 58 | id 74%, name 72%, body 57% | templates 54, template 17, message_templates 4, email_templates 3 |
-| conversation | 70 | 62 | id 79% | conversations 45, threads 18, conversation 12, chats 12 |
-| phone_number | 32 | 31 | number 81%, id 68%, capabilities 52%, country 52% | numbers 21, phone-numbers 11, phonenumbers 5, phone_numbers 3 |
+| conversation | 71 | 63 | id 79% | conversations 46, threads 18, chats 13, conversation 12 |
+| phone_number | 33 | 32 | number 81%, id 69%, capabilities 56%, country 50%, name 50%, status 50% | numbers 22, phone-numbers 11, phonenumbers 5, phone_numbers 4 |
 | sender | 19 | 17 | id 82%, email 71%, name 59% | senders 12, identities 4, verified_senders 2, sender_identities 1 |
-| suppression | 21 | 18 | reason 56%, address 50%, created_at 50% | suppressions 10, bounces 4, unsubscribes 3, blocklist 3 |
+| suppression | 22 | 19 | reason 63%, address 53%, created_at 53% | suppressions 10, bounces 6, unsubscribes 5, blocklist 3 |
 
-Cohort: 365 providers with harvested OpenAPI, 194 crosswalks. Of the providers exposing a message: 84% create, 71% list, 50% fetch, 27% update, 30% delete. Generated 2026-11-10 by build.py.
+Cohort: 365 providers with harvested OpenAPI, 198 crosswalks. Of the providers exposing a message: 84% create, 70% list, 50% fetch, 27% update, 30% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

@@ -8,8 +8,8 @@ concepts:
     - messages
     - message
     properties:
-      body: body
       id: id
+      body: body
       created_at: created_at
       status: status
       attachments: media_urls

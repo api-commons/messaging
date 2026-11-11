@@ -10,8 +10,8 @@ concepts:
     - mail
     - emails
     properties:
-      body: content
       id: msg_id
+      body: content
       from:
       - from_email
       - source
@@ -73,14 +73,23 @@ concepts:
   suppression:
     path_segment:
     - suppressions
+    - blocks
+    - bounces
+    - spam_reports
+    - unsubscribes
     properties:
+      reason:
+      - reason
+      - status
       address: email
-      created_at: created_at
+      created_at:
+      - created_at
+      - created
       id: id
-    core_coverage: 0.667
+    core_coverage: 1.0
     evidence:
     - openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/asm/groups/{group_id}/suppressions/{email}
-    - openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/groups/{group_id}/suppressions
-    - openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/suppressions
-    - openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/suppressions/{email}
-    - openapi/_original/tsg_suppressions_v3.yaml#POST /v3/asm/groups/{group_id}/suppressions
+    - openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/blocks
+    - openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/blocks/{email}
+    - openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/bounces
+    - openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/bounces/{email}

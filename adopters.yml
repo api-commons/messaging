@@ -84,6 +84,12 @@ adopters:
   crosswalk: crosswalk/apache-rocketmq.yml
   concepts:
   - message
+- provider: aurinko
+  apis_io: https://apis.io/providers/aurinko/
+  crosswalk: crosswalk/aurinko.yml
+  concepts:
+  - conversation
+  - message
 - provider: avito
   apis_io: https://apis.io/providers/avito/
   crosswalk: crosswalk/avito.yml
@@ -556,6 +562,11 @@ adopters:
 - provider: magicbell
   apis_io: https://apis.io/providers/magicbell/
   crosswalk: crosswalk/magicbell.yml
+  concepts:
+  - message
+- provider: mailbridgeapi
+  apis_io: https://apis.io/providers/mailbridgeapi/
+  crosswalk: crosswalk/mailbridgeapi.yml
   concepts:
   - message
 - provider: mailchimp
@@ -1088,7 +1099,13 @@ adopters:
   - message
   - phone_number
   - sender
+  - suppression
   - template
+- provider: unifonic
+  apis_io: https://apis.io/providers/unifonic/
+  crosswalk: crosswalk/unifonic.yml
+  concepts:
+  - message
 - provider: usecommune
   apis_io: https://apis.io/providers/usecommune/
   crosswalk: crosswalk/usecommune.yml
@@ -1174,6 +1191,12 @@ adopters:
   crosswalk: crosswalk/zoho-mail.yml
   concepts:
   - message
+- provider: zoom-phone
+  apis_io: https://apis.io/providers/zoom-phone/
+  crosswalk: crosswalk/zoom-phone.yml
+  concepts:
+  - message
+  - phone_number
 - provider: zulip
   apis_io: https://apis.io/providers/zulip/
   crosswalk: crosswalk/zulip.yml

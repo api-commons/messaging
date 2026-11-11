@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - notifications
     properties:
-      body: content
       id: id
+      body: content
       created_at: created_at
       status: status
       subject: title

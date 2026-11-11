@@ -16,7 +16,7 @@ paths:
       tags:
       - Messages
       x-commons-tier: core
-      x-commons-share: 0.84
+      x-commons-share: 0.843
       responses:
         '200':
           description: OK
@@ -35,7 +35,7 @@ paths:
       tags:
       - Messages
       x-commons-tier: core
-      x-commons-share: 0.706
+      x-commons-share: 0.702
       responses:
         '200':
           description: OK
@@ -62,7 +62,7 @@ paths:
       tags:
       - Messages
       x-commons-tier: core
-      x-commons-share: 0.505
+      x-commons-share: 0.5
       responses:
         '200':
           description: OK
@@ -75,7 +75,7 @@ paths:
       tags:
       - Messages
       x-commons-tier: extended
-      x-commons-share: 0.304
+      x-commons-share: 0.298
       responses:
         '200':
           description: OK
@@ -88,7 +88,7 @@ paths:
       tags:
       - Messages
       x-commons-tier: extended
-      x-commons-share: 0.273
+      x-commons-share: 0.268
       responses:
         '200':
           description: OK
@@ -132,7 +132,7 @@ paths:
       tags:
       - Templates
       x-commons-tier: core
-      x-commons-share: 0.636
+      x-commons-share: 0.652
       responses:
         '200':
           description: OK
@@ -198,7 +198,7 @@ paths:
       tags:
       - Conversations
       x-commons-tier: core
-      x-commons-share: 0.843
+      x-commons-share: 0.845
       responses:
         '200':
           description: OK
@@ -223,7 +223,7 @@ paths:
       tags:
       - Conversations
       x-commons-tier: extended
-      x-commons-share: 0.471
+      x-commons-share: 0.465
       responses:
         '200':
           description: OK
@@ -244,7 +244,7 @@ paths:
       tags:
       - Conversations
       x-commons-tier: core
-      x-commons-share: 0.757
+      x-commons-share: 0.761
       responses:
         '200':
           description: OK
@@ -257,7 +257,7 @@ paths:
       tags:
       - Conversations
       x-commons-tier: extended
-      x-commons-share: 0.414
+      x-commons-share: 0.423
       responses:
         '200':
           description: OK
@@ -275,7 +275,7 @@ paths:
       tags:
       - Conversations
       x-commons-tier: extended
-      x-commons-share: 0.286
+      x-commons-share: 0.282
       responses:
         '200':
           description: OK
@@ -289,7 +289,7 @@ paths:
       tags:
       - Phone Numbers
       x-commons-tier: core
-      x-commons-share: 0.906
+      x-commons-share: 0.909
       responses:
         '200':
           description: OK
@@ -314,7 +314,7 @@ paths:
       tags:
       - Phone Numbers
       x-commons-tier: core
-      x-commons-share: 0.719
+      x-commons-share: 0.727
       responses:
         '200':
           description: OK
@@ -335,7 +335,7 @@ paths:
       tags:
       - Phone Numbers
       x-commons-tier: core
-      x-commons-share: 0.656
+      x-commons-share: 0.697
       responses:
         '200':
           description: OK
@@ -348,7 +348,7 @@ paths:
       tags:
       - Phone Numbers
       x-commons-tier: core
-      x-commons-share: 0.5
+      x-commons-share: 0.545
       responses:
         '200':
           description: OK
@@ -361,7 +361,7 @@ paths:
       tags:
       - Phone Numbers
       x-commons-tier: extended
-      x-commons-share: 0.344
+      x-commons-share: 0.394
       responses:
         '200':
           description: OK
@@ -471,7 +471,7 @@ paths:
       tags:
       - Suppressions
       x-commons-tier: core
-      x-commons-share: 0.857
+      x-commons-share: 0.864
       responses:
         '200':
           description: OK
@@ -496,7 +496,7 @@ paths:
       tags:
       - Suppressions
       x-commons-tier: core
-      x-commons-share: 0.619
+      x-commons-share: 0.591
       responses:
         '200':
           description: OK
@@ -517,7 +517,7 @@ paths:
       tags:
       - Suppressions
       x-commons-tier: extended
-      x-commons-share: 0.333
+      x-commons-share: 0.318
       responses:
         '200':
           description: OK
@@ -530,7 +530,7 @@ paths:
       tags:
       - Suppressions
       x-commons-tier: extended
-      x-commons-share: 0.286
+      x-commons-share: 0.273
       responses:
         '200':
           description: OK

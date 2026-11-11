@@ -8,10 +8,10 @@ concepts:
     - email
     - sends
     properties:
+      id: MessageID
       body:
       - HtmlBody
       - TextBody
-      id: MessageID
       from: From
       to: To
       subject: Subject

@@ -8,12 +8,12 @@ concepts:
     - notifications
     - messages
     properties:
-      body: content
       id: id
+      body: content
+      to: recipient
       created_at:
       - created_at
       - created
-      to: recipient
       status:
       - status
       - state

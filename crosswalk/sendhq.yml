@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - emails
     properties:
+      id: id
       body:
       - html
       - text
-      id: id
       from: from
       to: to
       status: status

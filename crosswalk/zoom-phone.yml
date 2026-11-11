@@ -1,0 +1,36 @@
+provider: zoom-phone
+apis_io: https://apis.io/providers/zoom-phone/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: message_id
+      from: sender
+      attachments: attachments
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/zoom-phone-api-openapi.json#POST /phone/sms/messages
+  phone_number:
+    path_segment:
+    - phone_numbers
+    - numbers
+    properties:
+      number:
+      - phone_number
+      - number
+      id: id
+      capabilities: number_type
+      name:
+      - display_name
+      - title
+      status: status
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/auto_receptionists/{autoReceptionistId}/phone_numbers
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/auto_receptionists/{autoReceptionistId}/phone_numbers/{phoneNumberId}
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/call_queues/{callQueueId}/phone_numbers
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/call_queues/{callQueueId}/phone_numbers/{phoneNumberId}
+    - openapi/_original/zoom-phone-api-openapi.json#DELETE /phone/carrier_reseller/numbers/{number}

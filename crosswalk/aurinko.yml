@@ -1,0 +1,37 @@
+provider: aurinko
+apis_io: https://apis.io/providers/aurinko/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties:
+      id: id
+      body: body
+      from: from
+      to: to
+      created_at: createdTime
+      status: status
+      subject: subject
+      attachments: attachments
+      conversation_id: threadId
+      sent_at: sentAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/aurinko-openapi.json#GET /v1/email/messages
+    - openapi/_original/aurinko-openapi.json#GET /v1/email/messages/{messageId}
+    - openapi/_original/aurinko-openapi.json#POST /v1/email/messages
+  conversation:
+    path_segment:
+    - conversations
+    properties:
+      id: id
+      created_at: createdTime
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/aurinko-openapi.json#GET /v1/email/conversations/{threadId}
+    - openapi/_original/aurinko-openapi.json#GET /v1/followup/conversations
+    - openapi/_original/aurinko-openapi.json#GET /v1/followup/conversations/{convoId}
+    - openapi/_original/aurinko-openapi.json#PUT /v1/followup/conversations/{convoId}

@@ -7,17 +7,17 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - text
       - content
       - body
-      id: id
       from: source
-      created_at: createdAt
       to:
       - destination
       - destinations
       - msisdn
+      created_at: createdAt
       channel:
       - type
       - channel

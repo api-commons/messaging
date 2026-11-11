@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - text
       - html
-      id: id
       created_at: created
       attachments:
       - files

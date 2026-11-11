@@ -8,12 +8,12 @@ concepts:
     - messages
     - sms
     properties:
-      body:
-      - text
-      - body
       id:
       - id
       - messageId
+      body:
+      - text
+      - body
       from: from
       to: to
       channel:

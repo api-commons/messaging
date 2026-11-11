@@ -7,11 +7,11 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: body
       id: id
+      body: body
       from: from
-      created_at: created_date
       to: to
+      created_at: created_date
       channel: type
       status: state
       subject: subject

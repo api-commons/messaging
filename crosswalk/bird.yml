@@ -8,30 +8,37 @@ concepts:
     - messages
     - email
     properties:
+      id: id
       body:
       - body
+      - html
       - text
-      id: id
       from:
       - sender
       - originator
       - from
-      created_at:
-      - createdAt
-      - created_at
       to:
       - receiver
       - recipients
       - to
+      created_at:
+      - createdAt
+      - created_at
       channel: type
       status: status
+      subject: subject
+      attachments:
+      - attachments
+      - media_urls
+      conversation_id: thread_id
       direction: direction
       metadata:
       - tags
       - metadata
       sent_at:
-      - sent_at
       - delivered_at
+      - scheduled_at
+      - sent_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/bird-openapi.yml#GET /messages
@@ -74,10 +81,10 @@ concepts:
       created_at:
       - createdAt
       - created_at
+      status: status
       last_message_at:
       - last_message_at
       - updated_at
-      status: status
       channel: channel
       participants: participants
     core_coverage: 1.0

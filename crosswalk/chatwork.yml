@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: body
       id: message_id
+      body: body
       sent_at: send_time
     core_coverage: 0.667
     evidence:

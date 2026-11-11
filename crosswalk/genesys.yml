@@ -9,19 +9,19 @@ concepts:
     - emails
     - notifications
     properties:
+      id: id
       body:
       - body
       - htmlBody
       - textBody
       - text
       - content
-      id: id
       from: sender
+      to: address
       created_at:
       - dateCreated
       - timestamp
       - createdDate
-      to: address
       channel:
       - channel
       - type
@@ -66,6 +66,7 @@ concepts:
   conversation:
     path_segment:
     - conversations
+    - chats
     properties:
       id:
       - conversationId
@@ -79,9 +80,9 @@ concepts:
     evidence:
     - openapi/_original/genesys-platform-api-openapi-original.json#DELETE /api/v2/conversations/{conversationId}
     - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/chats
+    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/chats/{conversationId}
     - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/{conversationId}
-    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/speechandtextanalytics/conversations/{conversationId}
-    - openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}
   phone_number:
     path_segment:
     - phonenumbers
@@ -95,7 +96,7 @@ concepts:
       name: name
       created_at: dateCreated
       updated_at: dateModified
-    core_coverage: 1.0
+    core_coverage: 0.833
     evidence:
     - openapi/_original/genesys-platform-api-openapi-original.json#DELETE /api/v2/outbound/dnclists/{dncListId}/phonenumbers
     - openapi/_original/genesys-platform-api-openapi-original.json#DELETE /api/v2/routing/sms/phonenumbers/{phoneNumberId}

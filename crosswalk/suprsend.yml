@@ -8,8 +8,8 @@ concepts:
     - message
     properties:
       id: message_id
-      created_at: created_at
       to: recipient
+      created_at: created_at
       channel: channel
       status: status
       sent_at: delivered_at

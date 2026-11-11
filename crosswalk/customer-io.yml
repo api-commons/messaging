@@ -10,17 +10,17 @@ concepts:
     - sms
     - email
     properties:
+      id: id
       body:
       - body
       - content
-      id: id
       from:
       - from
       - sender_id
-      created_at: created
       to:
       - to
       - recipient
+      created_at: created
       channel: type
       subject: subject
       attachments: attachments

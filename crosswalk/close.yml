@@ -8,13 +8,13 @@ concepts:
     - email
     - sms
     properties:
-      body: text
       id: id
+      body: text
       from:
       - sender
       - source
-      created_at: date_created
       to: to
+      created_at: date_created
       channel: _type
       status: status
       subject: subject

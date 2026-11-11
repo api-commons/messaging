@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/messaging/main/schema/conversation.json",
   "title": "Conversation",
-  "description": "The common conversation in Messaging (Email, SMS, Chat), distilled from 62 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common conversation in Messaging (Email, SMS, Chat), distilled from 63 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.79,
-      "x-commons-providers": 49,
+      "x-commons-share": 0.794,
+      "x-commons-providers": 50,
       "x-commons-spellings": [
         "id",
         "conversationId",
@@ -23,12 +23,13 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.468,
-      "x-commons-providers": 29,
+      "x-commons-share": 0.476,
+      "x-commons-providers": 30,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
         "timestamp",
+        "createdTime",
         "created",
         "_createdOn",
         "date_created",
@@ -36,10 +37,20 @@
       ],
       "format": "date-time"
     },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.397,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
     "last_message_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.387,
+      "x-commons-share": 0.381,
       "x-commons-providers": 24,
       "x-commons-spellings": [
         "updatedAt",
@@ -51,20 +62,10 @@
       ],
       "format": "date-time"
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.387,
-      "x-commons-providers": 24,
-      "x-commons-spellings": [
-        "status",
-        "state"
-      ]
-    },
     "name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.323,
+      "x-commons-share": 0.317,
       "x-commons-providers": 20,
       "x-commons-spellings": [
         "name",
@@ -77,7 +78,7 @@
     "channel": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.306,
+      "x-commons-share": 0.302,
       "x-commons-providers": 19,
       "x-commons-spellings": [
         "type",
@@ -88,7 +89,7 @@
     "participants": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.29,
+      "x-commons-share": 0.286,
       "x-commons-providers": 18,
       "x-commons-spellings": [
         "participants",
@@ -105,7 +106,7 @@
   "x-commons": {
     "context": "messaging",
     "concept": "conversation",
-    "providers": 62,
+    "providers": 63,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

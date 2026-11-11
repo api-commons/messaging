@@ -1,0 +1,12 @@
+provider: unifonic
+apis_io: https://apis.io/providers/unifonic/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - messages
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/unifonic-sms-openapi-original.json#POST /rest/SMS/messages

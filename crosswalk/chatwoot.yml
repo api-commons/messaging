@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: content
       id: id
+      body: content
       from:
       - sender
       - sender_id
@@ -39,10 +39,10 @@ concepts:
       created_at:
       - created_at
       - timestamp
+      status: status
       last_message_at:
       - updated_at
       - last_activity_at
-      status: status
       name: name
     core_coverage: 1.0
     evidence:

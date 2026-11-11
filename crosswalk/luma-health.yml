@@ -7,15 +7,15 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: _id
       body:
       - text
       - body
-      id: _id
       from: from
-      created_at: createdAt
       to:
       - to
       - recipient
+      created_at: createdAt
       channel:
       - type
       - channel

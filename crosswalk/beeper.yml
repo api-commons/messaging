@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: text
       id:
       - id
       - messageID
+      body: text
       from: senderID
       created_at: timestamp
       channel: type

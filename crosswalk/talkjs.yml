@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - text
       - content
-      id: id
       from:
       - senderId
       - sender

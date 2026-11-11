@@ -8,15 +8,15 @@ concepts:
     - messages
     - sms
     properties:
-      body: body
       id:
       - sid
       - id
+      body: body
       from: from
+      to: to
       created_at:
       - date_created
       - created_at
-      to: to
       channel:
       - kind
       - channel

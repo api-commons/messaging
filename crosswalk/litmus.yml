@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - emails
     properties:
+      id: id
       body:
       - html
       - plain_text
-      id: id
       created_at: created_at
       status: status
       subject: subject

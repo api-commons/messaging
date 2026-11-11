@@ -8,8 +8,8 @@ concepts:
     - message
     - messages
     properties:
-      body: content
       id: id
+      body: content
       from: originator
       created_at: createdAt
       channel: type

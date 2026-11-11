@@ -66,7 +66,7 @@ concepts:
       - type
       country: country
       status: status
-    core_coverage: 1.0
+    core_coverage: 0.833
     evidence:
     - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#DELETE /channels/v1/accounts/{accountId}/phonenumbers/{phoneNumberId}
     - openapi/_original/cm-com-messaging-channels-api-v1-2-openapi.yml#GET /channels/v1/accounts/{accountId}/phonenumbers

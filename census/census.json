@@ -684,6 +684,60 @@
      "openapi/_original/apache-rocketmq-rest-api.yaml#POST /messages"
     ]
    },
+   "aurinko": {
+    "segments": [
+     "messages"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "threadId": "string",
+     "createdTime": "string",
+     "lastModifiedTime": "string",
+     "sentAt": "string",
+     "receivedAt": "string",
+     "internetMessageId": "string",
+     "subject": "string",
+     "sysLabels": "array",
+     "keywords": "array",
+     "sysClassifications": "array",
+     "sensitivity": "string",
+     "meetingMessageMethod": "string",
+     "from": "object",
+     "to": "array",
+     "cc": "array",
+     "bcc": "array",
+     "replyTo": "array",
+     "hasAttachments": "boolean",
+     "body": "string",
+     "bodySnippet": "string",
+     "attachments": "array",
+     "inReplyTo": "string",
+     "references": "string",
+     "threadIndex": "string",
+     "internetHeaders": "array",
+     "nativeProperties": "object",
+     "folderId": "string",
+     "webLink": "string",
+     "omitted": "array",
+     "status": "string",
+     "trackingId": "string",
+     "processingStatus": "string",
+     "processingError": "object",
+     "xHeaders": "array",
+     "tracking": "object",
+     "followUp": "object"
+    },
+    "evidence": [
+     "openapi/_original/aurinko-openapi.json#GET /v1/email/messages",
+     "openapi/_original/aurinko-openapi.json#GET /v1/email/messages/{messageId}",
+     "openapi/_original/aurinko-openapi.json#POST /v1/email/messages"
+    ]
+   },
    "avito": {
     "segments": [
      "messages"
@@ -920,53 +974,61 @@
      "mclass": "integer",
      "shortenUrls": "boolean",
      "scheduledDatetime": "integer",
-     "email": "string",
-     "valid": "boolean",
-     "result": null,
-     "delivery_confidence": "integer",
-     "flags": "array",
-     "reason": null,
-     "did_you_mean": "string",
-     "from": null,
-     "to": null,
-     "text": null,
-     "image": null,
-     "video": null,
-     "audio": null,
-     "sticker": null,
-     "document": null,
-     "location": null,
-     "contact_cards": "array",
-     "interactive": null,
-     "in_reply_to_message_id": null,
-     "interactive_reply": null,
-     "unsupported": null,
-     "reactions": "array",
-     "recipient_count": "integer",
+     "from": "object",
+     "to": "array",
+     "cc": "array",
+     "bcc": "array",
+     "subject": "string",
+     "category": "string",
+     "reply_to": [
+      "array",
+      "null"
+     ],
+     "accepted_count": "integer",
+     "processed_count": "integer",
      "delivered_count": "integer",
-     "read_count": "integer",
-     "last_error": [
+     "bounced_count": "integer",
+     "complained_count": "integer",
+     "deferred_count": "integer",
+     "rejected_count": "integer",
+     "processing_latency_ms": [
+      "integer",
+      "null"
+     ],
+     "delivery_latency_ms": [
+      "integer",
+      "null"
+     ],
+     "total_latency_ms": [
+      "integer",
+      "null"
+     ],
+     "open_count": "integer",
+     "click_count": "integer",
+     "requested_language": null,
+     "resolved_language": null,
+     "template_id": null,
+     "template_version_id": null,
+     "broadcast_id": "string",
+     "metadata": "object",
+     "parameters": [
       "object",
       "null"
      ],
+     "attachments": "array",
+     "track_opens": "boolean",
+     "track_clicks": "boolean",
      "created_at": "string",
-     "sent_at": [
+     "thread_id": [
       "string",
       "null"
      ],
+     "in_reply_to_message_id": null,
      "delivered_at": [
       "string",
       "null"
      ],
-     "read_at": [
-      "string",
-      "null"
-     ],
-     "cost": [
-      "object",
-      "null"
-     ],
-     "metadata": "object",
+     "scheduled_at": "string",
      "next_cursor": [
       "string",
       "null"
@@ -976,6 +1038,59 @@
       "null"
      ],
      "refresh_cursor": [
+      "string",
+      "null"
+     ],
+     "html": "string",
+     "text": "string",
+     "headers": "object",
+     "ip_pool_id": "string",
+     "template_content_hash": null,
+     "segments": "object",
+     "cost": [
+      "object",
+      "null"
+     ],
+     "options": null,
+     "validity_period": "integer",
+     "carrier": "string",
+     "mcc_mnc": "string",
+     "last_error": [
+      "object",
+      "null"
+     ],
+     "sent_at": [
+      "string",
+      "null"
+     ],
+     "media_urls": "array",
+     "messaging_profile_id": "string",
+     "campaign_id": "string",
+     "audience_id": "string",
+     "contact_id": "string",
+     "topic_id": "string",
+     "personalization": "object",
+     "email": "string",
+     "valid": "boolean",
+     "result": null,
+     "delivery_confidence": "integer",
+     "flags": "array",
+     "reason": null,
+     "did_you_mean": "string",
+     "image": null,
+     "video": null,
+     "audio": null,
+     "sticker": null,
+     "document": null,
+     "location": null,
+     "contact_cards": "array",
+     "interactive": null,
+     "interactive_reply": null,
+     "unsupported": null,
+     "reactions": "array",
+     "recipient_count": "integer",
+     "read_count": "integer",
+     "read_at": [
       "string",
       "null"
      ],
@@ -997,7 +1112,7 @@
      "openapi/_original/bird-sms-openapi.yml#GET /messages",
      "openapi/_original/bird-sms-openapi.yml#GET /messages/{messageId}",
      "openapi/_original/bird-sms-openapi.yml#POST /messages",
-     "openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/lookup/email/{address}"
+     "openapi/_original/messagebird-bird-api-openapi.yml#GET /v1/email/messages"
     ]
    },
    "birdeye": {
@@ -2963,17 +3078,30 @@
    },
    "gov-uk-notify": {
     "segments": [
-     "notifications"
+     "notifications",
+     "sms",
+     "email"
     ],
     "operations": [
      "GET collection",
-     "GET item"
+     "GET item",
+     "POST collection"
     ],
     "properties": {
      "id": "string",
      "reference": "string",
-     "email_address": "string",
+     "content": "object",
+     "uri": "string",
+     "template": "object",
+     "scheduled_for": "string",
      "phone_number": "string",
+     "template_id": "string",
+     "personalisation": "object",
+     "sms_sender_id": "string",
+     "email_address": "string",
+     "one_click_unsubscribe_url": "string",
+     "email_reply_to_id": "string",
+     "sanitise_content_for": "array",
      "line_1": "string",
      "line_2": "string",
      "line_3": "string",
@@ -2983,7 +3111,6 @@
      "postcode": "string",
      "type": "string",
      "status": "string",
-     "template": "object",
      "body": "string",
      "subject": "string",
      "created_at": "string",
@@ -2997,7 +3124,9 @@
     },
     "evidence": [
      "openapi/_original/openapi.yml#GET /v2/notifications",
-     "openapi/_original/openapi.yml#GET /v2/notifications/{notification_id}"
+     "openapi/_original/openapi.yml#GET /v2/notifications/{notification_id}",
+     "openapi/_original/openapi.yml#POST /v2/notifications/email",
+     "openapi/_original/openapi.yml#POST /v2/notifications/sms"
     ]
    },
    "greenhelix-net": {
@@ -3147,16 +3276,16 @@
     "evidence": [
      "openapi/_original/infobip-2fa-openapi.json#GET /2fa/2/applications/{appId}/messages",
      "openapi/_original/infobip-2fa-openapi.json#GET /2fa/2/applications/{appId}/messages/{msgId}",
+     "openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/applications/{appId}/email/messages",
      "openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/applications/{appId}/messages",
      "openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/pin/email",
      "openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/pin/{pinId}/resend/email",
+     "openapi/_original/infobip-2fa-openapi.json#PUT /2fa/2/applications/{appId}/email/messages/{msgId}",
      "openapi/_original/infobip-2fa-openapi.json#PUT /2fa/2/applications/{appId}/messages/{msgId}",
      "openapi/_original/infobip-apple-mfb-openapi.json#POST /apple-mfb/1/messages",
      "openapi/_original/infobip-conversations-openapi.json#GET /ccaas/1/conversations/{conversationId}/messages",
      "openapi/_original/infobip-conversations-openapi.json#POST /ccaas/1/conversations/{conversationId}/messages",
-     "openapi/_original/infobip-instagram-openapi.json#POST /instagram/1/messages",
-     "openapi/_original/infobip-kakao-openapi.json#POST /kakao-alim/1/messages",
-     "openapi/_original/infobip-kakao-openapi.json#POST /kakao-chingu/1/messages"
+     "openapi/_original/infobip-email-openapi.json#POST /email/4/messages"
     ]
    },
    "insider": {
@@ -3266,12 +3395,15 @@
      "restrict_once": "string",
      "template_id": "number",
      "template_variables": "array",
-     "rcs_phone_id": "number"
+     "rcs_phone_id": "number",
+     "group_id": "number",
+     "sent_by": "object"
     },
     "evidence": [
      "openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages",
      "openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages/{id}",
      "openapi/_original/justcall-openapi.json#GET /v2.1/texts",
+     "openapi/_original/justcall-openapi.json#GET /v2.1/texts/groups/messages/{message_id}",
      "openapi/_original/justcall-openapi.json#GET /v2.1/texts/{id}",
      "openapi/_original/justcall-openapi.json#GET /v2.1/whatsapp/messages",
      "openapi/_original/justcall-openapi.json#GET /v2.1/whatsapp/messages/{id}",
@@ -3482,6 +3614,7 @@
     },
     "evidence": [
      "openapi/_original/kore-wireless-sms.yml#GET /v1/messages",
+     "openapi/_original/kore-wireless-sms.yml#GET /v1/sms/messages",
      "openapi/_original/kore-wireless-sms.yml#POST /v1/messages/send"
     ]
    },
@@ -4130,6 +4263,18 @@
     "evidence": [
      "openapi/_original/magicbell-openapi.json#GET /notifications",
      "openapi/_original/magicbell-openapi.json#GET /notifications/{notification_id}"
+    ]
+   },
+   "mailbridgeapi": {
+    "segments": [
+     "message"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/mailbridgeapi.json#GET /email/message/"
     ]
    },
    "mailchimp": {
@@ -7702,6 +7847,23 @@
      "openapi/_original/conversations-openapi-original.yml#POST /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}"
     ]
    },
+   "unifonic": {
+    "segments": [
+     "messages"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "success": "string",
+     "message": "string",
+     "errorCode": "string",
+     "data": "object"
+    },
+    "evidence": [
+     "openapi/_original/unifonic-sms-openapi-original.json#POST /rest/SMS/messages"
+    ]
+   },
    "usecommune": {
     "segments": [
      "messages",
@@ -7795,6 +7957,14 @@
      "POST collection"
     ],
     "properties": {
+     "message_id": "string",
+     "status": "string",
+     "to": "string",
+     "from": "string",
+     "text": "string",
+     "callback_url": "string",
+     "subject": "string",
+     "content": "array",
      "wallet_message_id": "string",
      "message": "object",
      "campaign_ref": "object",
@@ -7804,6 +7974,8 @@
      "url": "string"
     },
     "evidence": [
+     "openapi/_original/vibes-connect-openapi.yml#POST /api/v1/mms/messages",
+     "openapi/_original/vibes-connect-openapi.yml#POST /api/v1/sms/messages",
      "openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/campaigns/wallet/{wallet_id}/messages",
      "openapi/_original/vibes-platform-api-openapi.json#GET /companies/{company_key}/campaigns/wallet/{wallet_id}/messages/{wallet_message_id}",
      "openapi/_original/vibes-platform-api-openapi.json#POST /companies/{company_key}/campaigns/wallet/{wallet_id}/messages"
@@ -8175,6 +8347,26 @@
      "openapi/_original/openapi.json#GET /api/accounts/{accountId}/messages",
      "openapi/_original/openapi.json#POST /api/accounts/{accountId}/messages",
      "openapi/_original/openapi.json#POST /api/accounts/{accountId}/messages/{messageId}"
+    ]
+   },
+   "zoom-phone": {
+    "segments": [
+     "messages"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "date_time": "string",
+     "message_id": "string",
+     "session_id": "string",
+     "attachments": "array",
+     "message": "string",
+     "sender": "object",
+     "to_members": "array"
+    },
+    "evidence": [
+     "openapi/_original/zoom-phone-api-openapi.json#POST /phone/sms/messages"
     ]
    },
    "zulip": {
@@ -10003,15 +10195,21 @@
    },
    "route-mobile": {
     "segments": [
-     "templates",
-     "template"
+     "template",
+     "templates"
     ],
     "operations": [
      "DELETE collection",
-     "GET collection"
+     "GET collection",
+     "POST collection",
+     "PUT collection"
     ],
     "properties": {
      "name": "string",
+     "type": "string",
+     "textMessageContent": "string",
+     "suggestions": "array",
+     "templateDetails": "object",
      "id": "string",
      "components": "array",
      "category": "string",
@@ -10026,6 +10224,12 @@
      "success": "boolean"
     },
     "evidence": [
+     "openapi/_original/route-mobile-rcs.yml#DELETE /rcs-template-apis/api/v1/template/template",
+     "openapi/_original/route-mobile-rcs.yml#GET /rcs-template-apis/api/v1//template//template",
+     "openapi/_original/route-mobile-rcs.yml#GET /rcs-template-apis/api/v1/template//template",
+     "openapi/_original/route-mobile-rcs.yml#GET /rcs-template-apis/api/v1/template/template",
+     "openapi/_original/route-mobile-rcs.yml#POST /rcs-template-apis/api/v1/template/template",
+     "openapi/_original/route-mobile-rcs.yml#PUT /rcs-template-apis/api/v1/template/template",
      "openapi/_original/route-mobile-whatsapp-business.yml#DELETE /wba/template/",
      "openapi/_original/route-mobile-whatsapp-business.yml#GET /wba/templates"
     ]
@@ -11995,7 +12199,8 @@
    },
    "genesys": {
     "segments": [
-     "conversations"
+     "conversations",
+     "chats"
     ],
     "operations": [
      "DELETE item",
@@ -12069,6 +12274,14 @@
      "previousUri": "string",
      "lastUri": "string",
      "pageCount": "integer",
+     "otherMediaUris": "array",
+     "queueId": "string",
+     "provider": "string",
+     "skillIds": "array",
+     "languageId": "string",
+     "priority": "integer",
+     "attributes": "object",
+     "customerName": "string",
      "jwt": "string",
      "eventStreamUri": "string",
      "member": "object",
@@ -12078,15 +12291,12 @@
      "memberInfo": "object",
      "memberAuthToken": "string",
      "journeyContext": "object",
-     "priority": "integer",
      "skills": "array",
      "language": "object",
      "label": "object",
      "scoredAgents": "array",
      "skillExpression": "string",
      "skillExpressionId": "string",
-     "skillIds": "array",
-     "languageId": "string",
      "labelId": "string",
      "requestScoredAgents": "array",
      "conversation": "object",
@@ -12101,15 +12311,16 @@
     "evidence": [
      "openapi/_original/genesys-platform-api-openapi-original.json#DELETE /api/v2/conversations/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations",
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/chats",
+     "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/chats/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/conversations/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/speechandtextanalytics/conversations/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#GET /api/v2/telephony/sipmessages/conversations/{conversationId}",
+     "openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/conversations/chats/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#PATCH /api/v2/routing/conversations/{conversationId}",
      "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/coaching/appointments/{appointmentId}/conversations",
-     "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/events/conversations",
-     "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/webchat/guest/conversations",
-     "openapi/_original/genesys-platform-api-openapi-original.json#PUT /api/v2/externalcontacts/conversations/{conversationId}"
+     "openapi/_original/genesys-platform-api-openapi-original.json#POST /api/v2/conversations/chats"
     ]
    },
    "getstream": {
@@ -14390,12 +14601,32 @@
     ],
     "operations": [
      "DELETE collection",
+     "DELETE item",
      "GET collection",
-     "POST collection"
+     "GET item",
+     "POST collection",
+     "PUT item"
     ],
     "properties": {
+     "numbers": "array",
+     "numberCount": "integer",
      "numberKey": "string",
      "number": "string",
+     "country": "string",
+     "countryName": "string",
+     "type": "string",
+     "capabilities": "array",
+     "shared": "boolean",
+     "price": "object",
+     "network": "string",
+     "keywords": "array",
+     "voiceSetup": "object",
+     "reservationStatus": "string",
+     "additionalSetupRequired": "boolean",
+     "editPermissions": "object",
+     "note": "string",
+     "applicationId": "string",
+     "entityId": "string",
      "countryCode": "string",
      "phoneNumber": "string",
      "jobName": "string",
@@ -14408,18 +14639,18 @@
      "businessId": "string"
     },
     "evidence": [
+     "openapi/_original/infobip-numbers-openapi.json#DELETE /numbers/1/numbers/{numberKey}",
      "openapi/_original/infobip-numbers-openapi.json#GET /number-registration/1/campaigns/{campaignId}/numbers",
+     "openapi/_original/infobip-numbers-openapi.json#GET /numbers/1/numbers",
+     "openapi/_original/infobip-numbers-openapi.json#GET /numbers/1/numbers/{numberKey}",
+     "openapi/_original/infobip-numbers-openapi.json#POST /numbers/1/numbers",
+     "openapi/_original/infobip-numbers-openapi.json#PUT /numbers/1/numbers/{numberKey}",
      "openapi/_original/infobip-platform-full-openapi.json#DELETE /number-reputation/1/businesses/{businessId}/numbers",
+     "openapi/_original/infobip-platform-full-openapi.json#DELETE /numbers/1/numbers/{numberKey}",
      "openapi/_original/infobip-platform-full-openapi.json#GET /number-registration/1/campaigns/{campaignId}/numbers",
      "openapi/_original/infobip-platform-full-openapi.json#GET /number-reputation/1/businesses/{businessId}/numbers",
      "openapi/_original/infobip-platform-full-openapi.json#GET /number-reputation/1/numbers",
-     "openapi/_original/infobip-platform-full-openapi.json#POST /number-reputation/1/businesses/{businessId}/numbers",
-     "openapi/_original/infobip-platform-openapi.json#DELETE /number-reputation/1/businesses/{businessId}/numbers",
-     "openapi/_original/infobip-platform-openapi.json#GET /number-registration/1/campaigns/{campaignId}/numbers",
-     "openapi/_original/infobip-platform-openapi.json#GET /number-reputation/1/businesses/{businessId}/numbers",
-     "openapi/_original/infobip-platform-openapi.json#GET /number-reputation/1/numbers",
-     "openapi/_original/infobip-platform-openapi.json#POST /number-reputation/1/businesses/{businessId}/numbers",
-     "openapi/_original/infobip-voice-openapi.json#DELETE /number-reputation/1/businesses/{businessId}/numbers"
+     "openapi/_original/infobip-platform-full-openapi.json#GET /numbers/1/numbers"
     ]
    },
    "justcall": {
@@ -17082,9 +17313,14 @@
    },
    "sendgrid": {
     "segments": [
-     "suppressions"
+     "suppressions",
+     "blocks",
+     "bounces",
+     "spam_reports",
+     "unsubscribes"
     ],
     "operations": [
+     "DELETE collection",
      "DELETE item",
      "GET collection",
      "GET item",
@@ -17100,14 +17336,27 @@
      "id": "integer",
      "is_default": "boolean",
      "name": "string",
-     "suppressed": "boolean"
+     "suppressed": "boolean",
+     "created": "integer",
+     "reason": "string",
+     "status": "string",
+     "delete_all": "boolean",
+     "emails": "array",
+     "ip": "string"
     },
     "evidence": [
      "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/asm/groups/{group_id}/suppressions/{email}",
+     "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/blocks",
+     "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/blocks/{email}",
+     "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/bounces",
+     "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/bounces/{email}",
+     "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/spam_reports",
+     "openapi/_original/tsg_suppressions_v3.yaml#DELETE /v3/suppression/spam_reports/{email}",
      "openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/groups/{group_id}/suppressions",
      "openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/suppressions",
      "openapi/_original/tsg_suppressions_v3.yaml#GET /v3/asm/suppressions/{email}",
-     "openapi/_original/tsg_suppressions_v3.yaml#POST /v3/asm/groups/{group_id}/suppressions"
+     "openapi/_original/tsg_suppressions_v3.yaml#GET /v3/suppression/blocks",
+     "openapi/_original/tsg_suppressions_v3.yaml#GET /v3/suppression/blocks/{email}"
     ]
    },
    "sendhq": {
@@ -17225,6 +17474,31 @@
      "openapi/_original/thecolony-ai-openapi.yml#DELETE /api/v1/suggestions/suppressions/{user_id}",
      "openapi/_original/thecolony-ai-openapi.yml#GET /api/v1/suggestions/suppressions",
      "openapi/_original/thecolony-ai-openapi.yml#POST /api/v1/suggestions/suppressions"
+    ]
+   },
+   "twilio": {
+    "segments": [
+     "bounces",
+     "blocks",
+     "unsubscribes"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection"
+    ],
+    "properties": {
+     "email": "string",
+     "status": "string",
+     "reason": "string",
+     "created": "integer",
+     "delete_all": "boolean",
+     "emails": "array"
+    },
+    "evidence": [
+     "openapi/_original/twilio-sendgrid-openapi.yml#DELETE /suppression/bounces",
+     "openapi/_original/twilio-sendgrid-openapi.yml#GET /suppression/blocks",
+     "openapi/_original/twilio-sendgrid-openapi.yml#GET /suppression/bounces",
+     "openapi/_original/twilio-sendgrid-openapi.yml#GET /suppression/unsubscribes"
     ]
    }
   }
@@ -20528,6 +20802,7 @@
     "trengo",
     "twilio",
     "tyntec",
+    "unifonic",
     "usecommune",
     "val-town",
     "vibes-platform",
@@ -20545,6 +20820,118 @@
     "zoho-mail",
     "zoom-phone",
     "zulip"
+   ],
+   "camelCase": [
+    "8x8",
+    "ably",
+    "act-on",
+    "agentphone",
+    "alianza",
+    "ando",
+    "apache-rocketmq",
+    "aurinko",
+    "bandwidth",
+    "beeper",
+    "benchmark-email",
+    "bharti-airtel",
+    "bics-network",
+    "bird",
+    "birdeye",
+    "boom-ai",
+    "brevo",
+    "bulksms",
+    "chat",
+    "cisco-collaboration-hybrid-solutions",
+    "clickatell",
+    "cloudtalk",
+    "cm-com",
+    "cometchat",
+    "dixa",
+    "dotdigital",
+    "dyspatch",
+    "emailconnect",
+    "encharge",
+    "engagespark",
+    "entergram",
+    "genesys",
+    "getresponse",
+    "gladly",
+    "google-business-messages",
+    "google-chat",
+    "google-chat-integrations-for-workspace",
+    "google-gmail",
+    "google-suites",
+    "hustle",
+    "infobip",
+    "iterable",
+    "khoros-ai",
+    "kpn",
+    "leadping",
+    "listrak",
+    "lithium",
+    "live-direct-marketing-online",
+    "liveblocks",
+    "loops",
+    "loops-so",
+    "luma-health",
+    "messagebird",
+    "messaging-api",
+    "microsoft-exchange",
+    "microsoft-graph",
+    "microsoft-outlook",
+    "montran",
+    "mtn-group",
+    "netcorecloud",
+    "nextiva",
+    "neynar",
+    "notificationapi",
+    "novu",
+    "omnisend",
+    "onesignal",
+    "openphone",
+    "orange-business",
+    "outrival",
+    "pagopa",
+    "paubox",
+    "plunk",
+    "podium",
+    "pypestream",
+    "quo",
+    "rainbow",
+    "regal-ai",
+    "respond",
+    "responsys",
+    "ringcentral",
+    "route-mobile",
+    "rubiconnect",
+    "samu",
+    "saperly",
+    "sendhq",
+    "sendpulse",
+    "signal",
+    "simpletexting",
+    "sinch",
+    "sleekflow",
+    "spruce-health",
+    "symphony",
+    "syniverse",
+    "talkjs",
+    "tapcart",
+    "tata-communications",
+    "teliax",
+    "telnyx",
+    "telstra",
+    "textmagic",
+    "twilio",
+    "tyntec",
+    "unifonic",
+    "val-town",
+    "weavix",
+    "webex",
+    "zavu",
+    "zenzap",
+    "zoho",
+    "zoho-mail"
    ],
    "snake_case": [
     "46elks",
@@ -20656,116 +21043,6 @@
     "zoho-cliq",
     "zoom-phone",
     "zulip"
-   ],
-   "camelCase": [
-    "8x8",
-    "ably",
-    "act-on",
-    "agentphone",
-    "alianza",
-    "ando",
-    "apache-rocketmq",
-    "aurinko",
-    "bandwidth",
-    "beeper",
-    "benchmark-email",
-    "bharti-airtel",
-    "bics-network",
-    "bird",
-    "birdeye",
-    "boom-ai",
-    "brevo",
-    "bulksms",
-    "chat",
-    "cisco-collaboration-hybrid-solutions",
-    "clickatell",
-    "cloudtalk",
-    "cm-com",
-    "cometchat",
-    "dixa",
-    "dotdigital",
-    "dyspatch",
-    "emailconnect",
-    "encharge",
-    "engagespark",
-    "entergram",
-    "genesys",
-    "getresponse",
-    "gladly",
-    "google-business-messages",
-    "google-chat",
-    "google-chat-integrations-for-workspace",
-    "google-gmail",
-    "google-suites",
-    "hustle",
-    "infobip",
-    "iterable",
-    "khoros-ai",
-    "kpn",
-    "leadping",
-    "listrak",
-    "lithium",
-    "live-direct-marketing-online",
-    "liveblocks",
-    "loops",
-    "loops-so",
-    "luma-health",
-    "messagebird",
-    "messaging-api",
-    "microsoft-exchange",
-    "microsoft-graph",
-    "microsoft-outlook",
-    "montran",
-    "mtn-group",
-    "netcorecloud",
-    "nextiva",
-    "neynar",
-    "notificationapi",
-    "novu",
-    "omnisend",
-    "onesignal",
-    "openphone",
-    "orange-business",
-    "outrival",
-    "pagopa",
-    "paubox",
-    "plunk",
-    "podium",
-    "pypestream",
-    "quo",
-    "rainbow",
-    "regal-ai",
-    "respond",
-    "responsys",
-    "ringcentral",
-    "rubiconnect",
-    "samu",
-    "saperly",
-    "sendhq",
-    "sendpulse",
-    "signal",
-    "simpletexting",
-    "sinch",
-    "sleekflow",
-    "spruce-health",
-    "symphony",
-    "syniverse",
-    "talkjs",
-    "tapcart",
-    "tata-communications",
-    "teliax",
-    "telnyx",
-    "telstra",
-    "textmagic",
-    "twilio",
-    "tyntec",
-    "val-town",
-    "weavix",
-    "webex",
-    "zavu",
-    "zenzap",
-    "zoho",
-    "zoho-mail"
    ],
    "other": [
     "8x8",

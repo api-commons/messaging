@@ -9,8 +9,8 @@ concepts:
     - sms
     - mms
     properties:
-      body: text
       id: id
+      body: text
       from: from
       to: to
       channel: type
@@ -62,7 +62,7 @@ concepts:
       capabilities: type
       name: label
       status: status
-    core_coverage: 0.75
+    core_coverage: 0.833
     evidence:
     - openapi/_original/ringcentral-platform-openapi.yml#DELETE /restapi/v1.0/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
     - openapi/_original/ringcentral-platform-openapi.yml#DELETE /restapi/v2/accounts/{accountId}/phone-numbers

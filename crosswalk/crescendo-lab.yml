@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - sms
     properties:
-      body: body
       id:
       - message_id
       - id
+      body: body
       from: from
       to: to
       channel: type

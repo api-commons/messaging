@@ -8,8 +8,8 @@ concepts:
     - messages
     - texts
     properties:
-      body: body
       id: id
+      body: body
       channel: medium
       status:
       - status
@@ -21,8 +21,8 @@ concepts:
     - openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages
     - openapi/_original/justcall-openapi.json#GET /v2.1/rcs/messages/{id}
     - openapi/_original/justcall-openapi.json#GET /v2.1/texts
+    - openapi/_original/justcall-openapi.json#GET /v2.1/texts/groups/messages/{message_id}
     - openapi/_original/justcall-openapi.json#GET /v2.1/texts/{id}
-    - openapi/_original/justcall-openapi.json#GET /v2.1/whatsapp/messages
   template:
     path_segment:
     - templates

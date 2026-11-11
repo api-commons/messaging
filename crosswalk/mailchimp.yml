@@ -12,10 +12,10 @@ concepts:
       - id
       - _id
       from: from_email
+      to: recipients
       created_at:
       - create_time
       - timestamp
-      to: recipients
       status: status
       subject: subject
       conversation_id: conversation_id

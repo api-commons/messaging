@@ -8,8 +8,8 @@ concepts:
     - messages
     - message
     properties:
-      body: body
       id: id
+      body: body
       from:
       - from
       - sender

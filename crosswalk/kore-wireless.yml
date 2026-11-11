@@ -13,4 +13,5 @@ concepts:
     core_coverage: 0.333
     evidence:
     - openapi/_original/kore-wireless-sms.yml#GET /v1/messages
+    - openapi/_original/kore-wireless-sms.yml#GET /v1/sms/messages
     - openapi/_original/kore-wireless-sms.yml#POST /v1/messages/send

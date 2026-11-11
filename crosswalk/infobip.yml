@@ -11,15 +11,15 @@ concepts:
     - email
     - message
     properties:
-      body: content
       id:
       - messageId
       - id
+      body: content
       from:
       - from
       - senderId
-      created_at: createdAt
       to: to
+      created_at: createdAt
       channel: channel
       status: status
       conversation_id: conversationId
@@ -28,9 +28,9 @@ concepts:
     evidence:
     - openapi/_original/infobip-2fa-openapi.json#GET /2fa/2/applications/{appId}/messages
     - openapi/_original/infobip-2fa-openapi.json#GET /2fa/2/applications/{appId}/messages/{msgId}
+    - openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/applications/{appId}/email/messages
     - openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/applications/{appId}/messages
     - openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/pin/email
-    - openapi/_original/infobip-2fa-openapi.json#POST /2fa/2/pin/{pinId}/resend/email
   template:
     path_segment:
     - templates
@@ -73,8 +73,8 @@ concepts:
     properties:
       id: id
       created_at: createdAt
-      last_message_at: updatedAt
       status: status
+      last_message_at: updatedAt
     core_coverage: 1.0
     evidence:
     - openapi/_original/infobip-conversations-openapi.json#GET /ccaas/1/agents/{agentId}/conversations
@@ -89,15 +89,20 @@ concepts:
       number:
       - number
       - phoneNumber
-      country: countryCode
+      capabilities:
+      - type
+      - capabilities
+      country:
+      - country
+      - countryCode
       status: status
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
+    - openapi/_original/infobip-numbers-openapi.json#DELETE /numbers/1/numbers/{numberKey}
     - openapi/_original/infobip-numbers-openapi.json#GET /number-registration/1/campaigns/{campaignId}/numbers
-    - openapi/_original/infobip-platform-full-openapi.json#DELETE /number-reputation/1/businesses/{businessId}/numbers
-    - openapi/_original/infobip-platform-full-openapi.json#GET /number-registration/1/campaigns/{campaignId}/numbers
-    - openapi/_original/infobip-platform-full-openapi.json#GET /number-reputation/1/businesses/{businessId}/numbers
-    - openapi/_original/infobip-platform-full-openapi.json#GET /number-reputation/1/numbers
+    - openapi/_original/infobip-numbers-openapi.json#GET /numbers/1/numbers
+    - openapi/_original/infobip-numbers-openapi.json#GET /numbers/1/numbers/{numberKey}
+    - openapi/_original/infobip-numbers-openapi.json#POST /numbers/1/numbers
   sender:
     path_segment:
     - senders

@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - sms
     properties:
-      body: body
       id: messageId
+      body: body
       from: from
       to: to
       status: deliveryStatus

@@ -10,17 +10,17 @@ concepts:
     - mail
     - email
     properties:
+      id: sid
       body:
       - body
       - content
-      id: sid
       from:
       - from
       - source
-      created_at: date_created
       to:
       - to
       - personalizations
+      created_at: date_created
       channel: type
       status: status
       subject:
@@ -71,10 +71,10 @@ concepts:
       created_at:
       - date_created
       - createdAt
-      last_message_at: updatedAt
       status:
       - state
       - status
+      last_message_at: updatedAt
       name:
       - friendly_name
       - name
@@ -109,7 +109,7 @@ concepts:
       updated_at:
       - date_updated
       - dateUpdated
-    core_coverage: 1.0
+    core_coverage: 0.833
     evidence:
     - openapi/_original/accounts-openapi-original.yml#DELETE /v1/SafeList/Numbers
     - openapi/_original/accounts-openapi-original.yml#GET /v1/SafeList/Numbers
@@ -130,3 +130,20 @@ concepts:
     evidence:
     - openapi/_original/twilio-sendgrid-openapi.yml#GET /verified_senders
     - openapi/_original/twilio-sendgrid-openapi.yml#POST /verified_senders
+  suppression:
+    path_segment:
+    - bounces
+    - blocks
+    - unsubscribes
+    properties:
+      reason:
+      - status
+      - reason
+      address: email
+      created_at: created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/twilio-sendgrid-openapi.yml#DELETE /suppression/bounces
+    - openapi/_original/twilio-sendgrid-openapi.yml#GET /suppression/blocks
+    - openapi/_original/twilio-sendgrid-openapi.yml#GET /suppression/bounces
+    - openapi/_original/twilio-sendgrid-openapi.yml#GET /suppression/unsubscribes

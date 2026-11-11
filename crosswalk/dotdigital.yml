@@ -8,15 +8,15 @@ concepts:
     - messages
     - email
     properties:
-      body:
-      - body
-      - htmlContent
       id:
       - id
       - messageId
+      body:
+      - body
+      - htmlContent
       from: from
-      created_at: _createdOn
       to: to
+      created_at: _createdOn
       status: status
       subject:
       - title

@@ -7,15 +7,15 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: message_id
       body:
       - text
       - html
-      id: message_id
       from: from
+      to: to
       created_at:
       - timestamp
       - created_at
-      to: to
       subject: subject
       attachments: attachments
       conversation_id: thread_id

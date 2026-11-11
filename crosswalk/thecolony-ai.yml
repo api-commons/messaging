@@ -9,10 +9,10 @@ concepts:
     - notifications
     - messages
     properties:
-      body: body
       id:
       - id
       - message_id
+      body: body
       from: sender
       created_at: created_at
       status: status

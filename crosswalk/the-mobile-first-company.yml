@@ -40,7 +40,7 @@ concepts:
       - capabilities
       country: country
       name: name
-    core_coverage: 0.75
+    core_coverage: 0.667
     evidence:
     - openapi/_original/the-mobile-first-company-allo-openapi.json#DELETE /v2/api/dialing-queues/current/numbers
     - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/numbers

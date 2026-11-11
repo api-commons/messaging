@@ -8,8 +8,8 @@ concepts:
     - messages
     - sends
     properties:
-      body: content
       id: id
+      body: content
       created_at: created_at
       attachments: media
     core_coverage: 0.667

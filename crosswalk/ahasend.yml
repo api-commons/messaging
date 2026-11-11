@@ -8,20 +8,20 @@ concepts:
     - messages
     - email
     properties:
+      id:
+      - message_id
+      - id
       body:
       - text_content
       - html_content
       - content
-      id:
-      - message_id
-      - id
       from:
       - sender
       - from
-      created_at: created_at
       to:
       - recipient
       - recipients
+      created_at: created_at
       status: status
       subject: subject
       attachments: attachments

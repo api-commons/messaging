@@ -10,6 +10,9 @@ concepts:
     - emails
     - sms
     properties:
+      id:
+      - id
+      - messageId
       body:
       - text
       - html
@@ -17,17 +20,14 @@ concepts:
       - textContent
       - body
       - content
-      id:
-      - id
-      - messageId
       from:
       - from
       - source
       - sender
-      created_at: createdAt
       to:
       - to
       - recipient
+      created_at: createdAt
       channel:
       - type
       - messageType

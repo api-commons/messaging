@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - emails
     properties:
-      body: html
       id: id
+      body: html
       from: fromEmail
       channel: type
       subject: subject

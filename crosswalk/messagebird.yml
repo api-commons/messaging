@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - content
       - body
-      id: id
       from:
       - from
       - originator
@@ -71,7 +71,7 @@ concepts:
       - countryCode
       status: status
       created_at: createdAt
-    core_coverage: 0.75
+    core_coverage: 0.667
     evidence:
     - openapi/_original/messagebird-numbers-openapi.yml#DELETE /phone-numbers/{number}
     - openapi/_original/messagebird-numbers-openapi.yml#GET /phone-numbers

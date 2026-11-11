@@ -7,16 +7,16 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - text
       - content
       - htmlBody
-      id: id
       from:
       - from
       - senderId
-      created_at: createdAt
       to: to
+      created_at: createdAt
       channel:
       - channel
       - messageType
@@ -60,7 +60,7 @@ concepts:
       status: status
       created_at: createdAt
       updated_at: updatedAt
-    core_coverage: 0.75
+    core_coverage: 0.833
     evidence:
     - openapi/_original/zavu-openapi-original.json#DELETE /v1/10dlc/campaigns/{campaignId}/phone-numbers/{assignmentId}
     - openapi/_original/zavu-openapi-original.json#DELETE /v1/phone-numbers/{phoneNumberId}

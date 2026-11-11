@@ -37,7 +37,7 @@ concepts:
     properties:
       number: phone_number
       name: name
-    core_coverage: 0.25
+    core_coverage: 0.333
     evidence:
     - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#DELETE /v4/accounts/{voip_id}/phone-numbers/{id}
     - openapi/_original/phone-com-phoenix-api-by-phone-com-openapi.yml#GET /v4/accounts/{voip_id}/10dlc/phone-numbers

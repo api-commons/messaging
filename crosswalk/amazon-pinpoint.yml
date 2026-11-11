@@ -9,8 +9,8 @@ concepts:
     - sms
     - messages
     properties:
-      body: Body
       id: Id
+      body: Body
       from: SenderId
       created_at: CreationDate
       subject: Subject

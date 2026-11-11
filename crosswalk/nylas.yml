@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: body
       id: id
+      body: body
       from: from
       to: to
       subject: subject

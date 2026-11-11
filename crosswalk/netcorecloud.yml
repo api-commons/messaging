@@ -10,11 +10,11 @@ concepts:
     - mail
     - message
     properties:
-      body: content
       id: messageId
+      body: content
       from: from
-      created_at: created
       to: personalizations
+      created_at: created
       status: status
       subject: subject
       attachments: attachments

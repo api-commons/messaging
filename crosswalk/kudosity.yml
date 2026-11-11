@@ -9,11 +9,11 @@ concepts:
     - sms
     - mms
     properties:
-      body: content
       id: id
+      body: content
       from: sender
-      created_at: created_at
       to: recipient
+      created_at: created_at
       status: status
       subject: subject
       direction: direction

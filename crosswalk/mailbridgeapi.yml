@@ -1,0 +1,12 @@
+provider: mailbridgeapi
+apis_io: https://apis.io/providers/mailbridgeapi/
+context: messaging
+generated: '2026-11-10'
+concepts:
+  message:
+    path_segment:
+    - message
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mailbridgeapi.json#GET /email/message/

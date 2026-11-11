@@ -29,7 +29,7 @@ concepts:
     - numbers
     properties:
       number: msisdn
-    core_coverage: 0.25
+    core_coverage: 0.167
     evidence:
     - openapi/_original/airtel-iot.json#GET /voice/numbers
     - openapi/_original/airtel-iot.json#GET /wt/numbers

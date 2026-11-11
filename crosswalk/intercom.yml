@@ -21,8 +21,8 @@ concepts:
     properties:
       id: id
       created_at: created_at
-      last_message_at: updated_at
       status: state
+      last_message_at: updated_at
       name: title
       channel: type
     core_coverage: 1.0

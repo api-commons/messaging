@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - messages
     properties:
-      body: text
       id: id
+      body: text
       channel: type
       attachments: mediaUrl
       direction: direction

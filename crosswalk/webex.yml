@@ -7,10 +7,10 @@ concepts:
     path_segment:
     - messages
     properties:
+      id: id
       body:
       - text
       - html
-      id: id
       created_at: created
       attachments:
       - files
@@ -55,7 +55,7 @@ concepts:
       status:
       - state
       - status
-    core_coverage: 0.75
+    core_coverage: 0.833
     evidence:
     - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/config/locations/{locationId}/numbers
     - openapi/_original/webex-cloud-calling-openapi.json#DELETE /telephony/config/people/me/settings/callBlock/numbers/{phoneNumberId}

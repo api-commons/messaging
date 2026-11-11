@@ -9,11 +9,11 @@ concepts:
     - messages
     - sms
     properties:
-      body: body
       id: id
+      body: body
       from: from
-      created_at: created_at
       to: to
+      created_at: created_at
       status: status
       direction: direction
     core_coverage: 1.0
@@ -46,7 +46,7 @@ concepts:
       - status
       created_at: created_at
       updated_at: updated_at
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/teliax-tniq-openapi.json#DELETE /v1/messaging/campaigns/{campaignId}/numbers
     - openapi/_original/teliax-tniq-openapi.json#GET /v1/inventory/numbers/{telephoneNumber}
