@@ -1,7 +1,7 @@
 provider: the-mobile-first-company
 apis_io: https://apis.io/providers/the-mobile-first-company/
 context: messaging
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   message:
     path_segment:

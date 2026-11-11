@@ -24,7 +24,7 @@ providers.
 | sender | 19 | 17 | id 82%, email 71%, name 59% | senders 12, identities 4, verified_senders 2, sender_identities 1 |
 | suppression | 22 | 19 | address 63%, reason 63%, created_at 58% | suppressions 10, bounces 6, unsubscribes 5, blocklist 3 |
 
-Cohort: 365 providers with harvested OpenAPI, 198 crosswalks. Of the providers exposing a message: 84% create, 70% list, 50% fetch, 27% update, 30% delete. Generated 2026-11-10 by build.py.
+Cohort: 365 providers with harvested OpenAPI, 198 crosswalks. Of the providers exposing a message: 84% create, 70% list, 50% fetch, 27% update, 30% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
